@@ -58,13 +58,22 @@ public class Main {
         ruleSet.add(SimpleSpeakQlParser.RULE_joinKeyword);
         ruleSet.add(SimpleSpeakQlParser.RULE_onKeyword);
         ruleSet.add(SimpleSpeakQlParser.RULE_nothingElement);
-        ruleSet.add(SimpleSpeakQlParser.RULE_selectElement);
         ruleSet.add(SimpleSpeakQlParser.RULE_groupByKeyword);
         ruleSet.add(SimpleSpeakQlParser.RULE_innerJoinKeyword);
         ruleSet.add(SimpleSpeakQlParser.RULE_leftParen);
         ruleSet.add(SimpleSpeakQlParser.RULE_rightParen);
         ruleSet.add(SimpleSpeakQlParser.RULE_joinDirection);
         ruleSet.add(SimpleSpeakQlParser.RULE_naturalJoinKeyword);
+        ruleSet.add(SimpleSpeakQlParser.RULE_theKeyword);
+        ruleSet.add(SimpleSpeakQlParser.RULE_tableName);
+        ruleSet.add(SimpleSpeakQlParser.RULE_tableKeyword);
+        ruleSet.add(SimpleSpeakQlParser.RULE_tableAlias);
+        ruleSet.add(SimpleSpeakQlParser.RULE_simpleId);
+        ruleSet.add(SimpleSpeakQlParser.RULE_aggregateWindowedFunction);
+        ruleSet.add(SimpleSpeakQlParser.RULE_selectElement);
+        ruleSet.add(SimpleSpeakQlParser.RULE_expressionDelimiter);
+        ruleSet.add(SimpleSpeakQlParser.RULE_tableSourceDelimiter);
+        ruleSet.add(SimpleSpeakQlParser.RULE_whereKeyword);
 
 
         CodeCompletionCore core = new CodeCompletionCore(parser, ruleSet, null);
