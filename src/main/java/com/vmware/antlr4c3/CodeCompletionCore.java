@@ -91,10 +91,10 @@ public class CodeCompletionCore {
         Integer tokenIndex;
     }
 
-    private boolean showResult = true;
-    private boolean showDebugOutput = true;
-    private boolean debugOutputWithTransitions = true;
-    private boolean showRuleStack = true;
+    private boolean showResult = false;
+    private boolean showDebugOutput = false;
+    private boolean debugOutputWithTransitions = false;
+    private boolean showRuleStack = false;
     
     private Set<Integer> ignoredTokens = new HashSet<>();
     private Set<Integer> preferredRules = new HashSet<>();

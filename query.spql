@@ -1,1 +1,1 @@
-SELECT A, B AND COUNT(C) FROM TABLE ONE, TWO __SCHROD
+select a from building where

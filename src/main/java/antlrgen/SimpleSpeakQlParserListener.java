@@ -42,30 +42,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitParenthesisSelect(SimpleSpeakQlParser.ParenthesisSelectContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code unionSelect}
-	 * labeled alternative in {@link SimpleSpeakQlParser#selectStatement}.
-	 * @param ctx the parse tree
-	 */
-	void enterUnionSelect(SimpleSpeakQlParser.UnionSelectContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code unionSelect}
-	 * labeled alternative in {@link SimpleSpeakQlParser#selectStatement}.
-	 * @param ctx the parse tree
-	 */
-	void exitUnionSelect(SimpleSpeakQlParser.UnionSelectContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code unionParenthesisSelect}
-	 * labeled alternative in {@link SimpleSpeakQlParser#selectStatement}.
-	 * @param ctx the parse tree
-	 */
-	void enterUnionParenthesisSelect(SimpleSpeakQlParser.UnionParenthesisSelectContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code unionParenthesisSelect}
-	 * labeled alternative in {@link SimpleSpeakQlParser#selectStatement}.
-	 * @param ctx the parse tree
-	 */
-	void exitUnionParenthesisSelect(SimpleSpeakQlParser.UnionParenthesisSelectContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code singleQuerySpecification}
 	 * labeled alternative in {@link SimpleSpeakQlParser#querySpecification}.
 	 * @param ctx the parse tree
@@ -216,18 +192,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitSelectFunctionElement(SimpleSpeakQlParser.SelectFunctionElementContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code selectExpressionElement}
-	 * labeled alternative in {@link SimpleSpeakQlParser#selectElement}.
-	 * @param ctx the parse tree
-	 */
-	void enterSelectExpressionElement(SimpleSpeakQlParser.SelectExpressionElementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code selectExpressionElement}
-	 * labeled alternative in {@link SimpleSpeakQlParser#selectElement}.
-	 * @param ctx the parse tree
-	 */
-	void exitSelectExpressionElement(SimpleSpeakQlParser.SelectExpressionElementContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#fullId}.
 	 * @param ctx the parse tree
 	 */
@@ -258,46 +222,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitSimpleId(SimpleSpeakQlParser.SimpleIdContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#charsetNameBase}.
-	 * @param ctx the parse tree
-	 */
-	void enterCharsetNameBase(SimpleSpeakQlParser.CharsetNameBaseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#charsetNameBase}.
-	 * @param ctx the parse tree
-	 */
-	void exitCharsetNameBase(SimpleSpeakQlParser.CharsetNameBaseContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#transactionLevelBase}.
-	 * @param ctx the parse tree
-	 */
-	void enterTransactionLevelBase(SimpleSpeakQlParser.TransactionLevelBaseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#transactionLevelBase}.
-	 * @param ctx the parse tree
-	 */
-	void exitTransactionLevelBase(SimpleSpeakQlParser.TransactionLevelBaseContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#engineName}.
-	 * @param ctx the parse tree
-	 */
-	void enterEngineName(SimpleSpeakQlParser.EngineNameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#engineName}.
-	 * @param ctx the parse tree
-	 */
-	void exitEngineName(SimpleSpeakQlParser.EngineNameContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#privilegesBase}.
-	 * @param ctx the parse tree
-	 */
-	void enterPrivilegesBase(SimpleSpeakQlParser.PrivilegesBaseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#privilegesBase}.
-	 * @param ctx the parse tree
-	 */
-	void exitPrivilegesBase(SimpleSpeakQlParser.PrivilegesBaseContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#intervalTypeBase}.
 	 * @param ctx the parse tree
 	 */
@@ -307,36 +231,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitIntervalTypeBase(SimpleSpeakQlParser.IntervalTypeBaseContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#dataTypeBase}.
-	 * @param ctx the parse tree
-	 */
-	void enterDataTypeBase(SimpleSpeakQlParser.DataTypeBaseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#dataTypeBase}.
-	 * @param ctx the parse tree
-	 */
-	void exitDataTypeBase(SimpleSpeakQlParser.DataTypeBaseContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#keywordsCanBeId}.
-	 * @param ctx the parse tree
-	 */
-	void enterKeywordsCanBeId(SimpleSpeakQlParser.KeywordsCanBeIdContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#keywordsCanBeId}.
-	 * @param ctx the parse tree
-	 */
-	void exitKeywordsCanBeId(SimpleSpeakQlParser.KeywordsCanBeIdContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#functionNameBase}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionNameBase(SimpleSpeakQlParser.FunctionNameBaseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#functionNameBase}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionNameBase(SimpleSpeakQlParser.FunctionNameBaseContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#selectElementDot}.
 	 * @param ctx the parse tree
@@ -378,18 +272,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitSelectElementAs(SimpleSpeakQlParser.SelectElementAsContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code specificFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#functionCall}.
-	 * @param ctx the parse tree
-	 */
-	void enterSpecificFunctionCall(SimpleSpeakQlParser.SpecificFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code specificFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#functionCall}.
-	 * @param ctx the parse tree
-	 */
-	void exitSpecificFunctionCall(SimpleSpeakQlParser.SpecificFunctionCallContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code aggregateFunctionCall}
 	 * labeled alternative in {@link SimpleSpeakQlParser#functionCall}.
 	 * @param ctx the parse tree
@@ -402,18 +284,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitAggregateFunctionCall(SimpleSpeakQlParser.AggregateFunctionCallContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code nonAggregateFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#functionCall}.
-	 * @param ctx the parse tree
-	 */
-	void enterNonAggregateFunctionCall(SimpleSpeakQlParser.NonAggregateFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code nonAggregateFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#functionCall}.
-	 * @param ctx the parse tree
-	 */
-	void exitNonAggregateFunctionCall(SimpleSpeakQlParser.NonAggregateFunctionCallContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code scalarFunctionCall}
 	 * labeled alternative in {@link SimpleSpeakQlParser#functionCall}.
 	 * @param ctx the parse tree
@@ -425,186 +295,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitScalarFunctionCall(SimpleSpeakQlParser.ScalarFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code udfFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#functionCall}.
-	 * @param ctx the parse tree
-	 */
-	void enterUdfFunctionCall(SimpleSpeakQlParser.UdfFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code udfFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#functionCall}.
-	 * @param ctx the parse tree
-	 */
-	void exitUdfFunctionCall(SimpleSpeakQlParser.UdfFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code passwordFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#functionCall}.
-	 * @param ctx the parse tree
-	 */
-	void enterPasswordFunctionCall(SimpleSpeakQlParser.PasswordFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code passwordFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#functionCall}.
-	 * @param ctx the parse tree
-	 */
-	void exitPasswordFunctionCall(SimpleSpeakQlParser.PasswordFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code simpleFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterSimpleFunctionCall(SimpleSpeakQlParser.SimpleFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code simpleFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitSimpleFunctionCall(SimpleSpeakQlParser.SimpleFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code dataTypeFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterDataTypeFunctionCall(SimpleSpeakQlParser.DataTypeFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code dataTypeFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitDataTypeFunctionCall(SimpleSpeakQlParser.DataTypeFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code valuesFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterValuesFunctionCall(SimpleSpeakQlParser.ValuesFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code valuesFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitValuesFunctionCall(SimpleSpeakQlParser.ValuesFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code caseExpressionFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterCaseExpressionFunctionCall(SimpleSpeakQlParser.CaseExpressionFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code caseExpressionFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitCaseExpressionFunctionCall(SimpleSpeakQlParser.CaseExpressionFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code caseFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterCaseFunctionCall(SimpleSpeakQlParser.CaseFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code caseFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitCaseFunctionCall(SimpleSpeakQlParser.CaseFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code charFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterCharFunctionCall(SimpleSpeakQlParser.CharFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code charFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitCharFunctionCall(SimpleSpeakQlParser.CharFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code positionFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterPositionFunctionCall(SimpleSpeakQlParser.PositionFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code positionFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitPositionFunctionCall(SimpleSpeakQlParser.PositionFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code substrFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterSubstrFunctionCall(SimpleSpeakQlParser.SubstrFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code substrFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitSubstrFunctionCall(SimpleSpeakQlParser.SubstrFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code trimFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterTrimFunctionCall(SimpleSpeakQlParser.TrimFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code trimFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitTrimFunctionCall(SimpleSpeakQlParser.TrimFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code weightFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterWeightFunctionCall(SimpleSpeakQlParser.WeightFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code weightFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitWeightFunctionCall(SimpleSpeakQlParser.WeightFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code extractFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterExtractFunctionCall(SimpleSpeakQlParser.ExtractFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code extractFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitExtractFunctionCall(SimpleSpeakQlParser.ExtractFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code getFormatFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterGetFormatFunctionCall(SimpleSpeakQlParser.GetFormatFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code getFormatFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitGetFormatFunctionCall(SimpleSpeakQlParser.GetFormatFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code jsonValueFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterJsonValueFunctionCall(SimpleSpeakQlParser.JsonValueFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code jsonValueFunctionCall}
-	 * labeled alternative in {@link SimpleSpeakQlParser#specificFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitJsonValueFunctionCall(SimpleSpeakQlParser.JsonValueFunctionCallContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#leftParen}.
 	 * @param ctx the parse tree
@@ -914,46 +604,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitHavingKeyword(SimpleSpeakQlParser.HavingKeywordContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#windowClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterWindowClause(SimpleSpeakQlParser.WindowClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#windowClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitWindowClause(SimpleSpeakQlParser.WindowClauseContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#windowName}.
-	 * @param ctx the parse tree
-	 */
-	void enterWindowName(SimpleSpeakQlParser.WindowNameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#windowName}.
-	 * @param ctx the parse tree
-	 */
-	void exitWindowName(SimpleSpeakQlParser.WindowNameContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#windowSpec}.
-	 * @param ctx the parse tree
-	 */
-	void enterWindowSpec(SimpleSpeakQlParser.WindowSpecContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#windowSpec}.
-	 * @param ctx the parse tree
-	 */
-	void exitWindowSpec(SimpleSpeakQlParser.WindowSpecContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#partitionClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterPartitionClause(SimpleSpeakQlParser.PartitionClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#partitionClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitPartitionClause(SimpleSpeakQlParser.PartitionClauseContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#orderByClause}.
 	 * @param ctx the parse tree
 	 */
@@ -973,56 +623,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitOrderByExpression(SimpleSpeakQlParser.OrderByExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#frameClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterFrameClause(SimpleSpeakQlParser.FrameClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#frameClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitFrameClause(SimpleSpeakQlParser.FrameClauseContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#frameUnits}.
-	 * @param ctx the parse tree
-	 */
-	void enterFrameUnits(SimpleSpeakQlParser.FrameUnitsContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#frameUnits}.
-	 * @param ctx the parse tree
-	 */
-	void exitFrameUnits(SimpleSpeakQlParser.FrameUnitsContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#frameExtent}.
-	 * @param ctx the parse tree
-	 */
-	void enterFrameExtent(SimpleSpeakQlParser.FrameExtentContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#frameExtent}.
-	 * @param ctx the parse tree
-	 */
-	void exitFrameExtent(SimpleSpeakQlParser.FrameExtentContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#frameRange}.
-	 * @param ctx the parse tree
-	 */
-	void enterFrameRange(SimpleSpeakQlParser.FrameRangeContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#frameRange}.
-	 * @param ctx the parse tree
-	 */
-	void exitFrameRange(SimpleSpeakQlParser.FrameRangeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#frameBetween}.
-	 * @param ctx the parse tree
-	 */
-	void enterFrameBetween(SimpleSpeakQlParser.FrameBetweenContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#frameBetween}.
-	 * @param ctx the parse tree
-	 */
-	void exitFrameBetween(SimpleSpeakQlParser.FrameBetweenContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#limitClause}.
 	 * @param ctx the parse tree
@@ -1044,82 +644,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitLimitClauseAtom(SimpleSpeakQlParser.LimitClauseAtomContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code selectIntoVariables}
-	 * labeled alternative in {@link SimpleSpeakQlParser#selectIntoExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterSelectIntoVariables(SimpleSpeakQlParser.SelectIntoVariablesContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code selectIntoVariables}
-	 * labeled alternative in {@link SimpleSpeakQlParser#selectIntoExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitSelectIntoVariables(SimpleSpeakQlParser.SelectIntoVariablesContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code selectIntoDumpFile}
-	 * labeled alternative in {@link SimpleSpeakQlParser#selectIntoExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterSelectIntoDumpFile(SimpleSpeakQlParser.SelectIntoDumpFileContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code selectIntoDumpFile}
-	 * labeled alternative in {@link SimpleSpeakQlParser#selectIntoExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitSelectIntoDumpFile(SimpleSpeakQlParser.SelectIntoDumpFileContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code selectIntoTextFile}
-	 * labeled alternative in {@link SimpleSpeakQlParser#selectIntoExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterSelectIntoTextFile(SimpleSpeakQlParser.SelectIntoTextFileContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code selectIntoTextFile}
-	 * labeled alternative in {@link SimpleSpeakQlParser#selectIntoExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitSelectIntoTextFile(SimpleSpeakQlParser.SelectIntoTextFileContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#assignmentField}.
-	 * @param ctx the parse tree
-	 */
-	void enterAssignmentField(SimpleSpeakQlParser.AssignmentFieldContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#assignmentField}.
-	 * @param ctx the parse tree
-	 */
-	void exitAssignmentField(SimpleSpeakQlParser.AssignmentFieldContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#selectFieldsInto}.
-	 * @param ctx the parse tree
-	 */
-	void enterSelectFieldsInto(SimpleSpeakQlParser.SelectFieldsIntoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#selectFieldsInto}.
-	 * @param ctx the parse tree
-	 */
-	void exitSelectFieldsInto(SimpleSpeakQlParser.SelectFieldsIntoContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#selectLinesInto}.
-	 * @param ctx the parse tree
-	 */
-	void enterSelectLinesInto(SimpleSpeakQlParser.SelectLinesIntoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#selectLinesInto}.
-	 * @param ctx the parse tree
-	 */
-	void exitSelectLinesInto(SimpleSpeakQlParser.SelectLinesIntoContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#lockClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterLockClause(SimpleSpeakQlParser.LockClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#lockClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitLockClause(SimpleSpeakQlParser.LockClauseContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#queryExpression}.
 	 * @param ctx the parse tree
 	 */
@@ -1129,16 +653,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitQueryExpression(SimpleSpeakQlParser.QueryExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#querySpecificationNointo}.
-	 * @param ctx the parse tree
-	 */
-	void enterQuerySpecificationNointo(SimpleSpeakQlParser.QuerySpecificationNointoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#querySpecificationNointo}.
-	 * @param ctx the parse tree
-	 */
-	void exitQuerySpecificationNointo(SimpleSpeakQlParser.QuerySpecificationNointoContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#fromClauseNoJoin}.
 	 * @param ctx the parse tree
@@ -1238,18 +752,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitTableSourceNested(SimpleSpeakQlParser.TableSourceNestedContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code subqueryTableItem}
-	 * labeled alternative in {@link SimpleSpeakQlParser#tableSourceItem}.
-	 * @param ctx the parse tree
-	 */
-	void enterSubqueryTableItem(SimpleSpeakQlParser.SubqueryTableItemContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code subqueryTableItem}
-	 * labeled alternative in {@link SimpleSpeakQlParser#tableSourceItem}.
-	 * @param ctx the parse tree
-	 */
-	void exitSubqueryTableItem(SimpleSpeakQlParser.SubqueryTableItemContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code onlyTableNameItem}
 	 * labeled alternative in {@link SimpleSpeakQlParser#tableSourceItem}.
 	 * @param ctx the parse tree
@@ -1262,17 +764,17 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitOnlyTableNameItem(SimpleSpeakQlParser.OnlyTableNameItemContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code atomTableItem}
+	 * Enter a parse tree produced by the {@code subqueryTableItem}
 	 * labeled alternative in {@link SimpleSpeakQlParser#tableSourceItem}.
 	 * @param ctx the parse tree
 	 */
-	void enterAtomTableItem(SimpleSpeakQlParser.AtomTableItemContext ctx);
+	void enterSubqueryTableItem(SimpleSpeakQlParser.SubqueryTableItemContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code atomTableItem}
+	 * Exit a parse tree produced by the {@code subqueryTableItem}
 	 * labeled alternative in {@link SimpleSpeakQlParser#tableSourceItem}.
 	 * @param ctx the parse tree
 	 */
-	void exitAtomTableItem(SimpleSpeakQlParser.AtomTableItemContext ctx);
+	void exitSubqueryTableItem(SimpleSpeakQlParser.SubqueryTableItemContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code tableSourcesItem}
 	 * labeled alternative in {@link SimpleSpeakQlParser#tableSourceItem}.
@@ -1526,36 +1028,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitTableSourceDelimiter(SimpleSpeakQlParser.TableSourceDelimiterContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#unionStatement}.
-	 * @param ctx the parse tree
-	 */
-	void enterUnionStatement(SimpleSpeakQlParser.UnionStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#unionStatement}.
-	 * @param ctx the parse tree
-	 */
-	void exitUnionStatement(SimpleSpeakQlParser.UnionStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#queryExpressionNointo}.
-	 * @param ctx the parse tree
-	 */
-	void enterQueryExpressionNointo(SimpleSpeakQlParser.QueryExpressionNointoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#queryExpressionNointo}.
-	 * @param ctx the parse tree
-	 */
-	void exitQueryExpressionNointo(SimpleSpeakQlParser.QueryExpressionNointoContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#unionParenthesis}.
-	 * @param ctx the parse tree
-	 */
-	void enterUnionParenthesis(SimpleSpeakQlParser.UnionParenthesisContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#unionParenthesis}.
-	 * @param ctx the parse tree
-	 */
-	void exitUnionParenthesis(SimpleSpeakQlParser.UnionParenthesisContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#expressions}.
 	 * @param ctx the parse tree
 	 */
@@ -1598,29 +1070,53 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitUnaryExpressionAtom(SimpleSpeakQlParser.UnaryExpressionAtomContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code collateExpressionAtom}
+	 * Enter a parse tree produced by the {@code subqueryExpressionAtom}
 	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
 	 * @param ctx the parse tree
 	 */
-	void enterCollateExpressionAtom(SimpleSpeakQlParser.CollateExpressionAtomContext ctx);
+	void enterSubqueryExpressionAtom(SimpleSpeakQlParser.SubqueryExpressionAtomContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code collateExpressionAtom}
+	 * Exit a parse tree produced by the {@code subqueryExpressionAtom}
 	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
 	 * @param ctx the parse tree
 	 */
-	void exitCollateExpressionAtom(SimpleSpeakQlParser.CollateExpressionAtomContext ctx);
+	void exitSubqueryExpressionAtom(SimpleSpeakQlParser.SubqueryExpressionAtomContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code mysqlVariableExpressionAtom}
+	 * Enter a parse tree produced by the {@code constantExpressionAtom}
 	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
 	 * @param ctx the parse tree
 	 */
-	void enterMysqlVariableExpressionAtom(SimpleSpeakQlParser.MysqlVariableExpressionAtomContext ctx);
+	void enterConstantExpressionAtom(SimpleSpeakQlParser.ConstantExpressionAtomContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code mysqlVariableExpressionAtom}
+	 * Exit a parse tree produced by the {@code constantExpressionAtom}
 	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
 	 * @param ctx the parse tree
 	 */
-	void exitMysqlVariableExpressionAtom(SimpleSpeakQlParser.MysqlVariableExpressionAtomContext ctx);
+	void exitConstantExpressionAtom(SimpleSpeakQlParser.ConstantExpressionAtomContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code functionCallExpressionAtom}
+	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunctionCallExpressionAtom(SimpleSpeakQlParser.FunctionCallExpressionAtomContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code functionCallExpressionAtom}
+	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunctionCallExpressionAtom(SimpleSpeakQlParser.FunctionCallExpressionAtomContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code fullColumnNameExpressionAtom}
+	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
+	 * @param ctx the parse tree
+	 */
+	void enterFullColumnNameExpressionAtom(SimpleSpeakQlParser.FullColumnNameExpressionAtomContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code fullColumnNameExpressionAtom}
+	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
+	 * @param ctx the parse tree
+	 */
+	void exitFullColumnNameExpressionAtom(SimpleSpeakQlParser.FullColumnNameExpressionAtomContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code nestedExpressionAtom}
 	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
@@ -1669,102 +1165,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExistsExpressionAtom(SimpleSpeakQlParser.ExistsExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code intervalExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterIntervalExpressionAtom(SimpleSpeakQlParser.IntervalExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code intervalExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitIntervalExpressionAtom(SimpleSpeakQlParser.IntervalExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code jsonExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterJsonExpressionAtom(SimpleSpeakQlParser.JsonExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code jsonExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitJsonExpressionAtom(SimpleSpeakQlParser.JsonExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code subqueryExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterSubqueryExpressionAtom(SimpleSpeakQlParser.SubqueryExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code subqueryExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitSubqueryExpressionAtom(SimpleSpeakQlParser.SubqueryExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code constantExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstantExpressionAtom(SimpleSpeakQlParser.ConstantExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code constantExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstantExpressionAtom(SimpleSpeakQlParser.ConstantExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code functionCallExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionCallExpressionAtom(SimpleSpeakQlParser.FunctionCallExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code functionCallExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionCallExpressionAtom(SimpleSpeakQlParser.FunctionCallExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code binaryExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterBinaryExpressionAtom(SimpleSpeakQlParser.BinaryExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code binaryExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitBinaryExpressionAtom(SimpleSpeakQlParser.BinaryExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code fullColumnNameExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterFullColumnNameExpressionAtom(SimpleSpeakQlParser.FullColumnNameExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code fullColumnNameExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitFullColumnNameExpressionAtom(SimpleSpeakQlParser.FullColumnNameExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code bitExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterBitExpressionAtom(SimpleSpeakQlParser.BitExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code bitExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitBitExpressionAtom(SimpleSpeakQlParser.BitExpressionAtomContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#constant}.
 	 * @param ctx the parse tree
@@ -1826,16 +1226,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitBooleanLiteral(SimpleSpeakQlParser.BooleanLiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#mysqlVariable}.
-	 * @param ctx the parse tree
-	 */
-	void enterMysqlVariable(SimpleSpeakQlParser.MysqlVariableContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#mysqlVariable}.
-	 * @param ctx the parse tree
-	 */
-	void exitMysqlVariable(SimpleSpeakQlParser.MysqlVariableContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#unaryOperator}.
 	 * @param ctx the parse tree
 	 */
@@ -1845,26 +1235,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitUnaryOperator(SimpleSpeakQlParser.UnaryOperatorContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#intervalType}.
-	 * @param ctx the parse tree
-	 */
-	void enterIntervalType(SimpleSpeakQlParser.IntervalTypeContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#intervalType}.
-	 * @param ctx the parse tree
-	 */
-	void exitIntervalType(SimpleSpeakQlParser.IntervalTypeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#bitOperator}.
-	 * @param ctx the parse tree
-	 */
-	void enterBitOperator(SimpleSpeakQlParser.BitOperatorContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#bitOperator}.
-	 * @param ctx the parse tree
-	 */
-	void exitBitOperator(SimpleSpeakQlParser.BitOperatorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#mathOperator}.
 	 * @param ctx the parse tree
@@ -1876,66 +1246,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitMathOperator(SimpleSpeakQlParser.MathOperatorContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#jsonOperator}.
-	 * @param ctx the parse tree
-	 */
-	void enterJsonOperator(SimpleSpeakQlParser.JsonOperatorContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#jsonOperator}.
-	 * @param ctx the parse tree
-	 */
-	void exitJsonOperator(SimpleSpeakQlParser.JsonOperatorContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#convertedDataType}.
-	 * @param ctx the parse tree
-	 */
-	void enterConvertedDataType(SimpleSpeakQlParser.ConvertedDataTypeContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#convertedDataType}.
-	 * @param ctx the parse tree
-	 */
-	void exitConvertedDataType(SimpleSpeakQlParser.ConvertedDataTypeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#lengthOneDimension}.
-	 * @param ctx the parse tree
-	 */
-	void enterLengthOneDimension(SimpleSpeakQlParser.LengthOneDimensionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#lengthOneDimension}.
-	 * @param ctx the parse tree
-	 */
-	void exitLengthOneDimension(SimpleSpeakQlParser.LengthOneDimensionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#charsetName}.
-	 * @param ctx the parse tree
-	 */
-	void enterCharsetName(SimpleSpeakQlParser.CharsetNameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#charsetName}.
-	 * @param ctx the parse tree
-	 */
-	void exitCharsetName(SimpleSpeakQlParser.CharsetNameContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#lengthTwoDimension}.
-	 * @param ctx the parse tree
-	 */
-	void enterLengthTwoDimension(SimpleSpeakQlParser.LengthTwoDimensionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#lengthTwoDimension}.
-	 * @param ctx the parse tree
-	 */
-	void exitLengthTwoDimension(SimpleSpeakQlParser.LengthTwoDimensionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#caseFuncAlternative}.
-	 * @param ctx the parse tree
-	 */
-	void enterCaseFuncAlternative(SimpleSpeakQlParser.CaseFuncAlternativeContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#caseFuncAlternative}.
-	 * @param ctx the parse tree
-	 */
-	void exitCaseFuncAlternative(SimpleSpeakQlParser.CaseFuncAlternativeContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#functionArgs}.
 	 * @param ctx the parse tree
 	 */
@@ -1945,60 +1255,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFunctionArgs(SimpleSpeakQlParser.FunctionArgsContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code levelWeightList}
-	 * labeled alternative in {@link SimpleSpeakQlParser#levelsInWeightString}.
-	 * @param ctx the parse tree
-	 */
-	void enterLevelWeightList(SimpleSpeakQlParser.LevelWeightListContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code levelWeightList}
-	 * labeled alternative in {@link SimpleSpeakQlParser#levelsInWeightString}.
-	 * @param ctx the parse tree
-	 */
-	void exitLevelWeightList(SimpleSpeakQlParser.LevelWeightListContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code levelWeightRange}
-	 * labeled alternative in {@link SimpleSpeakQlParser#levelsInWeightString}.
-	 * @param ctx the parse tree
-	 */
-	void enterLevelWeightRange(SimpleSpeakQlParser.LevelWeightRangeContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code levelWeightRange}
-	 * labeled alternative in {@link SimpleSpeakQlParser#levelsInWeightString}.
-	 * @param ctx the parse tree
-	 */
-	void exitLevelWeightRange(SimpleSpeakQlParser.LevelWeightRangeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#levelInWeightListElement}.
-	 * @param ctx the parse tree
-	 */
-	void enterLevelInWeightListElement(SimpleSpeakQlParser.LevelInWeightListElementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#levelInWeightListElement}.
-	 * @param ctx the parse tree
-	 */
-	void exitLevelInWeightListElement(SimpleSpeakQlParser.LevelInWeightListElementContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#defaultValue}.
-	 * @param ctx the parse tree
-	 */
-	void enterDefaultValue(SimpleSpeakQlParser.DefaultValueContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#defaultValue}.
-	 * @param ctx the parse tree
-	 */
-	void exitDefaultValue(SimpleSpeakQlParser.DefaultValueContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#currentTimestamp}.
-	 * @param ctx the parse tree
-	 */
-	void enterCurrentTimestamp(SimpleSpeakQlParser.CurrentTimestampContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#currentTimestamp}.
-	 * @param ctx the parse tree
-	 */
-	void exitCurrentTimestamp(SimpleSpeakQlParser.CurrentTimestampContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#aggregateWindowedFunction}.
 	 * @param ctx the parse tree
@@ -2040,16 +1296,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitFunctionArg(SimpleSpeakQlParser.FunctionArgContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#overClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterOverClause(SimpleSpeakQlParser.OverClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#overClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitOverClause(SimpleSpeakQlParser.OverClauseContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#allAggregatorKeyword}.
 	 * @param ctx the parse tree
 	 */
@@ -2070,16 +1316,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitDistinctAggregatorKeyword(SimpleSpeakQlParser.DistinctAggregatorKeywordContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#nonAggregateWindowedFunction}.
-	 * @param ctx the parse tree
-	 */
-	void enterNonAggregateWindowedFunction(SimpleSpeakQlParser.NonAggregateWindowedFunctionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#nonAggregateWindowedFunction}.
-	 * @param ctx the parse tree
-	 */
-	void exitNonAggregateWindowedFunction(SimpleSpeakQlParser.NonAggregateWindowedFunctionContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#scalarFunctionName}.
 	 * @param ctx the parse tree
 	 */
@@ -2089,16 +1325,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitScalarFunctionName(SimpleSpeakQlParser.ScalarFunctionNameContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#passwordFunctionClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterPasswordFunctionClause(SimpleSpeakQlParser.PasswordFunctionClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#passwordFunctionClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitPasswordFunctionClause(SimpleSpeakQlParser.PasswordFunctionClauseContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#selectElementDelimiter}.
 	 * @param ctx the parse tree
