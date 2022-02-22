@@ -364,18 +364,6 @@ public class SimpleSpeakQlParserBaseListener implements SimpleSpeakQlParserListe
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIsExpression(SimpleSpeakQlParser.IsExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitIsExpression(SimpleSpeakQlParser.IsExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterNotExpression(SimpleSpeakQlParser.NotExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -388,13 +376,13 @@ public class SimpleSpeakQlParserBaseListener implements SimpleSpeakQlParserListe
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLogicalExpression(SimpleSpeakQlParser.LogicalExpressionContext ctx) { }
+	@Override public void enterIsExpression(SimpleSpeakQlParser.IsExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLogicalExpression(SimpleSpeakQlParser.LogicalExpressionContext ctx) { }
+	@Override public void exitIsExpression(SimpleSpeakQlParser.IsExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -424,49 +412,13 @@ public class SimpleSpeakQlParserBaseListener implements SimpleSpeakQlParserListe
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSoundsLikePredicate(SimpleSpeakQlParser.SoundsLikePredicateContext ctx) { }
+	@Override public void enterIsNullPredicate(SimpleSpeakQlParser.IsNullPredicateContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSoundsLikePredicate(SimpleSpeakQlParser.SoundsLikePredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExpressionAtomPredicate(SimpleSpeakQlParser.ExpressionAtomPredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExpressionAtomPredicate(SimpleSpeakQlParser.ExpressionAtomPredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterSubqueryComparisonPredicate(SimpleSpeakQlParser.SubqueryComparisonPredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitSubqueryComparisonPredicate(SimpleSpeakQlParser.SubqueryComparisonPredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterJsonMemberOfPredicate(SimpleSpeakQlParser.JsonMemberOfPredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitJsonMemberOfPredicate(SimpleSpeakQlParser.JsonMemberOfPredicateContext ctx) { }
+	@Override public void exitIsNullPredicate(SimpleSpeakQlParser.IsNullPredicateContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -484,61 +436,13 @@ public class SimpleSpeakQlParserBaseListener implements SimpleSpeakQlParserListe
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInPredicate(SimpleSpeakQlParser.InPredicateContext ctx) { }
+	@Override public void enterSimpleExpressionAtomPredicate(SimpleSpeakQlParser.SimpleExpressionAtomPredicateContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInPredicate(SimpleSpeakQlParser.InPredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterBetweenPredicate(SimpleSpeakQlParser.BetweenPredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitBetweenPredicate(SimpleSpeakQlParser.BetweenPredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterIsNullPredicate(SimpleSpeakQlParser.IsNullPredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitIsNullPredicate(SimpleSpeakQlParser.IsNullPredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterLikePredicate(SimpleSpeakQlParser.LikePredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitLikePredicate(SimpleSpeakQlParser.LikePredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterRegexpPredicate(SimpleSpeakQlParser.RegexpPredicateContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitRegexpPredicate(SimpleSpeakQlParser.RegexpPredicateContext ctx) { }
+	@Override public void exitSimpleExpressionAtomPredicate(SimpleSpeakQlParser.SimpleExpressionAtomPredicateContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1180,6 +1084,18 @@ public class SimpleSpeakQlParserBaseListener implements SimpleSpeakQlParserListe
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterWhereExpressionDelimiter(SimpleSpeakQlParser.WhereExpressionDelimiterContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitWhereExpressionDelimiter(SimpleSpeakQlParser.WhereExpressionDelimiterContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterNullNotnull(SimpleSpeakQlParser.NullNotnullContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -1204,109 +1120,13 @@ public class SimpleSpeakQlParserBaseListener implements SimpleSpeakQlParserListe
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterUnaryExpressionAtom(SimpleSpeakQlParser.UnaryExpressionAtomContext ctx) { }
+	@Override public void enterSimpleExpressionAtom(SimpleSpeakQlParser.SimpleExpressionAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitUnaryExpressionAtom(SimpleSpeakQlParser.UnaryExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterSubqueryExpressionAtom(SimpleSpeakQlParser.SubqueryExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitSubqueryExpressionAtom(SimpleSpeakQlParser.SubqueryExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterConstantExpressionAtom(SimpleSpeakQlParser.ConstantExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitConstantExpressionAtom(SimpleSpeakQlParser.ConstantExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterFunctionCallExpressionAtom(SimpleSpeakQlParser.FunctionCallExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFunctionCallExpressionAtom(SimpleSpeakQlParser.FunctionCallExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterFullColumnNameExpressionAtom(SimpleSpeakQlParser.FullColumnNameExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFullColumnNameExpressionAtom(SimpleSpeakQlParser.FullColumnNameExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterNestedExpressionAtom(SimpleSpeakQlParser.NestedExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitNestedExpressionAtom(SimpleSpeakQlParser.NestedExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterNestedRowExpressionAtom(SimpleSpeakQlParser.NestedRowExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitNestedRowExpressionAtom(SimpleSpeakQlParser.NestedRowExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterMathExpressionAtom(SimpleSpeakQlParser.MathExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitMathExpressionAtom(SimpleSpeakQlParser.MathExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExistsExpressionAtom(SimpleSpeakQlParser.ExistsExpressionAtomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExistsExpressionAtom(SimpleSpeakQlParser.ExistsExpressionAtomContext ctx) { }
+	@Override public void exitSimpleExpressionAtom(SimpleSpeakQlParser.SimpleExpressionAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

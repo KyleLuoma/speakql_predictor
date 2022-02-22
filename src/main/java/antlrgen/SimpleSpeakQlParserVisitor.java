@@ -194,13 +194,6 @@ public interface SimpleSpeakQlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitRightParen(SimpleSpeakQlParser.RightParenContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code isExpression}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitIsExpression(SimpleSpeakQlParser.IsExpressionContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code notExpression}
 	 * labeled alternative in {@link SimpleSpeakQlParser#expression}.
 	 * @param ctx the parse tree
@@ -208,12 +201,12 @@ public interface SimpleSpeakQlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitNotExpression(SimpleSpeakQlParser.NotExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code logicalExpression}
+	 * Visit a parse tree produced by the {@code isExpression}
 	 * labeled alternative in {@link SimpleSpeakQlParser#expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLogicalExpression(SimpleSpeakQlParser.LogicalExpressionContext ctx);
+	T visitIsExpression(SimpleSpeakQlParser.IsExpressionContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code predicateExpression}
 	 * labeled alternative in {@link SimpleSpeakQlParser#expression}.
@@ -228,33 +221,12 @@ public interface SimpleSpeakQlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitLogicalOperator(SimpleSpeakQlParser.LogicalOperatorContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code soundsLikePredicate}
+	 * Visit a parse tree produced by the {@code isNullPredicate}
 	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitSoundsLikePredicate(SimpleSpeakQlParser.SoundsLikePredicateContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code expressionAtomPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExpressionAtomPredicate(SimpleSpeakQlParser.ExpressionAtomPredicateContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code subqueryComparisonPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitSubqueryComparisonPredicate(SimpleSpeakQlParser.SubqueryComparisonPredicateContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code jsonMemberOfPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitJsonMemberOfPredicate(SimpleSpeakQlParser.JsonMemberOfPredicateContext ctx);
+	T visitIsNullPredicate(SimpleSpeakQlParser.IsNullPredicateContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code binaryComparisonPredicate}
 	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
@@ -263,40 +235,12 @@ public interface SimpleSpeakQlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitBinaryComparisonPredicate(SimpleSpeakQlParser.BinaryComparisonPredicateContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code inPredicate}
+	 * Visit a parse tree produced by the {@code simpleExpressionAtomPredicate}
 	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitInPredicate(SimpleSpeakQlParser.InPredicateContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code betweenPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBetweenPredicate(SimpleSpeakQlParser.BetweenPredicateContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code isNullPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitIsNullPredicate(SimpleSpeakQlParser.IsNullPredicateContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code likePredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitLikePredicate(SimpleSpeakQlParser.LikePredicateContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code regexpPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitRegexpPredicate(SimpleSpeakQlParser.RegexpPredicateContext ctx);
+	T visitSimpleExpressionAtomPredicate(SimpleSpeakQlParser.SimpleExpressionAtomPredicateContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#isKeyword}.
 	 * @param ctx the parse tree
@@ -623,6 +567,12 @@ public interface SimpleSpeakQlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExpressions(SimpleSpeakQlParser.ExpressionsContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#whereExpressionDelimiter}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWhereExpressionDelimiter(SimpleSpeakQlParser.WhereExpressionDelimiterContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#nullNotnull}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -635,68 +585,11 @@ public interface SimpleSpeakQlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitComparisonOperator(SimpleSpeakQlParser.ComparisonOperatorContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code unaryExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
+	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#simpleExpressionAtom}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitUnaryExpressionAtom(SimpleSpeakQlParser.UnaryExpressionAtomContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code subqueryExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitSubqueryExpressionAtom(SimpleSpeakQlParser.SubqueryExpressionAtomContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code constantExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstantExpressionAtom(SimpleSpeakQlParser.ConstantExpressionAtomContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code functionCallExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunctionCallExpressionAtom(SimpleSpeakQlParser.FunctionCallExpressionAtomContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code fullColumnNameExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFullColumnNameExpressionAtom(SimpleSpeakQlParser.FullColumnNameExpressionAtomContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code nestedExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitNestedExpressionAtom(SimpleSpeakQlParser.NestedExpressionAtomContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code nestedRowExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitNestedRowExpressionAtom(SimpleSpeakQlParser.NestedRowExpressionAtomContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code mathExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitMathExpressionAtom(SimpleSpeakQlParser.MathExpressionAtomContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code existsExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExistsExpressionAtom(SimpleSpeakQlParser.ExistsExpressionAtomContext ctx);
+	T visitSimpleExpressionAtom(SimpleSpeakQlParser.SimpleExpressionAtomContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#constant}.
 	 * @param ctx the parse tree

@@ -62,15 +62,18 @@ public class Main {
         //Level 2 delimiter rule:
         if(includeL2DelimRules) {
             delimRuleSet.add(SimpleSpeakQlParser.RULE_whereKeyword);
-            //delimRuleSet.add(SimpleSpeakQlParser.RULE_fromKeyword);
+            delimRuleSet.add(SimpleSpeakQlParser.RULE_fromKeyword);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_joinKeyword);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_joinDirection);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_innerJoinKeyword);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_outerJoinKeyword);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_naturalJoinKeyword);
-            //delimRuleSet.add(SimpleSpeakQlParser.RULE_selectKeyword);
+            delimRuleSet.add(SimpleSpeakQlParser.RULE_selectKeyword);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_subQueryTable);
-            delimRuleSet.add(SimpleSpeakQlParser.RULE_expression);
+            //delimRuleSet.add(SimpleSpeakQlParser.RULE_expression);
+            delimRuleSet.add(SimpleSpeakQlParser.RULE_logicalOperator);
+            delimRuleSet.add(SimpleSpeakQlParser.RULE_groupByKeyword);
+            delimRuleSet.add(SimpleSpeakQlParser.RULE_selectModifierExpression);
         }
 
         //Level 3 delimiter rules:
@@ -94,7 +97,7 @@ public class Main {
                     0,
                     30,
                     stringRuleSet,
-                    "JOIN"
+                    "SELECT A FROM BUILDING WHERE"
             );
         }
 
@@ -232,7 +235,12 @@ public class Main {
             }
         }
 
-        CodeCompletionCore core = new CodeCompletionCore(parser, ruleSet, null);
+        HashSet<Integer> ignoreTokens = new HashSet<>();
+        ignoreTokens.add(parserPackage.getLexer().getTokenType("END_OF_FILE"));
+        ignoreTokens.add(parserPackage.getLexer().getTokenType("<EOF>"));
+        ignoreTokens.add(parserPackage.getLexer().getTokenType("-2"));
+
+        CodeCompletionCore core = new CodeCompletionCore(parser, ruleSet, ignoreTokens);
         CodeCompletionCore.CandidatesCollection collection = core.collectCandidates(tokens.getTokens().size() - 3, null);
 
         Set<Integer> ruleKeys = collection.rules.keySet();
@@ -246,7 +254,7 @@ public class Main {
                 );
                 continue;
             }
-            else if (depth < 10){
+            else if (depth < 16){
                 String newQuery = query.replace("__SCHROD", "") + rule + "_x __SCHROD";
                 //writeStringToFile("./allpossiblequeries.spql", newQuery.replace("__SCHROD", ""));
                 System.out.println(newQuery);
@@ -262,10 +270,12 @@ public class Main {
             if(query.contains(token)) {
                 continue;
             }
-            String newQuery = query.replace("__SCHROD", "") + " " + token + " __SCHROD";
-            //writeStringToFile("./allpossiblequeries.spql", newQuery.replace("__SCHROD", ""));
-            System.out.println(newQuery);
-            writeTrieFile(newQuery,delimRuleSet,idRuleSet,depth,maxDepth,stringExcludeRuleSet, removeFromOutput);
+            else if (depth < 16) {
+                String newQuery = query.replace("__SCHROD", "") + " " + token + " __SCHROD";
+                //writeStringToFile("./allpossiblequeries.spql", newQuery.replace("__SCHROD", ""));
+                System.out.println(newQuery);
+                writeTrieFile(newQuery, delimRuleSet, idRuleSet, depth, maxDepth, stringExcludeRuleSet, removeFromOutput);
+            }
         }
     }
 

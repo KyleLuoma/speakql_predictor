@@ -3,3 +3,4 @@ gen/
 target/
 out/
 allpossiblequeries.spql
+*tokens.spql

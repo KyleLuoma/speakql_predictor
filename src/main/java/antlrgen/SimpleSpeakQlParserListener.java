@@ -316,18 +316,6 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitRightParen(SimpleSpeakQlParser.RightParenContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code isExpression}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterIsExpression(SimpleSpeakQlParser.IsExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code isExpression}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitIsExpression(SimpleSpeakQlParser.IsExpressionContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code notExpression}
 	 * labeled alternative in {@link SimpleSpeakQlParser#expression}.
 	 * @param ctx the parse tree
@@ -340,17 +328,17 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitNotExpression(SimpleSpeakQlParser.NotExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code logicalExpression}
+	 * Enter a parse tree produced by the {@code isExpression}
 	 * labeled alternative in {@link SimpleSpeakQlParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterLogicalExpression(SimpleSpeakQlParser.LogicalExpressionContext ctx);
+	void enterIsExpression(SimpleSpeakQlParser.IsExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code logicalExpression}
+	 * Exit a parse tree produced by the {@code isExpression}
 	 * labeled alternative in {@link SimpleSpeakQlParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitLogicalExpression(SimpleSpeakQlParser.LogicalExpressionContext ctx);
+	void exitIsExpression(SimpleSpeakQlParser.IsExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code predicateExpression}
 	 * labeled alternative in {@link SimpleSpeakQlParser#expression}.
@@ -374,53 +362,17 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitLogicalOperator(SimpleSpeakQlParser.LogicalOperatorContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code soundsLikePredicate}
+	 * Enter a parse tree produced by the {@code isNullPredicate}
 	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
 	 * @param ctx the parse tree
 	 */
-	void enterSoundsLikePredicate(SimpleSpeakQlParser.SoundsLikePredicateContext ctx);
+	void enterIsNullPredicate(SimpleSpeakQlParser.IsNullPredicateContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code soundsLikePredicate}
+	 * Exit a parse tree produced by the {@code isNullPredicate}
 	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
 	 * @param ctx the parse tree
 	 */
-	void exitSoundsLikePredicate(SimpleSpeakQlParser.SoundsLikePredicateContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code expressionAtomPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void enterExpressionAtomPredicate(SimpleSpeakQlParser.ExpressionAtomPredicateContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code expressionAtomPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void exitExpressionAtomPredicate(SimpleSpeakQlParser.ExpressionAtomPredicateContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code subqueryComparisonPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void enterSubqueryComparisonPredicate(SimpleSpeakQlParser.SubqueryComparisonPredicateContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code subqueryComparisonPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void exitSubqueryComparisonPredicate(SimpleSpeakQlParser.SubqueryComparisonPredicateContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code jsonMemberOfPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void enterJsonMemberOfPredicate(SimpleSpeakQlParser.JsonMemberOfPredicateContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code jsonMemberOfPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void exitJsonMemberOfPredicate(SimpleSpeakQlParser.JsonMemberOfPredicateContext ctx);
+	void exitIsNullPredicate(SimpleSpeakQlParser.IsNullPredicateContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code binaryComparisonPredicate}
 	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
@@ -434,65 +386,17 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitBinaryComparisonPredicate(SimpleSpeakQlParser.BinaryComparisonPredicateContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code inPredicate}
+	 * Enter a parse tree produced by the {@code simpleExpressionAtomPredicate}
 	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
 	 * @param ctx the parse tree
 	 */
-	void enterInPredicate(SimpleSpeakQlParser.InPredicateContext ctx);
+	void enterSimpleExpressionAtomPredicate(SimpleSpeakQlParser.SimpleExpressionAtomPredicateContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code inPredicate}
+	 * Exit a parse tree produced by the {@code simpleExpressionAtomPredicate}
 	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
 	 * @param ctx the parse tree
 	 */
-	void exitInPredicate(SimpleSpeakQlParser.InPredicateContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code betweenPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void enterBetweenPredicate(SimpleSpeakQlParser.BetweenPredicateContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code betweenPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void exitBetweenPredicate(SimpleSpeakQlParser.BetweenPredicateContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code isNullPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void enterIsNullPredicate(SimpleSpeakQlParser.IsNullPredicateContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code isNullPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void exitIsNullPredicate(SimpleSpeakQlParser.IsNullPredicateContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code likePredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void enterLikePredicate(SimpleSpeakQlParser.LikePredicateContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code likePredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void exitLikePredicate(SimpleSpeakQlParser.LikePredicateContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code regexpPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void enterRegexpPredicate(SimpleSpeakQlParser.RegexpPredicateContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code regexpPredicate}
-	 * labeled alternative in {@link SimpleSpeakQlParser#predicate}.
-	 * @param ctx the parse tree
-	 */
-	void exitRegexpPredicate(SimpleSpeakQlParser.RegexpPredicateContext ctx);
+	void exitSimpleExpressionAtomPredicate(SimpleSpeakQlParser.SimpleExpressionAtomPredicateContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#isKeyword}.
 	 * @param ctx the parse tree
@@ -1038,6 +942,16 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitExpressions(SimpleSpeakQlParser.ExpressionsContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#whereExpressionDelimiter}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhereExpressionDelimiter(SimpleSpeakQlParser.WhereExpressionDelimiterContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#whereExpressionDelimiter}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhereExpressionDelimiter(SimpleSpeakQlParser.WhereExpressionDelimiterContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#nullNotnull}.
 	 * @param ctx the parse tree
 	 */
@@ -1058,113 +972,15 @@ public interface SimpleSpeakQlParserListener extends ParseTreeListener {
 	 */
 	void exitComparisonOperator(SimpleSpeakQlParser.ComparisonOperatorContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code unaryExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
+	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#simpleExpressionAtom}.
 	 * @param ctx the parse tree
 	 */
-	void enterUnaryExpressionAtom(SimpleSpeakQlParser.UnaryExpressionAtomContext ctx);
+	void enterSimpleExpressionAtom(SimpleSpeakQlParser.SimpleExpressionAtomContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code unaryExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
+	 * Exit a parse tree produced by {@link SimpleSpeakQlParser#simpleExpressionAtom}.
 	 * @param ctx the parse tree
 	 */
-	void exitUnaryExpressionAtom(SimpleSpeakQlParser.UnaryExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code subqueryExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterSubqueryExpressionAtom(SimpleSpeakQlParser.SubqueryExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code subqueryExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitSubqueryExpressionAtom(SimpleSpeakQlParser.SubqueryExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code constantExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstantExpressionAtom(SimpleSpeakQlParser.ConstantExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code constantExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstantExpressionAtom(SimpleSpeakQlParser.ConstantExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code functionCallExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionCallExpressionAtom(SimpleSpeakQlParser.FunctionCallExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code functionCallExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionCallExpressionAtom(SimpleSpeakQlParser.FunctionCallExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code fullColumnNameExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterFullColumnNameExpressionAtom(SimpleSpeakQlParser.FullColumnNameExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code fullColumnNameExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitFullColumnNameExpressionAtom(SimpleSpeakQlParser.FullColumnNameExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code nestedExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterNestedExpressionAtom(SimpleSpeakQlParser.NestedExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code nestedExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitNestedExpressionAtom(SimpleSpeakQlParser.NestedExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code nestedRowExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterNestedRowExpressionAtom(SimpleSpeakQlParser.NestedRowExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code nestedRowExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitNestedRowExpressionAtom(SimpleSpeakQlParser.NestedRowExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code mathExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterMathExpressionAtom(SimpleSpeakQlParser.MathExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code mathExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitMathExpressionAtom(SimpleSpeakQlParser.MathExpressionAtomContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code existsExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void enterExistsExpressionAtom(SimpleSpeakQlParser.ExistsExpressionAtomContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code existsExpressionAtom}
-	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
-	 * @param ctx the parse tree
-	 */
-	void exitExistsExpressionAtom(SimpleSpeakQlParser.ExistsExpressionAtomContext ctx);
+	void exitSimpleExpressionAtom(SimpleSpeakQlParser.SimpleExpressionAtomContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SimpleSpeakQlParser#constant}.
 	 * @param ctx the parse tree
