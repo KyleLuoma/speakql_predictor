@@ -20,8 +20,10 @@ public class Main {
         Boolean includeL1DelimRules = true;
         Boolean includeL2DelimRules = true;
         Boolean includeL3DelimRules = true;
-        Boolean makeTrie = true;
+        Boolean makeTrie = false;
         Boolean predict = false;
+        Boolean tokenize = false;
+        Boolean parseQuery = false;
 
         for(int arg = 0; arg < args.length; arg++) {
             if(args[arg].toUpperCase(Locale.ROOT).equals("-PREDICT")) {
@@ -34,6 +36,13 @@ public class Main {
             }
             if(args[arg].toUpperCase(Locale.ROOT).equals("-FILENAME")) {
                 outputFileName = args[arg + 1];
+            }
+            if(args[arg].toUpperCase(Locale.ROOT).equals("-TOKENIZE")) {
+                asrQuery = args[arg + 1];
+            }
+            if(args[arg].toUpperCase(Locale.ROOT).equals("-PARSE")) {
+                asrQuery = args[arg + 1];
+                parseQuery = true;
             }
         }
 
@@ -62,18 +71,22 @@ public class Main {
         //Level 2 delimiter rule:
         if(includeL2DelimRules) {
             delimRuleSet.add(SimpleSpeakQlParser.RULE_whereKeyword);
-            delimRuleSet.add(SimpleSpeakQlParser.RULE_fromKeyword);
+            //delimRuleSet.add(SimpleSpeakQlParser.RULE_fromKeyword);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_joinKeyword);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_joinDirection);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_innerJoinKeyword);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_outerJoinKeyword);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_naturalJoinKeyword);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_selectKeyword);
+            //delimRuleSet.add(SimpleSpeakQlParser.RULE_onKeyword);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_subQueryTable);
-            //delimRuleSet.add(SimpleSpeakQlParser.RULE_expression);
-            delimRuleSet.add(SimpleSpeakQlParser.RULE_logicalOperator);
+            delimRuleSet.add(SimpleSpeakQlParser.RULE_expression);
+            //delimRuleSet.add(SimpleSpeakQlParser.RULE_logicalOperator);
             delimRuleSet.add(SimpleSpeakQlParser.RULE_groupByKeyword);
-            delimRuleSet.add(SimpleSpeakQlParser.RULE_selectModifierExpression);
+            //delimRuleSet.add(SimpleSpeakQlParser.RULE_selectModifierExpression);
+            delimRuleSet.add(SimpleSpeakQlParser.RULE_havingKeyword);
+            delimRuleSet.add(SimpleSpeakQlParser.RULE_limitClause);
+            delimRuleSet.add(SimpleSpeakQlParser.RULE_orderByClause);
         }
 
         //Level 3 delimiter rules:
@@ -95,12 +108,40 @@ public class Main {
                     delimRuleSet,
                     idRuleSet,
                     0,
-                    30,
+                    40,
                     stringRuleSet,
-                    "SELECT A FROM BUILDING WHERE"
+                    "FROM BUILDING JOIN TABLE"
             );
         }
 
+        if(tokenize){
+            printLexerTokensAsArray(asrQuery);
+        }
+
+        if(parseQuery){
+            printParseTree(asrQuery);
+        }
+    }
+
+    public static void printParseTree(String speakqlQuery) {
+        ParserPackage parserPackage = new ParserPackage(speakqlQuery);
+        String stringTree = parserPackage.getTree().toStringTree(parserPackage.getParser());
+        System.out.println(stringTree);
+    }
+
+    public static String printLexerTokensAsArray(String query) {
+        ParserPackage parserPackage = new ParserPackage(query);
+        CommonTokenStream tokens = parserPackage.getTokens();
+        List<Token> tokensList = tokens.getTokens();
+        StringBuilder stringBuilder = new StringBuilder();
+        for(Token token : tokensList) {
+            if(! token.getText().equals(" ")) {
+                stringBuilder.append("\"" + token.getText() + "\"" + ", ");
+            }
+        }
+        String tokenString = stringBuilder.toString().replace(", \"<EOF>\",", "");
+        System.out.println("[ " + tokenString + " ]");
+        return tokenString;
     }
 
     public static String printNextWordsAsArray(ArrayList<String> nextWords) {
@@ -254,6 +295,9 @@ public class Main {
                 );
                 continue;
             }
+//            else if (rule.equals("-2")) {
+//                continue;
+//            }
             else if (depth < 16){
                 String newQuery = query.replace("__SCHROD", "") + rule + "_x __SCHROD";
                 //writeStringToFile("./allpossiblequeries.spql", newQuery.replace("__SCHROD", ""));
@@ -267,7 +311,7 @@ public class Main {
         Iterator<Integer> keyIter = keys.iterator();
         while(keyIter.hasNext()) {
             String token = parser.getVocabulary().getDisplayName(keyIter.next()).replace("'", "").strip();
-            if(query.contains(token)) {
+            if(query.contains(token) || token.equals("-2")) {
                 continue;
             }
             else if (depth < 16) {

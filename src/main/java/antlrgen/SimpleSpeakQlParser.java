@@ -160,30 +160,31 @@ public class SimpleSpeakQlParser extends Parser {
 		RULE_simpleId = 15, RULE_intervalTypeBase = 16, RULE_selectElementDot = 17, 
 		RULE_fullColumnName = 18, RULE_dottedId = 19, RULE_selectElementAs = 20, 
 		RULE_functionCall = 21, RULE_leftParen = 22, RULE_rightParen = 23, RULE_expression = 24, 
-		RULE_logicalOperator = 25, RULE_predicate = 26, RULE_isKeyword = 27, RULE_expressionDelimiter = 28, 
-		RULE_selectModifierExpression = 29, RULE_groupByClause = 30, RULE_groupByKeyword = 31, 
-		RULE_groupByItem = 32, RULE_automaticGroupByKeyword = 33, RULE_groupByExpression = 34, 
-		RULE_groupByItemDelimiter = 35, RULE_havingClause = 36, RULE_havingKeyword = 37, 
-		RULE_orderByClause = 38, RULE_orderByExpression = 39, RULE_limitClause = 40, 
-		RULE_limitClauseAtom = 41, RULE_queryExpression = 42, RULE_fromClauseNoJoin = 43, 
-		RULE_fromClause = 44, RULE_fromKeyword = 45, RULE_tableKeyword = 46, RULE_tableSources = 47, 
-		RULE_tableSourceNoJoin = 48, RULE_tableSource = 49, RULE_tableSourceItem = 50, 
-		RULE_subQueryTable = 51, RULE_tableAlias = 52, RULE_tableAliasAs = 53, 
-		RULE_tableName = 54, RULE_uidList = 55, RULE_indexHint = 56, RULE_indexHintType = 57, 
-		RULE_joinKeyword = 58, RULE_multiJoinExpression = 59, RULE_multiJoinPart = 60, 
-		RULE_multiInnerJoin = 61, RULE_multiOuterJoin = 62, RULE_multiNaturalJoin = 63, 
-		RULE_withKeyword = 64, RULE_joinPart = 65, RULE_innerJoin = 66, RULE_innerJoinKeyword = 67, 
-		RULE_onKeyword = 68, RULE_outerJoin = 69, RULE_joinDirection = 70, RULE_outerJoinKeyword = 71, 
-		RULE_naturalJoin = 72, RULE_naturalJoinKeyword = 73, RULE_tableSourceDelimiter = 74, 
-		RULE_expressions = 75, RULE_whereExpressionDelimiter = 76, RULE_nullNotnull = 77, 
-		RULE_comparisonOperator = 78, RULE_simpleExpressionAtom = 79, RULE_constant = 80, 
-		RULE_stringLiteral = 81, RULE_collationName = 82, RULE_decimalLiteral = 83, 
-		RULE_hexadecimalLiteral = 84, RULE_booleanLiteral = 85, RULE_unaryOperator = 86, 
-		RULE_mathOperator = 87, RULE_functionArgs = 88, RULE_aggregateWindowedFunction = 89, 
-		RULE_ofKeyword = 90, RULE_theKeyword = 91, RULE_functionArg = 92, RULE_allAggregatorKeyword = 93, 
-		RULE_distinctAggregatorKeyword = 94, RULE_scalarFunctionName = 95, RULE_selectElementDelimiter = 96, 
-		RULE_whereKeyword = 97, RULE_whereExpression = 98, RULE_tableExpressionNoJoin = 99, 
-		RULE_tableExpression = 100;
+		RULE_logicalOperator = 25, RULE_predicate = 26, RULE_subQueryPredicate = 27, 
+		RULE_isKeyword = 28, RULE_expressionDelimiter = 29, RULE_selectModifierExpression = 30, 
+		RULE_selectModifierItem = 31, RULE_groupByClause = 32, RULE_groupByKeyword = 33, 
+		RULE_groupByItem = 34, RULE_automaticGroupByKeyword = 35, RULE_groupByExpression = 36, 
+		RULE_groupByItemDelimiter = 37, RULE_havingClause = 38, RULE_havingKeyword = 39, 
+		RULE_orderByClause = 40, RULE_orderByExpression = 41, RULE_limitClause = 42, 
+		RULE_limitClauseAtom = 43, RULE_queryExpression = 44, RULE_fromClauseNoJoin = 45, 
+		RULE_fromClause = 46, RULE_fromKeyword = 47, RULE_tableKeyword = 48, RULE_tableSources = 49, 
+		RULE_tableSourceNoJoin = 50, RULE_tableSource = 51, RULE_tableSourceItem = 52, 
+		RULE_subQueryTable = 53, RULE_tableAlias = 54, RULE_tableAliasAs = 55, 
+		RULE_tableName = 56, RULE_uidList = 57, RULE_indexHint = 58, RULE_indexHintType = 59, 
+		RULE_joinKeyword = 60, RULE_multiJoinExpression = 61, RULE_multiJoinPart = 62, 
+		RULE_multiInnerJoin = 63, RULE_multiOuterJoin = 64, RULE_multiNaturalJoin = 65, 
+		RULE_withKeyword = 66, RULE_joinPart = 67, RULE_innerJoin = 68, RULE_innerJoinKeyword = 69, 
+		RULE_onKeyword = 70, RULE_outerJoin = 71, RULE_joinDirection = 72, RULE_outerJoinKeyword = 73, 
+		RULE_naturalJoin = 74, RULE_naturalJoinKeyword = 75, RULE_tableSourceDelimiter = 76, 
+		RULE_expressions = 77, RULE_nullNotnull = 78, RULE_comparisonOperator = 79, 
+		RULE_expressionAtom = 80, RULE_constant = 81, RULE_stringLiteral = 82, 
+		RULE_collationName = 83, RULE_decimalLiteral = 84, RULE_hexadecimalLiteral = 85, 
+		RULE_booleanLiteral = 86, RULE_unaryOperator = 87, RULE_mathOperator = 88, 
+		RULE_functionArgs = 89, RULE_aggregateWindowedFunction = 90, RULE_ofKeyword = 91, 
+		RULE_theKeyword = 92, RULE_functionArg = 93, RULE_allAggregatorKeyword = 94, 
+		RULE_distinctAggregatorKeyword = 95, RULE_nonAggregateWindowedFunction = 96, 
+		RULE_scalarFunctionName = 97, RULE_selectElementDelimiter = 98, RULE_whereKeyword = 99, 
+		RULE_whereExpression = 100, RULE_tableExpressionNoJoin = 101, RULE_tableExpression = 102;
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"start", "selectStatement", "querySpecification", "queryOrderSpecification", 
@@ -191,22 +192,23 @@ public class SimpleSpeakQlParser extends Parser {
 			"nothingElement", "nothingKeyword", "selectSpec", "selectElements", "selectElement", 
 			"fullId", "uid", "simpleId", "intervalTypeBase", "selectElementDot", 
 			"fullColumnName", "dottedId", "selectElementAs", "functionCall", "leftParen", 
-			"rightParen", "expression", "logicalOperator", "predicate", "isKeyword", 
-			"expressionDelimiter", "selectModifierExpression", "groupByClause", "groupByKeyword", 
-			"groupByItem", "automaticGroupByKeyword", "groupByExpression", "groupByItemDelimiter", 
-			"havingClause", "havingKeyword", "orderByClause", "orderByExpression", 
-			"limitClause", "limitClauseAtom", "queryExpression", "fromClauseNoJoin", 
-			"fromClause", "fromKeyword", "tableKeyword", "tableSources", "tableSourceNoJoin", 
-			"tableSource", "tableSourceItem", "subQueryTable", "tableAlias", "tableAliasAs", 
-			"tableName", "uidList", "indexHint", "indexHintType", "joinKeyword", 
-			"multiJoinExpression", "multiJoinPart", "multiInnerJoin", "multiOuterJoin", 
-			"multiNaturalJoin", "withKeyword", "joinPart", "innerJoin", "innerJoinKeyword", 
-			"onKeyword", "outerJoin", "joinDirection", "outerJoinKeyword", "naturalJoin", 
-			"naturalJoinKeyword", "tableSourceDelimiter", "expressions", "whereExpressionDelimiter", 
-			"nullNotnull", "comparisonOperator", "simpleExpressionAtom", "constant", 
-			"stringLiteral", "collationName", "decimalLiteral", "hexadecimalLiteral", 
-			"booleanLiteral", "unaryOperator", "mathOperator", "functionArgs", "aggregateWindowedFunction", 
-			"ofKeyword", "theKeyword", "functionArg", "allAggregatorKeyword", "distinctAggregatorKeyword", 
+			"rightParen", "expression", "logicalOperator", "predicate", "subQueryPredicate", 
+			"isKeyword", "expressionDelimiter", "selectModifierExpression", "selectModifierItem", 
+			"groupByClause", "groupByKeyword", "groupByItem", "automaticGroupByKeyword", 
+			"groupByExpression", "groupByItemDelimiter", "havingClause", "havingKeyword", 
+			"orderByClause", "orderByExpression", "limitClause", "limitClauseAtom", 
+			"queryExpression", "fromClauseNoJoin", "fromClause", "fromKeyword", "tableKeyword", 
+			"tableSources", "tableSourceNoJoin", "tableSource", "tableSourceItem", 
+			"subQueryTable", "tableAlias", "tableAliasAs", "tableName", "uidList", 
+			"indexHint", "indexHintType", "joinKeyword", "multiJoinExpression", "multiJoinPart", 
+			"multiInnerJoin", "multiOuterJoin", "multiNaturalJoin", "withKeyword", 
+			"joinPart", "innerJoin", "innerJoinKeyword", "onKeyword", "outerJoin", 
+			"joinDirection", "outerJoinKeyword", "naturalJoin", "naturalJoinKeyword", 
+			"tableSourceDelimiter", "expressions", "nullNotnull", "comparisonOperator", 
+			"expressionAtom", "constant", "stringLiteral", "collationName", "decimalLiteral", 
+			"hexadecimalLiteral", "booleanLiteral", "unaryOperator", "mathOperator", 
+			"functionArgs", "aggregateWindowedFunction", "ofKeyword", "theKeyword", 
+			"functionArg", "allAggregatorKeyword", "distinctAggregatorKeyword", "nonAggregateWindowedFunction", 
 			"scalarFunctionName", "selectElementDelimiter", "whereKeyword", "whereExpression", 
 			"tableExpressionNoJoin", "tableExpression"
 		};
@@ -553,14 +555,14 @@ public class SimpleSpeakQlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(202);
+			setState(206);
 			selectStatement();
-			setState(204);
+			setState(208);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==END_OF_FILE) {
 				{
-				setState(203);
+				setState(207);
 				match(END_OF_FILE);
 				}
 			}
@@ -632,7 +634,7 @@ public class SimpleSpeakQlParser extends Parser {
 		SelectStatementContext _localctx = new SelectStatementContext(_ctx, getState());
 		enterRule(_localctx, 2, RULE_selectStatement);
 		try {
-			setState(208);
+			setState(212);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case RETRIEVE:
@@ -675,15 +677,19 @@ public class SimpleSpeakQlParser extends Parser {
 				_localctx = new SimpleSelectContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(206);
+				setState(210);
 				querySpecification();
 				}
 				break;
+			case OPEN_PARENTHESIS:
+			case LEFT_PARENTHESIS:
+			case OPEN_PAREN:
+			case LEFT_PAREN:
 			case LR_BRACKET:
 				_localctx = new ParenthesisSelectContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(207);
+				setState(211);
 				queryExpression();
 				}
 				break;
@@ -782,16 +788,16 @@ public class SimpleSpeakQlParser extends Parser {
 		int _la;
 		try {
 			int _alt;
-			setState(239);
+			setState(243);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,7,_ctx) ) {
 			case 1:
 				_localctx = new SingleQuerySpecificationContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(210);
+				setState(214);
 				queryOrderSpecification();
-				setState(211);
+				setState(215);
 				selectModifierExpression();
 				}
 				break;
@@ -799,42 +805,42 @@ public class SimpleSpeakQlParser extends Parser {
 				_localctx = new MultiQuerySpecificationContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(216);
+				setState(220);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (((((_la - 19)) & ~0x3f) == 0 && ((1L << (_la - 19)) & ((1L << (JOIN_TABLE - 19)) | (1L << (BY_JOINING - 19)) | (1L << (BY_JOINING_TABLE - 19)) | (1L << (JOIN_WITH - 19)) | (1L << (JOIN_WITH_TABLE - 19)) | (1L << (JOINED_WITH - 19)) | (1L << (JOINED_WITH_TABLE - 19)) | (1L << (BY_JOINING_WITH_TABLE - 19)) | (1L << (CROSS - 19)))) != 0) || ((((_la - 112)) & ~0x3f) == 0 && ((1L << (_la - 112)) & ((1L << (INNER - 112)) | (1L << (JOIN - 112)) | (1L << (LEFT - 112)) | (1L << (NATURAL - 112)) | (1L << (RIGHT - 112)))) != 0)) {
 					{
-					setState(213);
+					setState(217);
 					multiJoinExpression();
-					setState(214);
+					setState(218);
 					expressionDelimiter();
 					}
 				}
 
-				setState(221);
+				setState(225);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==AND_THEN || ((((_la - 103)) & ~0x3f) == 0 && ((1L << (_la - 103)) & ((1L << (GROUP - 103)) | (1L << (HAVING - 103)) | (1L << (LIMIT - 103)) | (1L << (ORDER - 103)))) != 0) || _la==THEN) {
 					{
-					setState(218);
+					setState(222);
 					selectModifierExpression();
-					setState(219);
+					setState(223);
 					expressionDelimiter();
 					}
 				}
 
-				setState(223);
+				setState(227);
 				multiQueryOrderSpecification();
-				setState(231);
+				setState(235);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
 				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
-						setState(224);
+						setState(228);
 						expressionDelimiter();
-						setState(227);
+						setState(231);
 						_errHandler.sync(this);
 						switch (_input.LA(1)) {
 						case RETRIEVE:
@@ -855,7 +861,7 @@ public class SimpleSpeakQlParser extends Parser {
 						case IN:
 						case SELECT:
 							{
-							setState(225);
+							setState(229);
 							multiQueryOrderSpecification();
 							}
 							break;
@@ -874,7 +880,7 @@ public class SimpleSpeakQlParser extends Parser {
 						case NATURAL:
 						case RIGHT:
 							{
-							setState(226);
+							setState(230);
 							multiJoinExpression();
 							}
 							break;
@@ -884,18 +890,18 @@ public class SimpleSpeakQlParser extends Parser {
 						}
 						} 
 					}
-					setState(233);
+					setState(237);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
 				}
-				setState(237);
+				setState(241);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==AND_THEN || _la==THEN) {
 					{
-					setState(234);
+					setState(238);
 					expressionDelimiter();
-					setState(235);
+					setState(239);
 					selectModifierExpression();
 					}
 				}
@@ -952,45 +958,45 @@ public class SimpleSpeakQlParser extends Parser {
 		enterRule(_localctx, 6, RULE_queryOrderSpecification);
 		int _la;
 		try {
-			setState(271);
+			setState(275);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,12,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(241);
-				selectExpression();
 				setState(245);
+				selectExpression();
+				setState(249);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==WHERE) {
 					{
-					setState(242);
+					setState(246);
 					whereKeyword();
-					setState(243);
+					setState(247);
 					whereExpression();
 					}
 				}
 
-				setState(247);
+				setState(251);
 				tableExpression();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(249);
+				setState(253);
 				selectExpression();
-				setState(250);
-				tableExpression();
 				setState(254);
+				tableExpression();
+				setState(258);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==WHERE) {
 					{
-					setState(251);
+					setState(255);
 					whereKeyword();
-					setState(252);
+					setState(256);
 					whereExpression();
 					}
 				}
@@ -1000,18 +1006,18 @@ public class SimpleSpeakQlParser extends Parser {
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(256);
+				setState(260);
 				tableExpression();
-				setState(257);
-				selectExpression();
 				setState(261);
+				selectExpression();
+				setState(265);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==WHERE) {
 					{
-					setState(258);
+					setState(262);
 					whereKeyword();
-					setState(259);
+					setState(263);
 					whereExpression();
 					}
 				}
@@ -1021,21 +1027,21 @@ public class SimpleSpeakQlParser extends Parser {
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(263);
-				tableExpression();
 				setState(267);
+				tableExpression();
+				setState(271);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==WHERE) {
 					{
-					setState(264);
+					setState(268);
 					whereKeyword();
-					setState(265);
+					setState(269);
 					whereExpression();
 					}
 				}
 
-				setState(269);
+				setState(273);
 				selectExpression();
 				}
 				break;
@@ -1089,45 +1095,45 @@ public class SimpleSpeakQlParser extends Parser {
 		enterRule(_localctx, 8, RULE_multiQueryOrderSpecification);
 		int _la;
 		try {
-			setState(303);
+			setState(307);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,17,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(273);
-				selectExpression();
 				setState(277);
+				selectExpression();
+				setState(281);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==WHERE) {
 					{
-					setState(274);
+					setState(278);
 					whereKeyword();
-					setState(275);
+					setState(279);
 					whereExpression();
 					}
 				}
 
-				setState(279);
+				setState(283);
 				tableExpressionNoJoin();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(281);
+				setState(285);
 				selectExpression();
-				setState(282);
-				tableExpressionNoJoin();
 				setState(286);
+				tableExpressionNoJoin();
+				setState(290);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==WHERE) {
 					{
-					setState(283);
+					setState(287);
 					whereKeyword();
-					setState(284);
+					setState(288);
 					whereExpression();
 					}
 				}
@@ -1137,18 +1143,18 @@ public class SimpleSpeakQlParser extends Parser {
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(288);
+				setState(292);
 				tableExpressionNoJoin();
-				setState(289);
-				selectExpression();
 				setState(293);
+				selectExpression();
+				setState(297);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==WHERE) {
 					{
-					setState(290);
+					setState(294);
 					whereKeyword();
-					setState(291);
+					setState(295);
 					whereExpression();
 					}
 				}
@@ -1158,21 +1164,21 @@ public class SimpleSpeakQlParser extends Parser {
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(295);
-				tableExpressionNoJoin();
 				setState(299);
+				tableExpressionNoJoin();
+				setState(303);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==WHERE) {
 					{
-					setState(296);
+					setState(300);
 					whereKeyword();
-					setState(297);
+					setState(301);
 					whereExpression();
 					}
 				}
 
-				setState(301);
+				setState(305);
 				selectExpression();
 				}
 				break;
@@ -1229,61 +1235,61 @@ public class SimpleSpeakQlParser extends Parser {
 		enterRule(_localctx, 10, RULE_selectExpression);
 		int _la;
 		try {
-			setState(326);
+			setState(330);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,20,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(305);
-				selectClause();
 				setState(309);
+				selectClause();
+				setState(313);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (((((_la - 46)) & ~0x3f) == 0 && ((1L << (_la - 46)) & ((1L << (ALL - 46)) | (1L << (DISTINCT - 46)) | (1L << (DISTINCTROW - 46)))) != 0)) {
 					{
 					{
-					setState(306);
+					setState(310);
 					selectSpec();
 					}
 					}
-					setState(311);
+					setState(315);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(312);
+				setState(316);
 				selectElements();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(314);
-				selectClause();
 				setState(318);
+				selectClause();
+				setState(322);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (((((_la - 46)) & ~0x3f) == 0 && ((1L << (_la - 46)) & ((1L << (ALL - 46)) | (1L << (DISTINCT - 46)) | (1L << (DISTINCTROW - 46)))) != 0)) {
 					{
 					{
-					setState(315);
+					setState(319);
 					selectSpec();
 					}
 					}
-					setState(320);
+					setState(324);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(321);
+				setState(325);
 				selectElements();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(323);
+				setState(327);
 				selectClause();
-				setState(324);
+				setState(328);
 				nothingElement();
 				}
 				break;
@@ -1329,7 +1335,7 @@ public class SimpleSpeakQlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(328);
+			setState(332);
 			selectKeyword();
 			}
 		}
@@ -1382,7 +1388,7 @@ public class SimpleSpeakQlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(330);
+			setState(334);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << RETRIEVE) | (1L << SHOW_ME) | (1L << DISPLAY) | (1L << PRESENT) | (1L << FIND) | (1L << WHAT_IS) | (1L << WHAT_ARE) | (1L << WHAT_IS_THE) | (1L << WHAT_ARE_THE))) != 0) || _la==GET || _la==SELECT) ) {
 			_errHandler.recoverInline(this);
@@ -1434,7 +1440,7 @@ public class SimpleSpeakQlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(332);
+			setState(336);
 			nothingKeyword();
 			}
 		}
@@ -1478,7 +1484,7 @@ public class SimpleSpeakQlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(334);
+			setState(338);
 			_la = _input.LA(1);
 			if ( !(_la==NOTHING || _la==NO_COLUMNS) ) {
 			_errHandler.recoverInline(this);
@@ -1531,7 +1537,7 @@ public class SimpleSpeakQlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(336);
+			setState(340);
 			_la = _input.LA(1);
 			if ( !(((((_la - 46)) & ~0x3f) == 0 && ((1L << (_la - 46)) & ((1L << (ALL - 46)) | (1L << (DISTINCT - 46)) | (1L << (DISTINCTROW - 46)))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -1595,25 +1601,56 @@ public class SimpleSpeakQlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(340);
+			setState(344);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case STAR:
 				{
-				setState(338);
+				setState(342);
 				((SelectElementsContext)_localctx).star = match(STAR);
 				}
 				break;
 			case SPOKEN_DOT:
+			case OPEN_PARENTHESIS:
+			case LEFT_PARENTHESIS:
+			case OPEN_PAREN:
+			case LEFT_PAREN:
 			case THE:
+			case EXISTS:
+			case FALSE:
 			case IF:
 			case INSERT:
+			case NOT:
+			case NULL_LITERAL:
 			case REPLACE:
+			case TRUE:
 			case AVG:
+			case BIT_AND:
+			case BIT_OR:
+			case BIT_XOR:
 			case COUNT:
+			case CUME_DIST:
+			case DENSE_RANK:
+			case FIRST_VALUE:
+			case GROUP_CONCAT:
+			case LAG:
+			case LAST_VALUE:
+			case LEAD:
 			case MAX:
 			case MIN:
+			case NTILE:
+			case NTH_VALUE:
+			case PERCENT_RANK:
+			case RANK:
+			case ROW_NUMBER:
+			case STD:
+			case STDDEV:
+			case STDDEV_POP:
+			case STDDEV_SAMP:
 			case SUM:
+			case VAR_POP:
+			case VAR_SAMP:
+			case VARIANCE:
 			case CURRENT_DATE:
 			case CURRENT_TIME:
 			case CURRENT_TIMESTAMP:
@@ -1632,6 +1669,7 @@ public class SimpleSpeakQlParser extends Parser {
 			case UTC_TIME:
 			case UTC_TIMESTAMP:
 			case MID:
+			case ROW:
 			case QUARTER:
 			case MONTH:
 			case DAY:
@@ -1640,29 +1678,45 @@ public class SimpleSpeakQlParser extends Parser {
 			case WEEK:
 			case SECOND:
 			case MICROSECOND:
+			case PLUS:
+			case MINUS:
+			case EXCLAMATION_SYMBOL:
+			case BIT_NOT_OP:
 			case DOT:
+			case LR_BRACKET:
+			case ZERO_DECIMAL:
+			case ONE_DECIMAL:
+			case TWO_DECIMAL:
+			case START_NATIONAL_STRING_LITERAL:
+			case STRING_LITERAL:
+			case DECIMAL_LITERAL:
+			case HEXADECIMAL_LITERAL:
+			case REAL_LITERAL:
+			case NULL_SPEC_LITERAL:
+			case BIT_STRING:
 			case ID:
+			case LOCAL_ID:
 				{
-				setState(339);
+				setState(343);
 				selectElement();
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
 			}
-			setState(347);
+			setState(351);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==AND || _la==COMMA) {
 				{
 				{
-				setState(342);
+				setState(346);
 				selectElementDelimiter();
-				setState(343);
+				setState(347);
 				selectElement();
 				}
 				}
-				setState(349);
+				setState(353);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -1688,6 +1742,33 @@ public class SimpleSpeakQlParser extends Parser {
 		public SelectElementContext() { }
 		public void copyFrom(SelectElementContext ctx) {
 			super.copyFrom(ctx);
+		}
+	}
+	public static class SelectExpressionElementContext extends SelectElementContext {
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
+		}
+		public TerminalNode LOCAL_ID() { return getToken(SimpleSpeakQlParser.LOCAL_ID, 0); }
+		public TerminalNode VAR_ASSIGN() { return getToken(SimpleSpeakQlParser.VAR_ASSIGN, 0); }
+		public SelectElementAsContext selectElementAs() {
+			return getRuleContext(SelectElementAsContext.class,0);
+		}
+		public UidContext uid() {
+			return getRuleContext(UidContext.class,0);
+		}
+		public SelectExpressionElementContext(SelectElementContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterSelectExpressionElement(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitSelectExpressionElement(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitSelectExpressionElement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 	public static class SelectFunctionElementContext extends SelectElementContext {
@@ -1769,18 +1850,18 @@ public class SimpleSpeakQlParser extends Parser {
 		enterRule(_localctx, 24, RULE_selectElement);
 		int _la;
 		try {
-			setState(366);
+			setState(380);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,25,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,27,_ctx) ) {
 			case 1:
 				_localctx = new SelectStarElementContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(350);
+				setState(354);
 				fullId();
-				setState(351);
+				setState(355);
 				selectElementDot();
-				setState(352);
+				setState(356);
 				match(STAR);
 				}
 				break;
@@ -1788,16 +1869,16 @@ public class SimpleSpeakQlParser extends Parser {
 				_localctx = new SelectColumnElementContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(354);
-				fullColumnName();
 				setState(358);
+				fullColumnName();
+				setState(362);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==AS) {
 					{
-					setState(355);
+					setState(359);
 					selectElementAs();
-					setState(356);
+					setState(360);
 					uid();
 					}
 				}
@@ -1808,16 +1889,48 @@ public class SimpleSpeakQlParser extends Parser {
 				_localctx = new SelectFunctionElementContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(360);
-				functionCall();
 				setState(364);
+				functionCall();
+				setState(368);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==AS) {
 					{
-					setState(361);
+					setState(365);
 					selectElementAs();
-					setState(362);
+					setState(366);
+					uid();
+					}
+				}
+
+				}
+				break;
+			case 4:
+				_localctx = new SelectExpressionElementContext(_localctx);
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(372);
+				_errHandler.sync(this);
+				switch ( getInterpreter().adaptivePredict(_input,25,_ctx) ) {
+				case 1:
+					{
+					setState(370);
+					match(LOCAL_ID);
+					setState(371);
+					match(VAR_ASSIGN);
+					}
+					break;
+				}
+				setState(374);
+				expression(0);
+				setState(378);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==AS) {
+					{
+					setState(375);
+					selectElementAs();
+					setState(376);
 					uid();
 					}
 				}
@@ -1844,6 +1957,7 @@ public class SimpleSpeakQlParser extends Parser {
 		public UidContext uid(int i) {
 			return getRuleContext(UidContext.class,i);
 		}
+		public TerminalNode DOT_ID() { return getToken(SimpleSpeakQlParser.DOT_ID, 0); }
 		public TerminalNode DOT() { return getToken(SimpleSpeakQlParser.DOT, 0); }
 		public FullIdContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1870,16 +1984,22 @@ public class SimpleSpeakQlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(368);
+			setState(382);
 			uid();
-			setState(371);
+			setState(386);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,26,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,28,_ctx) ) {
 			case 1:
 				{
-				setState(369);
+				setState(383);
+				match(DOT_ID);
+				}
+				break;
+			case 2:
+				{
+				setState(384);
 				match(DOT);
-				setState(370);
+				setState(385);
 				uid();
 				}
 				break;
@@ -1926,7 +2046,7 @@ public class SimpleSpeakQlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(373);
+			setState(388);
 			simpleId();
 			}
 		}
@@ -1969,13 +2089,13 @@ public class SimpleSpeakQlParser extends Parser {
 		SimpleIdContext _localctx = new SimpleIdContext(_ctx, getState());
 		enterRule(_localctx, 30, RULE_simpleId);
 		try {
-			setState(377);
+			setState(392);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case ID:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(375);
+				setState(390);
 				match(ID);
 				}
 				break;
@@ -1989,7 +2109,7 @@ public class SimpleSpeakQlParser extends Parser {
 			case MICROSECOND:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(376);
+				setState(391);
 				intervalTypeBase();
 				}
 				break;
@@ -2043,7 +2163,7 @@ public class SimpleSpeakQlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(379);
+			setState(394);
 			_la = _input.LA(1);
 			if ( !(((((_la - 352)) & ~0x3f) == 0 && ((1L << (_la - 352)) & ((1L << (QUARTER - 352)) | (1L << (MONTH - 352)) | (1L << (DAY - 352)) | (1L << (HOUR - 352)) | (1L << (MINUTE - 352)) | (1L << (WEEK - 352)) | (1L << (SECOND - 352)) | (1L << (MICROSECOND - 352)))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -2095,7 +2215,7 @@ public class SimpleSpeakQlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(381);
+			setState(396);
 			_la = _input.LA(1);
 			if ( !(_la==SPOKEN_DOT || _la==DOT) ) {
 			_errHandler.recoverInline(this);
@@ -2153,9 +2273,8 @@ public class SimpleSpeakQlParser extends Parser {
 	public final FullColumnNameContext fullColumnName() throws RecognitionException {
 		FullColumnNameContext _localctx = new FullColumnNameContext(_ctx, getState());
 		enterRule(_localctx, 36, RULE_fullColumnName);
-		int _la;
 		try {
-			setState(395);
+			setState(410);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case QUARTER:
@@ -2169,48 +2288,48 @@ public class SimpleSpeakQlParser extends Parser {
 			case ID:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(383);
+				setState(398);
 				uid();
-				setState(388);
+				setState(403);
 				_errHandler.sync(this);
-				_la = _input.LA(1);
-				if (_la==SPOKEN_DOT || _la==DOT) {
+				switch ( getInterpreter().adaptivePredict(_input,31,_ctx) ) {
+				case 1:
 					{
-					setState(384);
+					setState(399);
 					dottedId();
-					setState(386);
+					setState(401);
 					_errHandler.sync(this);
-					_la = _input.LA(1);
-					if (_la==SPOKEN_DOT || _la==DOT) {
+					switch ( getInterpreter().adaptivePredict(_input,30,_ctx) ) {
+					case 1:
 						{
-						setState(385);
+						setState(400);
 						dottedId();
 						}
+						break;
 					}
-
 					}
+					break;
 				}
-
 				}
 				break;
 			case SPOKEN_DOT:
 			case DOT:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(390);
+				setState(405);
 				selectElementDot();
-				setState(391);
+				setState(406);
 				dottedId();
-				setState(393);
+				setState(408);
 				_errHandler.sync(this);
-				_la = _input.LA(1);
-				if (_la==SPOKEN_DOT || _la==DOT) {
+				switch ( getInterpreter().adaptivePredict(_input,32,_ctx) ) {
+				case 1:
 					{
-					setState(392);
+					setState(407);
 					dottedId();
 					}
+					break;
 				}
-
 				}
 				break;
 			default:
@@ -2229,6 +2348,7 @@ public class SimpleSpeakQlParser extends Parser {
 	}
 
 	public static class DottedIdContext extends ParserRuleContext {
+		public TerminalNode DOT_ID() { return getToken(SimpleSpeakQlParser.DOT_ID, 0); }
 		public SelectElementDotContext selectElementDot() {
 			return getRuleContext(SelectElementDotContext.class,0);
 		}
@@ -2258,12 +2378,28 @@ public class SimpleSpeakQlParser extends Parser {
 		DottedIdContext _localctx = new DottedIdContext(_ctx, getState());
 		enterRule(_localctx, 38, RULE_dottedId);
 		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(397);
-			selectElementDot();
-			setState(398);
-			uid();
+			setState(416);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case DOT_ID:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(412);
+				match(DOT_ID);
+				}
+				break;
+			case SPOKEN_DOT:
+			case DOT:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(413);
+				selectElementDot();
+				setState(414);
+				uid();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2304,7 +2440,7 @@ public class SimpleSpeakQlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(400);
+			setState(418);
 			match(AS);
 			}
 		}
@@ -2328,6 +2464,53 @@ public class SimpleSpeakQlParser extends Parser {
 		public FunctionCallContext() { }
 		public void copyFrom(FunctionCallContext ctx) {
 			super.copyFrom(ctx);
+		}
+	}
+	public static class UdfFunctionCallContext extends FunctionCallContext {
+		public FullIdContext fullId() {
+			return getRuleContext(FullIdContext.class,0);
+		}
+		public LeftParenContext leftParen() {
+			return getRuleContext(LeftParenContext.class,0);
+		}
+		public RightParenContext rightParen() {
+			return getRuleContext(RightParenContext.class,0);
+		}
+		public FunctionArgsContext functionArgs() {
+			return getRuleContext(FunctionArgsContext.class,0);
+		}
+		public UdfFunctionCallContext(FunctionCallContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterUdfFunctionCall(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitUdfFunctionCall(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitUdfFunctionCall(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class NonAggregateFunctionCallContext extends FunctionCallContext {
+		public NonAggregateWindowedFunctionContext nonAggregateWindowedFunction() {
+			return getRuleContext(NonAggregateWindowedFunctionContext.class,0);
+		}
+		public NonAggregateFunctionCallContext(FunctionCallContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterNonAggregateFunctionCall(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitNonAggregateFunctionCall(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitNonAggregateFunctionCall(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 	public static class AggregateFunctionCallContext extends FunctionCallContext {
@@ -2383,20 +2566,49 @@ public class SimpleSpeakQlParser extends Parser {
 		enterRule(_localctx, 42, RULE_functionCall);
 		int _la;
 		try {
-			setState(410);
+			setState(436);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case THE:
 			case AVG:
+			case BIT_AND:
+			case BIT_OR:
+			case BIT_XOR:
 			case COUNT:
+			case GROUP_CONCAT:
 			case MAX:
 			case MIN:
+			case STD:
+			case STDDEV:
+			case STDDEV_POP:
+			case STDDEV_SAMP:
 			case SUM:
+			case VAR_POP:
+			case VAR_SAMP:
+			case VARIANCE:
 				_localctx = new AggregateFunctionCallContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(402);
+				setState(420);
 				aggregateWindowedFunction();
+				}
+				break;
+			case CUME_DIST:
+			case DENSE_RANK:
+			case FIRST_VALUE:
+			case LAG:
+			case LAST_VALUE:
+			case LEAD:
+			case NTILE:
+			case NTH_VALUE:
+			case PERCENT_RANK:
+			case RANK:
+			case ROW_NUMBER:
+				_localctx = new NonAggregateFunctionCallContext(_localctx);
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(421);
+				nonAggregateWindowedFunction();
 				}
 				break;
 			case IF:
@@ -2421,23 +2633,53 @@ public class SimpleSpeakQlParser extends Parser {
 			case UTC_TIMESTAMP:
 			case MID:
 				_localctx = new ScalarFunctionCallContext(_localctx);
-				enterOuterAlt(_localctx, 2);
+				enterOuterAlt(_localctx, 3);
 				{
-				setState(403);
+				setState(422);
 				scalarFunctionName();
-				setState(404);
+				setState(423);
 				leftParen();
-				setState(406);
+				setState(425);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if (_la==SPOKEN_DOT || ((((_la - 93)) & ~0x3f) == 0 && ((1L << (_la - 93)) & ((1L << (FALSE - 93)) | (1L << (NOT - 93)) | (1L << (NULL_LITERAL - 93)))) != 0) || _la==TRUE || ((((_la - 352)) & ~0x3f) == 0 && ((1L << (_la - 352)) & ((1L << (QUARTER - 352)) | (1L << (MONTH - 352)) | (1L << (DAY - 352)) | (1L << (HOUR - 352)) | (1L << (MINUTE - 352)) | (1L << (WEEK - 352)) | (1L << (SECOND - 352)) | (1L << (MICROSECOND - 352)))) != 0) || ((((_la - 665)) & ~0x3f) == 0 && ((1L << (_la - 665)) & ((1L << (MINUS - 665)) | (1L << (DOT - 665)) | (1L << (ZERO_DECIMAL - 665)) | (1L << (ONE_DECIMAL - 665)) | (1L << (TWO_DECIMAL - 665)) | (1L << (START_NATIONAL_STRING_LITERAL - 665)) | (1L << (STRING_LITERAL - 665)) | (1L << (DECIMAL_LITERAL - 665)) | (1L << (HEXADECIMAL_LITERAL - 665)) | (1L << (REAL_LITERAL - 665)) | (1L << (NULL_SPEC_LITERAL - 665)) | (1L << (BIT_STRING - 665)) | (1L << (ID - 665)))) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << SPOKEN_DOT) | (1L << OPEN_PARENTHESIS) | (1L << LEFT_PARENTHESIS) | (1L << OPEN_PAREN) | (1L << LEFT_PAREN) | (1L << THE))) != 0) || ((((_la - 90)) & ~0x3f) == 0 && ((1L << (_la - 90)) & ((1L << (EXISTS - 90)) | (1L << (FALSE - 90)) | (1L << (IF - 90)) | (1L << (INSERT - 90)) | (1L << (NOT - 90)) | (1L << (NULL_LITERAL - 90)))) != 0) || _la==REPLACE || _la==TRUE || ((((_la - 255)) & ~0x3f) == 0 && ((1L << (_la - 255)) & ((1L << (AVG - 255)) | (1L << (BIT_AND - 255)) | (1L << (BIT_OR - 255)) | (1L << (BIT_XOR - 255)) | (1L << (COUNT - 255)) | (1L << (CUME_DIST - 255)) | (1L << (DENSE_RANK - 255)) | (1L << (FIRST_VALUE - 255)) | (1L << (GROUP_CONCAT - 255)) | (1L << (LAG - 255)) | (1L << (LAST_VALUE - 255)) | (1L << (LEAD - 255)) | (1L << (MAX - 255)) | (1L << (MIN - 255)) | (1L << (NTILE - 255)) | (1L << (NTH_VALUE - 255)) | (1L << (PERCENT_RANK - 255)) | (1L << (RANK - 255)) | (1L << (ROW_NUMBER - 255)) | (1L << (STD - 255)) | (1L << (STDDEV - 255)) | (1L << (STDDEV_POP - 255)) | (1L << (STDDEV_SAMP - 255)) | (1L << (SUM - 255)) | (1L << (VAR_POP - 255)) | (1L << (VAR_SAMP - 255)) | (1L << (VARIANCE - 255)) | (1L << (CURRENT_DATE - 255)) | (1L << (CURRENT_TIME - 255)) | (1L << (CURRENT_TIMESTAMP - 255)) | (1L << (LOCALTIME - 255)) | (1L << (CURDATE - 255)) | (1L << (CURTIME - 255)) | (1L << (DATE_ADD - 255)) | (1L << (DATE_SUB - 255)) | (1L << (LOCALTIMESTAMP - 255)) | (1L << (NOW - 255)) | (1L << (SUBSTR - 255)) | (1L << (SUBSTRING - 255)) | (1L << (SYSDATE - 255)) | (1L << (TRIM - 255)) | (1L << (UTC_DATE - 255)) | (1L << (UTC_TIME - 255)) | (1L << (UTC_TIMESTAMP - 255)))) != 0) || ((((_la - 331)) & ~0x3f) == 0 && ((1L << (_la - 331)) & ((1L << (MID - 331)) | (1L << (ROW - 331)) | (1L << (QUARTER - 331)) | (1L << (MONTH - 331)) | (1L << (DAY - 331)) | (1L << (HOUR - 331)) | (1L << (MINUTE - 331)) | (1L << (WEEK - 331)) | (1L << (SECOND - 331)) | (1L << (MICROSECOND - 331)))) != 0) || ((((_la - 664)) & ~0x3f) == 0 && ((1L << (_la - 664)) & ((1L << (PLUS - 664)) | (1L << (MINUS - 664)) | (1L << (EXCLAMATION_SYMBOL - 664)) | (1L << (BIT_NOT_OP - 664)) | (1L << (DOT - 664)) | (1L << (LR_BRACKET - 664)) | (1L << (ZERO_DECIMAL - 664)) | (1L << (ONE_DECIMAL - 664)) | (1L << (TWO_DECIMAL - 664)) | (1L << (START_NATIONAL_STRING_LITERAL - 664)) | (1L << (STRING_LITERAL - 664)) | (1L << (DECIMAL_LITERAL - 664)) | (1L << (HEXADECIMAL_LITERAL - 664)) | (1L << (REAL_LITERAL - 664)) | (1L << (NULL_SPEC_LITERAL - 664)) | (1L << (BIT_STRING - 664)) | (1L << (ID - 664)) | (1L << (LOCAL_ID - 664)))) != 0)) {
 					{
-					setState(405);
+					setState(424);
 					functionArgs();
 					}
 				}
 
-				setState(408);
+				setState(427);
+				rightParen();
+				}
+				break;
+			case QUARTER:
+			case MONTH:
+			case DAY:
+			case HOUR:
+			case MINUTE:
+			case WEEK:
+			case SECOND:
+			case MICROSECOND:
+			case ID:
+				_localctx = new UdfFunctionCallContext(_localctx);
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(429);
+				fullId();
+				setState(430);
+				leftParen();
+				setState(432);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << SPOKEN_DOT) | (1L << OPEN_PARENTHESIS) | (1L << LEFT_PARENTHESIS) | (1L << OPEN_PAREN) | (1L << LEFT_PAREN) | (1L << THE))) != 0) || ((((_la - 90)) & ~0x3f) == 0 && ((1L << (_la - 90)) & ((1L << (EXISTS - 90)) | (1L << (FALSE - 90)) | (1L << (IF - 90)) | (1L << (INSERT - 90)) | (1L << (NOT - 90)) | (1L << (NULL_LITERAL - 90)))) != 0) || _la==REPLACE || _la==TRUE || ((((_la - 255)) & ~0x3f) == 0 && ((1L << (_la - 255)) & ((1L << (AVG - 255)) | (1L << (BIT_AND - 255)) | (1L << (BIT_OR - 255)) | (1L << (BIT_XOR - 255)) | (1L << (COUNT - 255)) | (1L << (CUME_DIST - 255)) | (1L << (DENSE_RANK - 255)) | (1L << (FIRST_VALUE - 255)) | (1L << (GROUP_CONCAT - 255)) | (1L << (LAG - 255)) | (1L << (LAST_VALUE - 255)) | (1L << (LEAD - 255)) | (1L << (MAX - 255)) | (1L << (MIN - 255)) | (1L << (NTILE - 255)) | (1L << (NTH_VALUE - 255)) | (1L << (PERCENT_RANK - 255)) | (1L << (RANK - 255)) | (1L << (ROW_NUMBER - 255)) | (1L << (STD - 255)) | (1L << (STDDEV - 255)) | (1L << (STDDEV_POP - 255)) | (1L << (STDDEV_SAMP - 255)) | (1L << (SUM - 255)) | (1L << (VAR_POP - 255)) | (1L << (VAR_SAMP - 255)) | (1L << (VARIANCE - 255)) | (1L << (CURRENT_DATE - 255)) | (1L << (CURRENT_TIME - 255)) | (1L << (CURRENT_TIMESTAMP - 255)) | (1L << (LOCALTIME - 255)) | (1L << (CURDATE - 255)) | (1L << (CURTIME - 255)) | (1L << (DATE_ADD - 255)) | (1L << (DATE_SUB - 255)) | (1L << (LOCALTIMESTAMP - 255)) | (1L << (NOW - 255)) | (1L << (SUBSTR - 255)) | (1L << (SUBSTRING - 255)) | (1L << (SYSDATE - 255)) | (1L << (TRIM - 255)) | (1L << (UTC_DATE - 255)) | (1L << (UTC_TIME - 255)) | (1L << (UTC_TIMESTAMP - 255)))) != 0) || ((((_la - 331)) & ~0x3f) == 0 && ((1L << (_la - 331)) & ((1L << (MID - 331)) | (1L << (ROW - 331)) | (1L << (QUARTER - 331)) | (1L << (MONTH - 331)) | (1L << (DAY - 331)) | (1L << (HOUR - 331)) | (1L << (MINUTE - 331)) | (1L << (WEEK - 331)) | (1L << (SECOND - 331)) | (1L << (MICROSECOND - 331)))) != 0) || ((((_la - 664)) & ~0x3f) == 0 && ((1L << (_la - 664)) & ((1L << (PLUS - 664)) | (1L << (MINUS - 664)) | (1L << (EXCLAMATION_SYMBOL - 664)) | (1L << (BIT_NOT_OP - 664)) | (1L << (DOT - 664)) | (1L << (LR_BRACKET - 664)) | (1L << (ZERO_DECIMAL - 664)) | (1L << (ONE_DECIMAL - 664)) | (1L << (TWO_DECIMAL - 664)) | (1L << (START_NATIONAL_STRING_LITERAL - 664)) | (1L << (STRING_LITERAL - 664)) | (1L << (DECIMAL_LITERAL - 664)) | (1L << (HEXADECIMAL_LITERAL - 664)) | (1L << (REAL_LITERAL - 664)) | (1L << (NULL_SPEC_LITERAL - 664)) | (1L << (BIT_STRING - 664)) | (1L << (ID - 664)) | (1L << (LOCAL_ID - 664)))) != 0)) {
+					{
+					setState(431);
+					functionArgs();
+					}
+				}
+
+				setState(434);
 				rightParen();
 				}
 				break;
@@ -2458,6 +2700,10 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public static class LeftParenContext extends ParserRuleContext {
 		public TerminalNode LR_BRACKET() { return getToken(SimpleSpeakQlParser.LR_BRACKET, 0); }
+		public TerminalNode OPEN_PAREN() { return getToken(SimpleSpeakQlParser.OPEN_PAREN, 0); }
+		public TerminalNode LEFT_PAREN() { return getToken(SimpleSpeakQlParser.LEFT_PAREN, 0); }
+		public TerminalNode OPEN_PARENTHESIS() { return getToken(SimpleSpeakQlParser.OPEN_PARENTHESIS, 0); }
+		public TerminalNode LEFT_PARENTHESIS() { return getToken(SimpleSpeakQlParser.LEFT_PARENTHESIS, 0); }
 		public LeftParenContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2480,11 +2726,20 @@ public class SimpleSpeakQlParser extends Parser {
 	public final LeftParenContext leftParen() throws RecognitionException {
 		LeftParenContext _localctx = new LeftParenContext(_ctx, getState());
 		enterRule(_localctx, 44, RULE_leftParen);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(412);
-			match(LR_BRACKET);
+			setState(438);
+			_la = _input.LA(1);
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << OPEN_PARENTHESIS) | (1L << LEFT_PARENTHESIS) | (1L << OPEN_PAREN) | (1L << LEFT_PAREN))) != 0) || _la==LR_BRACKET) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -2500,6 +2755,10 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public static class RightParenContext extends ParserRuleContext {
 		public TerminalNode RR_BRACKET() { return getToken(SimpleSpeakQlParser.RR_BRACKET, 0); }
+		public TerminalNode CLOSE_PAREN() { return getToken(SimpleSpeakQlParser.CLOSE_PAREN, 0); }
+		public TerminalNode RIGHT_PAREN() { return getToken(SimpleSpeakQlParser.RIGHT_PAREN, 0); }
+		public TerminalNode CLOSE_PARENTHESIS() { return getToken(SimpleSpeakQlParser.CLOSE_PARENTHESIS, 0); }
+		public TerminalNode RIGHT_PARENTHESIS() { return getToken(SimpleSpeakQlParser.RIGHT_PARENTHESIS, 0); }
 		public RightParenContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2522,11 +2781,20 @@ public class SimpleSpeakQlParser extends Parser {
 	public final RightParenContext rightParen() throws RecognitionException {
 		RightParenContext _localctx = new RightParenContext(_ctx, getState());
 		enterRule(_localctx, 46, RULE_rightParen);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(414);
-			match(RR_BRACKET);
+			setState(440);
+			_la = _input.LA(1);
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << CLOSE_PARENTHESIS) | (1L << RIGHT_PARENTHESIS) | (1L << CLOSE_PAREN) | (1L << RIGHT_PAREN))) != 0) || _la==RR_BRACKET) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -2578,8 +2846,8 @@ public class SimpleSpeakQlParser extends Parser {
 	}
 	public static class NotExpressionContext extends ExpressionContext {
 		public Token notOperator;
-		public PredicateContext predicate() {
-			return getRuleContext(PredicateContext.class,0);
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
 		}
 		public TerminalNode NOT() { return getToken(SimpleSpeakQlParser.NOT, 0); }
 		public TerminalNode EXCLAMATION_SYMBOL() { return getToken(SimpleSpeakQlParser.EXCLAMATION_SYMBOL, 0); }
@@ -2595,6 +2863,31 @@ public class SimpleSpeakQlParser extends Parser {
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitNotExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class LogicalExpressionContext extends ExpressionContext {
+		public List<ExpressionContext> expression() {
+			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
+		}
+		public LogicalOperatorContext logicalOperator() {
+			return getRuleContext(LogicalOperatorContext.class,0);
+		}
+		public LogicalExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterLogicalExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitLogicalExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitLogicalExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2619,18 +2912,31 @@ public class SimpleSpeakQlParser extends Parser {
 	}
 
 	public final ExpressionContext expression() throws RecognitionException {
-		ExpressionContext _localctx = new ExpressionContext(_ctx, getState());
-		enterRule(_localctx, 48, RULE_expression);
+		return expression(0);
+	}
+
+	private ExpressionContext expression(int _p) throws RecognitionException {
+		ParserRuleContext _parentctx = _ctx;
+		int _parentState = getState();
+		ExpressionContext _localctx = new ExpressionContext(_ctx, _parentState);
+		ExpressionContext _prevctx = _localctx;
+		int _startState = 48;
+		enterRecursionRule(_localctx, 48, RULE_expression, _p);
 		int _la;
 		try {
-			setState(426);
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(453);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,35,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,39,_ctx) ) {
 			case 1:
-				_localctx = new NotExpressionContext(_localctx);
-				enterOuterAlt(_localctx, 1);
 				{
-				setState(416);
+				_localctx = new NotExpressionContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+
+				setState(443);
 				((NotExpressionContext)_localctx).notOperator = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !(_la==NOT || _la==EXCLAMATION_SYMBOL) ) {
@@ -2641,29 +2947,30 @@ public class SimpleSpeakQlParser extends Parser {
 					_errHandler.reportMatch(this);
 					consume();
 				}
-				setState(417);
-				predicate();
+				setState(444);
+				expression(4);
 				}
 				break;
 			case 2:
-				_localctx = new IsExpressionContext(_localctx);
-				enterOuterAlt(_localctx, 2);
 				{
-				setState(418);
-				predicate();
-				setState(419);
+				_localctx = new IsExpressionContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(445);
+				predicate(0);
+				setState(446);
 				match(IS);
-				setState(421);
+				setState(448);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==NOT) {
 					{
-					setState(420);
+					setState(447);
 					match(NOT);
 					}
 				}
 
-				setState(423);
+				setState(450);
 				((IsExpressionContext)_localctx).testValue = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !(_la==FALSE || _la==TRUE || _la==UNKNOWN) ) {
@@ -2677,13 +2984,40 @@ public class SimpleSpeakQlParser extends Parser {
 				}
 				break;
 			case 3:
-				_localctx = new PredicateExpressionContext(_localctx);
-				enterOuterAlt(_localctx, 3);
 				{
-				setState(425);
-				predicate();
+				_localctx = new PredicateExpressionContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(452);
+				predicate(0);
 				}
 				break;
+			}
+			_ctx.stop = _input.LT(-1);
+			setState(461);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,40,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					if ( _parseListeners!=null ) triggerExitRuleEvent();
+					_prevctx = _localctx;
+					{
+					{
+					_localctx = new LogicalExpressionContext(new ExpressionContext(_parentctx, _parentState));
+					pushNewRecursionContext(_localctx, _startState, RULE_expression);
+					setState(455);
+					if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
+					setState(456);
+					logicalOperator();
+					setState(457);
+					expression(4);
+					}
+					} 
+				}
+				setState(463);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,40,_ctx);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -2692,7 +3026,7 @@ public class SimpleSpeakQlParser extends Parser {
 			_errHandler.recover(this, re);
 		}
 		finally {
-			exitRule();
+			unrollRecursionContexts(_parentctx);
 		}
 		return _localctx;
 	}
@@ -2732,45 +3066,45 @@ public class SimpleSpeakQlParser extends Parser {
 		LogicalOperatorContext _localctx = new LogicalOperatorContext(_ctx, getState());
 		enterRule(_localctx, 50, RULE_logicalOperator);
 		try {
-			setState(435);
+			setState(471);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case AND:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(428);
+				setState(464);
 				match(AND);
 				}
 				break;
 			case BIT_AND_OP:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(429);
+				setState(465);
 				match(BIT_AND_OP);
-				setState(430);
+				setState(466);
 				match(BIT_AND_OP);
 				}
 				break;
 			case XOR:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(431);
+				setState(467);
 				match(XOR);
 				}
 				break;
 			case OR:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(432);
+				setState(468);
 				match(OR);
 				}
 				break;
 			case BIT_OR_OP:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(433);
+				setState(469);
 				match(BIT_OR_OP);
-				setState(434);
+				setState(470);
 				match(BIT_OR_OP);
 				}
 				break;
@@ -2800,36 +3134,127 @@ public class SimpleSpeakQlParser extends Parser {
 			super.copyFrom(ctx);
 		}
 	}
-	public static class SimpleExpressionAtomPredicateContext extends PredicateContext {
-		public SimpleExpressionAtomContext simpleExpressionAtom() {
-			return getRuleContext(SimpleExpressionAtomContext.class,0);
+	public static class SoundsLikePredicateContext extends PredicateContext {
+		public List<PredicateContext> predicate() {
+			return getRuleContexts(PredicateContext.class);
 		}
-		public SimpleExpressionAtomPredicateContext(PredicateContext ctx) { copyFrom(ctx); }
+		public PredicateContext predicate(int i) {
+			return getRuleContext(PredicateContext.class,i);
+		}
+		public TerminalNode SOUNDS() { return getToken(SimpleSpeakQlParser.SOUNDS, 0); }
+		public TerminalNode LIKE() { return getToken(SimpleSpeakQlParser.LIKE, 0); }
+		public SoundsLikePredicateContext(PredicateContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterSimpleExpressionAtomPredicate(this);
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterSoundsLikePredicate(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitSimpleExpressionAtomPredicate(this);
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitSoundsLikePredicate(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitSimpleExpressionAtomPredicate(this);
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitSoundsLikePredicate(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class ExpressionAtomPredicateContext extends PredicateContext {
+		public ExpressionAtomContext expressionAtom() {
+			return getRuleContext(ExpressionAtomContext.class,0);
+		}
+		public TerminalNode LOCAL_ID() { return getToken(SimpleSpeakQlParser.LOCAL_ID, 0); }
+		public TerminalNode VAR_ASSIGN() { return getToken(SimpleSpeakQlParser.VAR_ASSIGN, 0); }
+		public ExpressionAtomPredicateContext(PredicateContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterExpressionAtomPredicate(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitExpressionAtomPredicate(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitExpressionAtomPredicate(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class SubqueryComparisonPredicateContext extends PredicateContext {
+		public Token quantifier;
+		public PredicateContext predicate() {
+			return getRuleContext(PredicateContext.class,0);
+		}
+		public ComparisonOperatorContext comparisonOperator() {
+			return getRuleContext(ComparisonOperatorContext.class,0);
+		}
+		public LeftParenContext leftParen() {
+			return getRuleContext(LeftParenContext.class,0);
+		}
+		public SubQueryPredicateContext subQueryPredicate() {
+			return getRuleContext(SubQueryPredicateContext.class,0);
+		}
+		public RightParenContext rightParen() {
+			return getRuleContext(RightParenContext.class,0);
+		}
+		public TerminalNode ALL() { return getToken(SimpleSpeakQlParser.ALL, 0); }
+		public TerminalNode ANY() { return getToken(SimpleSpeakQlParser.ANY, 0); }
+		public TerminalNode SOME() { return getToken(SimpleSpeakQlParser.SOME, 0); }
+		public SubqueryComparisonPredicateContext(PredicateContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterSubqueryComparisonPredicate(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitSubqueryComparisonPredicate(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitSubqueryComparisonPredicate(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class JsonMemberOfPredicateContext extends PredicateContext {
+		public List<PredicateContext> predicate() {
+			return getRuleContexts(PredicateContext.class);
+		}
+		public PredicateContext predicate(int i) {
+			return getRuleContext(PredicateContext.class,i);
+		}
+		public TerminalNode MEMBER() { return getToken(SimpleSpeakQlParser.MEMBER, 0); }
+		public TerminalNode OF() { return getToken(SimpleSpeakQlParser.OF, 0); }
+		public LeftParenContext leftParen() {
+			return getRuleContext(LeftParenContext.class,0);
+		}
+		public RightParenContext rightParen() {
+			return getRuleContext(RightParenContext.class,0);
+		}
+		public JsonMemberOfPredicateContext(PredicateContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterJsonMemberOfPredicate(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitJsonMemberOfPredicate(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitJsonMemberOfPredicate(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 	public static class BinaryComparisonPredicateContext extends PredicateContext {
-		public SimpleExpressionAtomContext left;
-		public SimpleExpressionAtomContext right;
+		public PredicateContext left;
+		public PredicateContext right;
 		public ComparisonOperatorContext comparisonOperator() {
 			return getRuleContext(ComparisonOperatorContext.class,0);
 		}
-		public List<SimpleExpressionAtomContext> simpleExpressionAtom() {
-			return getRuleContexts(SimpleExpressionAtomContext.class);
+		public List<PredicateContext> predicate() {
+			return getRuleContexts(PredicateContext.class);
 		}
-		public SimpleExpressionAtomContext simpleExpressionAtom(int i) {
-			return getRuleContext(SimpleExpressionAtomContext.class,i);
+		public PredicateContext predicate(int i) {
+			return getRuleContext(PredicateContext.class,i);
 		}
 		public BinaryComparisonPredicateContext(PredicateContext ctx) { copyFrom(ctx); }
 		@Override
@@ -2846,9 +3271,70 @@ public class SimpleSpeakQlParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	public static class InPredicateContext extends PredicateContext {
+		public PredicateContext predicate() {
+			return getRuleContext(PredicateContext.class,0);
+		}
+		public TerminalNode IN() { return getToken(SimpleSpeakQlParser.IN, 0); }
+		public LeftParenContext leftParen() {
+			return getRuleContext(LeftParenContext.class,0);
+		}
+		public RightParenContext rightParen() {
+			return getRuleContext(RightParenContext.class,0);
+		}
+		public SubQueryPredicateContext subQueryPredicate() {
+			return getRuleContext(SubQueryPredicateContext.class,0);
+		}
+		public ExpressionsContext expressions() {
+			return getRuleContext(ExpressionsContext.class,0);
+		}
+		public TerminalNode NOT() { return getToken(SimpleSpeakQlParser.NOT, 0); }
+		public IsKeywordContext isKeyword() {
+			return getRuleContext(IsKeywordContext.class,0);
+		}
+		public InPredicateContext(PredicateContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterInPredicate(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitInPredicate(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitInPredicate(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class BetweenPredicateContext extends PredicateContext {
+		public List<PredicateContext> predicate() {
+			return getRuleContexts(PredicateContext.class);
+		}
+		public PredicateContext predicate(int i) {
+			return getRuleContext(PredicateContext.class,i);
+		}
+		public TerminalNode BETWEEN() { return getToken(SimpleSpeakQlParser.BETWEEN, 0); }
+		public TerminalNode AND() { return getToken(SimpleSpeakQlParser.AND, 0); }
+		public TerminalNode NOT() { return getToken(SimpleSpeakQlParser.NOT, 0); }
+		public BetweenPredicateContext(PredicateContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterBetweenPredicate(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitBetweenPredicate(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitBetweenPredicate(this);
+			else return visitor.visitChildren(this);
+		}
+	}
 	public static class IsNullPredicateContext extends PredicateContext {
-		public SimpleExpressionAtomContext simpleExpressionAtom() {
-			return getRuleContext(SimpleExpressionAtomContext.class,0);
+		public PredicateContext predicate() {
+			return getRuleContext(PredicateContext.class,0);
 		}
 		public TerminalNode IS() { return getToken(SimpleSpeakQlParser.IS, 0); }
 		public NullNotnullContext nullNotnull() {
@@ -2869,46 +3355,383 @@ public class SimpleSpeakQlParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	public static class LikePredicateContext extends PredicateContext {
+		public List<PredicateContext> predicate() {
+			return getRuleContexts(PredicateContext.class);
+		}
+		public PredicateContext predicate(int i) {
+			return getRuleContext(PredicateContext.class,i);
+		}
+		public TerminalNode LIKE() { return getToken(SimpleSpeakQlParser.LIKE, 0); }
+		public TerminalNode NOT() { return getToken(SimpleSpeakQlParser.NOT, 0); }
+		public TerminalNode ESCAPE() { return getToken(SimpleSpeakQlParser.ESCAPE, 0); }
+		public TerminalNode STRING_LITERAL() { return getToken(SimpleSpeakQlParser.STRING_LITERAL, 0); }
+		public LikePredicateContext(PredicateContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterLikePredicate(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitLikePredicate(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitLikePredicate(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class RegexpPredicateContext extends PredicateContext {
+		public Token regex;
+		public List<PredicateContext> predicate() {
+			return getRuleContexts(PredicateContext.class);
+		}
+		public PredicateContext predicate(int i) {
+			return getRuleContext(PredicateContext.class,i);
+		}
+		public TerminalNode REGEXP() { return getToken(SimpleSpeakQlParser.REGEXP, 0); }
+		public TerminalNode RLIKE() { return getToken(SimpleSpeakQlParser.RLIKE, 0); }
+		public TerminalNode NOT() { return getToken(SimpleSpeakQlParser.NOT, 0); }
+		public RegexpPredicateContext(PredicateContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterRegexpPredicate(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitRegexpPredicate(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitRegexpPredicate(this);
+			else return visitor.visitChildren(this);
+		}
+	}
 
 	public final PredicateContext predicate() throws RecognitionException {
-		PredicateContext _localctx = new PredicateContext(_ctx, getState());
-		enterRule(_localctx, 52, RULE_predicate);
+		return predicate(0);
+	}
+
+	private PredicateContext predicate(int _p) throws RecognitionException {
+		ParserRuleContext _parentctx = _ctx;
+		int _parentState = getState();
+		PredicateContext _localctx = new PredicateContext(_ctx, _parentState);
+		PredicateContext _prevctx = _localctx;
+		int _startState = 52;
+		enterRecursionRule(_localctx, 52, RULE_predicate, _p);
+		int _la;
 		try {
-			setState(446);
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+			{
+			_localctx = new ExpressionAtomPredicateContext(_localctx);
+			_ctx = _localctx;
+			_prevctx = _localctx;
+
+			setState(476);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,37,_ctx) ) {
-			case 1:
-				_localctx = new IsNullPredicateContext(_localctx);
-				enterOuterAlt(_localctx, 1);
+			_la = _input.LA(1);
+			if (_la==LOCAL_ID) {
 				{
-				setState(437);
-				simpleExpressionAtom();
-				setState(438);
-				match(IS);
-				setState(439);
-				nullNotnull();
+				setState(474);
+				match(LOCAL_ID);
+				setState(475);
+				match(VAR_ASSIGN);
 				}
-				break;
-			case 2:
-				_localctx = new BinaryComparisonPredicateContext(_localctx);
-				enterOuterAlt(_localctx, 2);
-				{
-				setState(441);
-				((BinaryComparisonPredicateContext)_localctx).left = simpleExpressionAtom();
-				setState(442);
-				comparisonOperator();
-				setState(443);
-				((BinaryComparisonPredicateContext)_localctx).right = simpleExpressionAtom();
+			}
+
+			setState(478);
+			expressionAtom(0);
+			}
+			_ctx.stop = _input.LT(-1);
+			setState(547);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,51,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					if ( _parseListeners!=null ) triggerExitRuleEvent();
+					_prevctx = _localctx;
+					{
+					setState(545);
+					_errHandler.sync(this);
+					switch ( getInterpreter().adaptivePredict(_input,50,_ctx) ) {
+					case 1:
+						{
+						_localctx = new BinaryComparisonPredicateContext(new PredicateContext(_parentctx, _parentState));
+						((BinaryComparisonPredicateContext)_localctx).left = _prevctx;
+						pushNewRecursionContext(_localctx, _startState, RULE_predicate);
+						setState(480);
+						if (!(precpred(_ctx, 8))) throw new FailedPredicateException(this, "precpred(_ctx, 8)");
+						setState(481);
+						comparisonOperator();
+						setState(482);
+						((BinaryComparisonPredicateContext)_localctx).right = predicate(9);
+						}
+						break;
+					case 2:
+						{
+						_localctx = new BetweenPredicateContext(new PredicateContext(_parentctx, _parentState));
+						pushNewRecursionContext(_localctx, _startState, RULE_predicate);
+						setState(484);
+						if (!(precpred(_ctx, 6))) throw new FailedPredicateException(this, "precpred(_ctx, 6)");
+						setState(486);
+						_errHandler.sync(this);
+						_la = _input.LA(1);
+						if (_la==NOT) {
+							{
+							setState(485);
+							match(NOT);
+							}
+						}
+
+						setState(488);
+						match(BETWEEN);
+						setState(489);
+						predicate(0);
+						setState(490);
+						match(AND);
+						setState(491);
+						predicate(7);
+						}
+						break;
+					case 3:
+						{
+						_localctx = new SoundsLikePredicateContext(new PredicateContext(_parentctx, _parentState));
+						pushNewRecursionContext(_localctx, _startState, RULE_predicate);
+						setState(493);
+						if (!(precpred(_ctx, 5))) throw new FailedPredicateException(this, "precpred(_ctx, 5)");
+						setState(494);
+						match(SOUNDS);
+						setState(495);
+						match(LIKE);
+						setState(496);
+						predicate(6);
+						}
+						break;
+					case 4:
+						{
+						_localctx = new RegexpPredicateContext(new PredicateContext(_parentctx, _parentState));
+						pushNewRecursionContext(_localctx, _startState, RULE_predicate);
+						setState(497);
+						if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
+						setState(499);
+						_errHandler.sync(this);
+						_la = _input.LA(1);
+						if (_la==NOT) {
+							{
+							setState(498);
+							match(NOT);
+							}
+						}
+
+						setState(501);
+						((RegexpPredicateContext)_localctx).regex = _input.LT(1);
+						_la = _input.LA(1);
+						if ( !(_la==REGEXP || _la==RLIKE) ) {
+							((RegexpPredicateContext)_localctx).regex = (Token)_errHandler.recoverInline(this);
+						}
+						else {
+							if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+							_errHandler.reportMatch(this);
+							consume();
+						}
+						setState(502);
+						predicate(4);
+						}
+						break;
+					case 5:
+						{
+						_localctx = new InPredicateContext(new PredicateContext(_parentctx, _parentState));
+						pushNewRecursionContext(_localctx, _startState, RULE_predicate);
+						setState(503);
+						if (!(precpred(_ctx, 10))) throw new FailedPredicateException(this, "precpred(_ctx, 10)");
+						setState(505);
+						_errHandler.sync(this);
+						_la = _input.LA(1);
+						if (_la==NOT) {
+							{
+							setState(504);
+							match(NOT);
+							}
+						}
+
+						setState(508);
+						_errHandler.sync(this);
+						_la = _input.LA(1);
+						if (_la==IS) {
+							{
+							setState(507);
+							isKeyword();
+							}
+						}
+
+						setState(510);
+						match(IN);
+						setState(511);
+						leftParen();
+						setState(514);
+						_errHandler.sync(this);
+						switch ( getInterpreter().adaptivePredict(_input,47,_ctx) ) {
+						case 1:
+							{
+							setState(512);
+							subQueryPredicate();
+							}
+							break;
+						case 2:
+							{
+							setState(513);
+							expressions();
+							}
+							break;
+						}
+						setState(516);
+						rightParen();
+						}
+						break;
+					case 6:
+						{
+						_localctx = new IsNullPredicateContext(new PredicateContext(_parentctx, _parentState));
+						pushNewRecursionContext(_localctx, _startState, RULE_predicate);
+						setState(518);
+						if (!(precpred(_ctx, 9))) throw new FailedPredicateException(this, "precpred(_ctx, 9)");
+						setState(519);
+						match(IS);
+						setState(520);
+						nullNotnull();
+						}
+						break;
+					case 7:
+						{
+						_localctx = new SubqueryComparisonPredicateContext(new PredicateContext(_parentctx, _parentState));
+						pushNewRecursionContext(_localctx, _startState, RULE_predicate);
+						setState(521);
+						if (!(precpred(_ctx, 7))) throw new FailedPredicateException(this, "precpred(_ctx, 7)");
+						setState(522);
+						comparisonOperator();
+						setState(523);
+						((SubqueryComparisonPredicateContext)_localctx).quantifier = _input.LT(1);
+						_la = _input.LA(1);
+						if ( !(_la==ALL || _la==ANY || _la==SOME) ) {
+							((SubqueryComparisonPredicateContext)_localctx).quantifier = (Token)_errHandler.recoverInline(this);
+						}
+						else {
+							if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+							_errHandler.reportMatch(this);
+							consume();
+						}
+						setState(524);
+						leftParen();
+						setState(525);
+						subQueryPredicate();
+						setState(526);
+						rightParen();
+						}
+						break;
+					case 8:
+						{
+						_localctx = new LikePredicateContext(new PredicateContext(_parentctx, _parentState));
+						pushNewRecursionContext(_localctx, _startState, RULE_predicate);
+						setState(528);
+						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
+						setState(530);
+						_errHandler.sync(this);
+						_la = _input.LA(1);
+						if (_la==NOT) {
+							{
+							setState(529);
+							match(NOT);
+							}
+						}
+
+						setState(532);
+						match(LIKE);
+						setState(533);
+						predicate(0);
+						setState(536);
+						_errHandler.sync(this);
+						switch ( getInterpreter().adaptivePredict(_input,49,_ctx) ) {
+						case 1:
+							{
+							setState(534);
+							match(ESCAPE);
+							setState(535);
+							match(STRING_LITERAL);
+							}
+							break;
+						}
+						}
+						break;
+					case 9:
+						{
+						_localctx = new JsonMemberOfPredicateContext(new PredicateContext(_parentctx, _parentState));
+						pushNewRecursionContext(_localctx, _startState, RULE_predicate);
+						setState(538);
+						if (!(precpred(_ctx, 1))) throw new FailedPredicateException(this, "precpred(_ctx, 1)");
+						setState(539);
+						match(MEMBER);
+						setState(540);
+						match(OF);
+						setState(541);
+						leftParen();
+						setState(542);
+						predicate(0);
+						setState(543);
+						rightParen();
+						}
+						break;
+					}
+					} 
 				}
-				break;
-			case 3:
-				_localctx = new SimpleExpressionAtomPredicateContext(_localctx);
-				enterOuterAlt(_localctx, 3);
-				{
-				setState(445);
-				simpleExpressionAtom();
-				}
-				break;
+				setState(549);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,51,_ctx);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			unrollRecursionContexts(_parentctx);
+		}
+		return _localctx;
+	}
+
+	public static class SubQueryPredicateContext extends ParserRuleContext {
+		public SelectStatementContext selectStatement() {
+			return getRuleContext(SelectStatementContext.class,0);
+		}
+		public SubQueryPredicateContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_subQueryPredicate; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterSubQueryPredicate(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitSubQueryPredicate(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitSubQueryPredicate(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final SubQueryPredicateContext subQueryPredicate() throws RecognitionException {
+		SubQueryPredicateContext _localctx = new SubQueryPredicateContext(_ctx, getState());
+		enterRule(_localctx, 54, RULE_subQueryPredicate);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(550);
+			selectStatement();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2945,11 +3768,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final IsKeywordContext isKeyword() throws RecognitionException {
 		IsKeywordContext _localctx = new IsKeywordContext(_ctx, getState());
-		enterRule(_localctx, 54, RULE_isKeyword);
+		enterRule(_localctx, 56, RULE_isKeyword);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(448);
+			setState(552);
 			match(IS);
 			}
 		}
@@ -2988,12 +3811,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final ExpressionDelimiterContext expressionDelimiter() throws RecognitionException {
 		ExpressionDelimiterContext _localctx = new ExpressionDelimiterContext(_ctx, getState());
-		enterRule(_localctx, 56, RULE_expressionDelimiter);
+		enterRule(_localctx, 58, RULE_expressionDelimiter);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(450);
+			setState(554);
 			_la = _input.LA(1);
 			if ( !(_la==AND_THEN || _la==THEN) ) {
 			_errHandler.recoverInline(this);
@@ -3017,17 +3840,11 @@ public class SimpleSpeakQlParser extends Parser {
 	}
 
 	public static class SelectModifierExpressionContext extends ParserRuleContext {
-		public GroupByClauseContext groupByClause() {
-			return getRuleContext(GroupByClauseContext.class,0);
+		public List<SelectModifierItemContext> selectModifierItem() {
+			return getRuleContexts(SelectModifierItemContext.class);
 		}
-		public HavingClauseContext havingClause() {
-			return getRuleContext(HavingClauseContext.class,0);
-		}
-		public OrderByClauseContext orderByClause() {
-			return getRuleContext(OrderByClauseContext.class,0);
-		}
-		public LimitClauseContext limitClause() {
-			return getRuleContext(LimitClauseContext.class,0);
+		public SelectModifierItemContext selectModifierItem(int i) {
+			return getRuleContext(SelectModifierItemContext.class,i);
 		}
 		public SelectModifierExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -3050,51 +3867,133 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final SelectModifierExpressionContext selectModifierExpression() throws RecognitionException {
 		SelectModifierExpressionContext _localctx = new SelectModifierExpressionContext(_ctx, getState());
-		enterRule(_localctx, 58, RULE_selectModifierExpression);
+		enterRule(_localctx, 60, RULE_selectModifierExpression);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(453);
+			setState(557);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,52,_ctx) ) {
+			case 1:
+				{
+				setState(556);
+				selectModifierItem();
+				}
+				break;
+			}
+			setState(560);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,53,_ctx) ) {
+			case 1:
+				{
+				setState(559);
+				selectModifierItem();
+				}
+				break;
+			}
+			setState(563);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,54,_ctx) ) {
+			case 1:
+				{
+				setState(562);
+				selectModifierItem();
+				}
+				break;
+			}
+			setState(566);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if (_la==GROUP) {
+			if (((((_la - 103)) & ~0x3f) == 0 && ((1L << (_la - 103)) & ((1L << (GROUP - 103)) | (1L << (HAVING - 103)) | (1L << (LIMIT - 103)) | (1L << (ORDER - 103)))) != 0)) {
 				{
-				setState(452);
+				setState(565);
+				selectModifierItem();
+				}
+			}
+
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class SelectModifierItemContext extends ParserRuleContext {
+		public GroupByClauseContext groupByClause() {
+			return getRuleContext(GroupByClauseContext.class,0);
+		}
+		public HavingClauseContext havingClause() {
+			return getRuleContext(HavingClauseContext.class,0);
+		}
+		public OrderByClauseContext orderByClause() {
+			return getRuleContext(OrderByClauseContext.class,0);
+		}
+		public LimitClauseContext limitClause() {
+			return getRuleContext(LimitClauseContext.class,0);
+		}
+		public SelectModifierItemContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_selectModifierItem; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterSelectModifierItem(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitSelectModifierItem(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitSelectModifierItem(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final SelectModifierItemContext selectModifierItem() throws RecognitionException {
+		SelectModifierItemContext _localctx = new SelectModifierItemContext(_ctx, getState());
+		enterRule(_localctx, 62, RULE_selectModifierItem);
+		try {
+			setState(572);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case GROUP:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(568);
 				groupByClause();
 				}
-			}
-
-			setState(456);
-			_errHandler.sync(this);
-			_la = _input.LA(1);
-			if (_la==HAVING) {
+				break;
+			case HAVING:
+				enterOuterAlt(_localctx, 2);
 				{
-				setState(455);
+				setState(569);
 				havingClause();
 				}
-			}
-
-			setState(459);
-			_errHandler.sync(this);
-			_la = _input.LA(1);
-			if (_la==ORDER) {
+				break;
+			case ORDER:
+				enterOuterAlt(_localctx, 3);
 				{
-				setState(458);
+				setState(570);
 				orderByClause();
 				}
-			}
-
-			setState(462);
-			_errHandler.sync(this);
-			_la = _input.LA(1);
-			if (_la==LIMIT) {
+				break;
+			case LIMIT:
+				enterOuterAlt(_localctx, 4);
 				{
-				setState(461);
+				setState(571);
 				limitClause();
 				}
-			}
-
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -3165,75 +4064,75 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final GroupByClauseContext groupByClause() throws RecognitionException {
 		GroupByClauseContext _localctx = new GroupByClauseContext(_ctx, getState());
-		enterRule(_localctx, 60, RULE_groupByClause);
+		enterRule(_localctx, 64, RULE_groupByClause);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(464);
+			setState(574);
 			groupByKeyword();
-			setState(465);
+			setState(575);
 			groupByItem();
-			setState(471);
+			setState(581);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==AND || _la==COMMA) {
 				{
 				{
-				setState(466);
+				setState(576);
 				groupByItemDelimiter();
-				setState(467);
+				setState(577);
 				groupByItem();
 				}
 				}
-				setState(473);
+				setState(583);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(476);
+			setState(586);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==WITH) {
 				{
-				setState(474);
+				setState(584);
 				match(WITH);
-				setState(475);
+				setState(585);
 				match(ROLLUP);
 				}
 			}
 
-			setState(491);
+			setState(601);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,46,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,61,_ctx) ) {
 			case 1:
 				{
-				setState(478);
+				setState(588);
 				expressionDelimiter();
-				setState(480);
+				setState(590);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << RETRIEVE) | (1L << SHOW_ME) | (1L << DISPLAY) | (1L << PRESENT) | (1L << FIND) | (1L << WHAT_IS) | (1L << WHAT_ARE) | (1L << WHAT_IS_THE) | (1L << WHAT_ARE_THE))) != 0) || _la==GET || _la==SELECT) {
 					{
-					setState(479);
+					setState(589);
 					selectKeyword();
 					}
 				}
 
-				setState(482);
+				setState(592);
 				aggregateWindowedFunction();
-				setState(488);
+				setState(598);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==AND || _la==COMMA) {
 					{
 					{
-					setState(483);
+					setState(593);
 					selectElementDelimiter();
-					setState(484);
+					setState(594);
 					aggregateWindowedFunction();
 					}
 					}
-					setState(490);
+					setState(600);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -3277,24 +4176,24 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final GroupByKeywordContext groupByKeyword() throws RecognitionException {
 		GroupByKeywordContext _localctx = new GroupByKeywordContext(_ctx, getState());
-		enterRule(_localctx, 62, RULE_groupByKeyword);
+		enterRule(_localctx, 66, RULE_groupByKeyword);
 		try {
-			setState(496);
+			setState(606);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,47,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,62,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(493);
+				setState(603);
 				match(GROUP);
-				setState(494);
+				setState(604);
 				match(BY);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(495);
+				setState(605);
 				match(GROUP);
 				}
 				break;
@@ -3342,17 +4241,72 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final GroupByItemContext groupByItem() throws RecognitionException {
 		GroupByItemContext _localctx = new GroupByItemContext(_ctx, getState());
-		enterRule(_localctx, 64, RULE_groupByItem);
+		enterRule(_localctx, 68, RULE_groupByItem);
 		int _la;
 		try {
-			setState(503);
+			setState(613);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case SPOKEN_DOT:
+			case OPEN_PARENTHESIS:
+			case LEFT_PARENTHESIS:
+			case OPEN_PAREN:
+			case LEFT_PAREN:
+			case THE:
+			case EXISTS:
 			case FALSE:
+			case IF:
+			case INSERT:
 			case NOT:
 			case NULL_LITERAL:
+			case REPLACE:
 			case TRUE:
+			case AVG:
+			case BIT_AND:
+			case BIT_OR:
+			case BIT_XOR:
+			case COUNT:
+			case CUME_DIST:
+			case DENSE_RANK:
+			case FIRST_VALUE:
+			case GROUP_CONCAT:
+			case LAG:
+			case LAST_VALUE:
+			case LEAD:
+			case MAX:
+			case MIN:
+			case NTILE:
+			case NTH_VALUE:
+			case PERCENT_RANK:
+			case RANK:
+			case ROW_NUMBER:
+			case STD:
+			case STDDEV:
+			case STDDEV_POP:
+			case STDDEV_SAMP:
+			case SUM:
+			case VAR_POP:
+			case VAR_SAMP:
+			case VARIANCE:
+			case CURRENT_DATE:
+			case CURRENT_TIME:
+			case CURRENT_TIMESTAMP:
+			case LOCALTIME:
+			case CURDATE:
+			case CURTIME:
+			case DATE_ADD:
+			case DATE_SUB:
+			case LOCALTIMESTAMP:
+			case NOW:
+			case SUBSTR:
+			case SUBSTRING:
+			case SYSDATE:
+			case TRIM:
+			case UTC_DATE:
+			case UTC_TIME:
+			case UTC_TIMESTAMP:
+			case MID:
+			case ROW:
 			case QUARTER:
 			case MONTH:
 			case DAY:
@@ -3366,6 +4320,7 @@ public class SimpleSpeakQlParser extends Parser {
 			case EXCLAMATION_SYMBOL:
 			case BIT_NOT_OP:
 			case DOT:
+			case LR_BRACKET:
 			case ZERO_DECIMAL:
 			case ONE_DECIMAL:
 			case TWO_DECIMAL:
@@ -3377,16 +4332,17 @@ public class SimpleSpeakQlParser extends Parser {
 			case NULL_SPEC_LITERAL:
 			case BIT_STRING:
 			case ID:
+			case LOCAL_ID:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(498);
+				setState(608);
 				groupByExpression();
-				setState(500);
+				setState(610);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==ASC || _la==DESC) {
 					{
-					setState(499);
+					setState(609);
 					((GroupByItemContext)_localctx).order = _input.LT(1);
 					_la = _input.LA(1);
 					if ( !(_la==ASC || _la==DESC) ) {
@@ -3406,7 +4362,7 @@ public class SimpleSpeakQlParser extends Parser {
 			case AUTOMATICALLY:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(502);
+				setState(612);
 				automaticGroupByKeyword();
 				}
 				break;
@@ -3449,12 +4405,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final AutomaticGroupByKeywordContext automaticGroupByKeyword() throws RecognitionException {
 		AutomaticGroupByKeywordContext _localctx = new AutomaticGroupByKeywordContext(_ctx, getState());
-		enterRule(_localctx, 66, RULE_automaticGroupByKeyword);
+		enterRule(_localctx, 70, RULE_automaticGroupByKeyword);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(505);
+			setState(615);
 			_la = _input.LA(1);
 			if ( !(_la==AUTOMATIC || _la==AUTOMATICALLY) ) {
 			_errHandler.recoverInline(this);
@@ -3513,16 +4469,16 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final GroupByExpressionContext groupByExpression() throws RecognitionException {
 		GroupByExpressionContext _localctx = new GroupByExpressionContext(_ctx, getState());
-		enterRule(_localctx, 68, RULE_groupByExpression);
+		enterRule(_localctx, 72, RULE_groupByExpression);
 		int _la;
 		try {
-			setState(517);
+			setState(627);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,51,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,66,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(507);
+				setState(617);
 				((GroupByExpressionContext)_localctx).notOperator = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !(_la==NOT || _la==EXCLAMATION_SYMBOL) ) {
@@ -3533,28 +4489,28 @@ public class SimpleSpeakQlParser extends Parser {
 					_errHandler.reportMatch(this);
 					consume();
 				}
-				setState(508);
+				setState(618);
 				groupByExpression();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(509);
-				predicate();
-				setState(510);
+				setState(619);
+				predicate(0);
+				setState(620);
 				match(IS);
-				setState(512);
+				setState(622);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==NOT) {
 					{
-					setState(511);
+					setState(621);
 					match(NOT);
 					}
 				}
 
-				setState(514);
+				setState(624);
 				((GroupByExpressionContext)_localctx).testValue = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !(_la==FALSE || _la==TRUE || _la==UNKNOWN) ) {
@@ -3570,8 +4526,8 @@ public class SimpleSpeakQlParser extends Parser {
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(516);
-				predicate();
+				setState(626);
+				predicate(0);
 				}
 				break;
 			}
@@ -3611,12 +4567,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final GroupByItemDelimiterContext groupByItemDelimiter() throws RecognitionException {
 		GroupByItemDelimiterContext _localctx = new GroupByItemDelimiterContext(_ctx, getState());
-		enterRule(_localctx, 70, RULE_groupByItemDelimiter);
+		enterRule(_localctx, 74, RULE_groupByItemDelimiter);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(519);
+			setState(629);
 			_la = _input.LA(1);
 			if ( !(_la==AND || _la==COMMA) ) {
 			_errHandler.recoverInline(this);
@@ -3668,14 +4624,14 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final HavingClauseContext havingClause() throws RecognitionException {
 		HavingClauseContext _localctx = new HavingClauseContext(_ctx, getState());
-		enterRule(_localctx, 72, RULE_havingClause);
+		enterRule(_localctx, 76, RULE_havingClause);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(521);
+			setState(631);
 			havingKeyword();
-			setState(522);
-			((HavingClauseContext)_localctx).havingExpr = expression();
+			setState(632);
+			((HavingClauseContext)_localctx).havingExpr = expression(0);
 			}
 		}
 		catch (RecognitionException re) {
@@ -3712,11 +4668,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final HavingKeywordContext havingKeyword() throws RecognitionException {
 		HavingKeywordContext _localctx = new HavingKeywordContext(_ctx, getState());
-		enterRule(_localctx, 74, RULE_havingKeyword);
+		enterRule(_localctx, 78, RULE_havingKeyword);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(524);
+			setState(634);
 			match(HAVING);
 			}
 		}
@@ -3765,30 +4721,30 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final OrderByClauseContext orderByClause() throws RecognitionException {
 		OrderByClauseContext _localctx = new OrderByClauseContext(_ctx, getState());
-		enterRule(_localctx, 76, RULE_orderByClause);
+		enterRule(_localctx, 80, RULE_orderByClause);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(526);
+			setState(636);
 			match(ORDER);
-			setState(527);
+			setState(637);
 			match(BY);
-			setState(528);
+			setState(638);
 			orderByExpression();
-			setState(533);
+			setState(643);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(529);
+				setState(639);
 				match(COMMA);
-				setState(530);
+				setState(640);
 				orderByExpression();
 				}
 				}
-				setState(535);
+				setState(645);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -3833,19 +4789,19 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final OrderByExpressionContext orderByExpression() throws RecognitionException {
 		OrderByExpressionContext _localctx = new OrderByExpressionContext(_ctx, getState());
-		enterRule(_localctx, 78, RULE_orderByExpression);
+		enterRule(_localctx, 82, RULE_orderByExpression);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(536);
-			expression();
-			setState(538);
+			setState(646);
+			expression(0);
+			setState(648);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==ASC || _la==DESC) {
 				{
-				setState(537);
+				setState(647);
 				((OrderByExpressionContext)_localctx).order = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !(_la==ASC || _la==DESC) ) {
@@ -3905,40 +4861,40 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final LimitClauseContext limitClause() throws RecognitionException {
 		LimitClauseContext _localctx = new LimitClauseContext(_ctx, getState());
-		enterRule(_localctx, 80, RULE_limitClause);
+		enterRule(_localctx, 84, RULE_limitClause);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(540);
+			setState(650);
 			match(LIMIT);
-			setState(551);
+			setState(661);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,55,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,70,_ctx) ) {
 			case 1:
 				{
-				setState(544);
+				setState(654);
 				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,54,_ctx) ) {
+				switch ( getInterpreter().adaptivePredict(_input,69,_ctx) ) {
 				case 1:
 					{
-					setState(541);
+					setState(651);
 					((LimitClauseContext)_localctx).offset = limitClauseAtom();
-					setState(542);
+					setState(652);
 					match(COMMA);
 					}
 					break;
 				}
-				setState(546);
+				setState(656);
 				((LimitClauseContext)_localctx).limit = limitClauseAtom();
 				}
 				break;
 			case 2:
 				{
-				setState(547);
+				setState(657);
 				((LimitClauseContext)_localctx).limit = limitClauseAtom();
-				setState(548);
+				setState(658);
 				match(OFFSET);
-				setState(549);
+				setState(659);
 				((LimitClauseContext)_localctx).offset = limitClauseAtom();
 				}
 				break;
@@ -3984,9 +4940,9 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final LimitClauseAtomContext limitClauseAtom() throws RecognitionException {
 		LimitClauseAtomContext _localctx = new LimitClauseAtomContext(_ctx, getState());
-		enterRule(_localctx, 82, RULE_limitClauseAtom);
+		enterRule(_localctx, 86, RULE_limitClauseAtom);
 		try {
-			setState(555);
+			setState(665);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case ZERO_DECIMAL:
@@ -3996,7 +4952,7 @@ public class SimpleSpeakQlParser extends Parser {
 			case REAL_LITERAL:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(553);
+				setState(663);
 				decimalLiteral();
 				}
 				break;
@@ -4011,7 +4967,7 @@ public class SimpleSpeakQlParser extends Parser {
 			case ID:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(554);
+				setState(664);
 				simpleId();
 				}
 				break;
@@ -4064,30 +5020,30 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final QueryExpressionContext queryExpression() throws RecognitionException {
 		QueryExpressionContext _localctx = new QueryExpressionContext(_ctx, getState());
-		enterRule(_localctx, 84, RULE_queryExpression);
+		enterRule(_localctx, 88, RULE_queryExpression);
 		try {
-			setState(565);
+			setState(675);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,57,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,72,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(557);
+				setState(667);
 				leftParen();
-				setState(558);
+				setState(668);
 				querySpecification();
-				setState(559);
+				setState(669);
 				rightParen();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(561);
+				setState(671);
 				leftParen();
-				setState(562);
+				setState(672);
 				queryExpression();
-				setState(563);
+				setState(673);
 				rightParen();
 				}
 				break;
@@ -4111,6 +5067,12 @@ public class SimpleSpeakQlParser extends Parser {
 		public TableSourceNoJoinContext tableSourceNoJoin() {
 			return getRuleContext(TableSourceNoJoinContext.class,0);
 		}
+		public TheKeywordContext theKeyword() {
+			return getRuleContext(TheKeywordContext.class,0);
+		}
+		public TableKeywordContext tableKeyword() {
+			return getRuleContext(TableKeywordContext.class,0);
+		}
 		public FromClauseNoJoinContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -4132,14 +5094,35 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final FromClauseNoJoinContext fromClauseNoJoin() throws RecognitionException {
 		FromClauseNoJoinContext _localctx = new FromClauseNoJoinContext(_ctx, getState());
-		enterRule(_localctx, 86, RULE_fromClauseNoJoin);
+		enterRule(_localctx, 90, RULE_fromClauseNoJoin);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(567);
+			setState(677);
 			fromKeyword();
-			setState(568);
+			setState(679);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,73,_ctx) ) {
+			case 1:
+				{
+				setState(678);
+				theKeyword();
+				}
+				break;
+			}
+			setState(681);
 			tableSourceNoJoin();
+			setState(683);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==TABLE) {
+				{
+				setState(682);
+				tableKeyword();
+				}
+			}
+
 			}
 		}
 		catch (RecognitionException re) {
@@ -4181,13 +5164,13 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final FromClauseContext fromClause() throws RecognitionException {
 		FromClauseContext _localctx = new FromClauseContext(_ctx, getState());
-		enterRule(_localctx, 88, RULE_fromClause);
+		enterRule(_localctx, 92, RULE_fromClause);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(570);
+			setState(685);
 			fromKeyword();
-			setState(571);
+			setState(686);
 			tableSources();
 			}
 		}
@@ -4230,12 +5213,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final FromKeywordContext fromKeyword() throws RecognitionException {
 		FromKeywordContext _localctx = new FromKeywordContext(_ctx, getState());
-		enterRule(_localctx, 90, RULE_fromKeyword);
+		enterRule(_localctx, 94, RULE_fromKeyword);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(573);
+			setState(688);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << IN_TABLE) | (1L << IN_TABLES) | (1L << FROM_TABLE) | (1L << FROM_TABLES))) != 0) || _la==FROM || _la==IN) ) {
 			_errHandler.recoverInline(this);
@@ -4281,11 +5264,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final TableKeywordContext tableKeyword() throws RecognitionException {
 		TableKeywordContext _localctx = new TableKeywordContext(_ctx, getState());
-		enterRule(_localctx, 92, RULE_tableKeyword);
+		enterRule(_localctx, 96, RULE_tableKeyword);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(575);
+			setState(690);
 			match(TABLE);
 			}
 		}
@@ -4346,66 +5329,66 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final TableSourcesContext tableSources() throws RecognitionException {
 		TableSourcesContext _localctx = new TableSourcesContext(_ctx, getState());
-		enterRule(_localctx, 94, RULE_tableSources);
+		enterRule(_localctx, 98, RULE_tableSources);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(578);
+			setState(693);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,58,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,75,_ctx) ) {
 			case 1:
 				{
-				setState(577);
+				setState(692);
 				theKeyword();
 				}
 				break;
 			}
-			setState(580);
+			setState(695);
 			tableSource();
-			setState(582);
+			setState(697);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==TABLE) {
 				{
-				setState(581);
+				setState(696);
 				tableKeyword();
 				}
 			}
 
-			setState(594);
+			setState(709);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==AND || _la==COMMA) {
 				{
 				{
-				setState(584);
+				setState(699);
 				tableSourceDelimiter();
-				setState(586);
+				setState(701);
 				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,60,_ctx) ) {
+				switch ( getInterpreter().adaptivePredict(_input,77,_ctx) ) {
 				case 1:
 					{
-					setState(585);
+					setState(700);
 					theKeyword();
 					}
 					break;
 				}
-				setState(588);
+				setState(703);
 				tableSource();
-				setState(590);
+				setState(705);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==TABLE) {
 					{
-					setState(589);
+					setState(704);
 					tableKeyword();
 					}
 				}
 
 				}
 				}
-				setState(596);
+				setState(711);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -4480,16 +5463,16 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final TableSourceNoJoinContext tableSourceNoJoin() throws RecognitionException {
 		TableSourceNoJoinContext _localctx = new TableSourceNoJoinContext(_ctx, getState());
-		enterRule(_localctx, 96, RULE_tableSourceNoJoin);
+		enterRule(_localctx, 100, RULE_tableSourceNoJoin);
 		try {
-			setState(602);
+			setState(717);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,63,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,80,_ctx) ) {
 			case 1:
 				_localctx = new TableSourceNoJoinBaseContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(597);
+				setState(712);
 				tableSourceItem();
 				}
 				break;
@@ -4497,11 +5480,11 @@ public class SimpleSpeakQlParser extends Parser {
 				_localctx = new TableSourceNoJoinNestedContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(598);
+				setState(713);
 				leftParen();
-				setState(599);
+				setState(714);
 				tableSourceItem();
-				setState(600);
+				setState(715);
 				rightParen();
 				}
 				break;
@@ -4588,29 +5571,29 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final TableSourceContext tableSource() throws RecognitionException {
 		TableSourceContext _localctx = new TableSourceContext(_ctx, getState());
-		enterRule(_localctx, 98, RULE_tableSource);
+		enterRule(_localctx, 102, RULE_tableSource);
 		int _la;
 		try {
-			setState(621);
+			setState(736);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,66,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,83,_ctx) ) {
 			case 1:
 				_localctx = new TableSourceBaseContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(604);
+				setState(719);
 				tableSourceItem();
-				setState(608);
+				setState(723);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (((((_la - 19)) & ~0x3f) == 0 && ((1L << (_la - 19)) & ((1L << (JOIN_TABLE - 19)) | (1L << (BY_JOINING - 19)) | (1L << (BY_JOINING_TABLE - 19)) | (1L << (JOIN_WITH - 19)) | (1L << (JOIN_WITH_TABLE - 19)) | (1L << (JOINED_WITH - 19)) | (1L << (JOINED_WITH_TABLE - 19)) | (1L << (BY_JOINING_WITH_TABLE - 19)) | (1L << (CROSS - 19)))) != 0) || ((((_la - 112)) & ~0x3f) == 0 && ((1L << (_la - 112)) & ((1L << (INNER - 112)) | (1L << (JOIN - 112)) | (1L << (LEFT - 112)) | (1L << (NATURAL - 112)) | (1L << (RIGHT - 112)))) != 0)) {
 					{
 					{
-					setState(605);
+					setState(720);
 					joinPart();
 					}
 					}
-					setState(610);
+					setState(725);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -4620,25 +5603,25 @@ public class SimpleSpeakQlParser extends Parser {
 				_localctx = new TableSourceNestedContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(611);
+				setState(726);
 				leftParen();
-				setState(612);
+				setState(727);
 				tableSourceItem();
-				setState(616);
+				setState(731);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (((((_la - 19)) & ~0x3f) == 0 && ((1L << (_la - 19)) & ((1L << (JOIN_TABLE - 19)) | (1L << (BY_JOINING - 19)) | (1L << (BY_JOINING_TABLE - 19)) | (1L << (JOIN_WITH - 19)) | (1L << (JOIN_WITH_TABLE - 19)) | (1L << (JOINED_WITH - 19)) | (1L << (JOINED_WITH_TABLE - 19)) | (1L << (BY_JOINING_WITH_TABLE - 19)) | (1L << (CROSS - 19)))) != 0) || ((((_la - 112)) & ~0x3f) == 0 && ((1L << (_la - 112)) & ((1L << (INNER - 112)) | (1L << (JOIN - 112)) | (1L << (LEFT - 112)) | (1L << (NATURAL - 112)) | (1L << (RIGHT - 112)))) != 0)) {
 					{
 					{
-					setState(613);
+					setState(728);
 					joinPart();
 					}
 					}
-					setState(618);
+					setState(733);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(619);
+				setState(734);
 				rightParen();
 				}
 				break;
@@ -4667,8 +5650,14 @@ public class SimpleSpeakQlParser extends Parser {
 		}
 	}
 	public static class SubqueryTableItemContext extends TableSourceItemContext {
+		public LeftParenContext leftParen() {
+			return getRuleContext(LeftParenContext.class,0);
+		}
 		public SubQueryTableContext subQueryTable() {
 			return getRuleContext(SubQueryTableContext.class,0);
+		}
+		public RightParenContext rightParen() {
+			return getRuleContext(RightParenContext.class,0);
 		}
 		public TableAliasContext tableAlias() {
 			return getRuleContext(TableAliasContext.class,0);
@@ -4685,6 +5674,48 @@ public class SimpleSpeakQlParser extends Parser {
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitSubqueryTableItem(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class AtomTableItemContext extends TableSourceItemContext {
+		public TableNameContext tableName() {
+			return getRuleContext(TableNameContext.class,0);
+		}
+		public TerminalNode PARTITION() { return getToken(SimpleSpeakQlParser.PARTITION, 0); }
+		public LeftParenContext leftParen() {
+			return getRuleContext(LeftParenContext.class,0);
+		}
+		public UidListContext uidList() {
+			return getRuleContext(UidListContext.class,0);
+		}
+		public RightParenContext rightParen() {
+			return getRuleContext(RightParenContext.class,0);
+		}
+		public TableAliasContext tableAlias() {
+			return getRuleContext(TableAliasContext.class,0);
+		}
+		public List<IndexHintContext> indexHint() {
+			return getRuleContexts(IndexHintContext.class);
+		}
+		public IndexHintContext indexHint(int i) {
+			return getRuleContext(IndexHintContext.class,i);
+		}
+		public List<TerminalNode> COMMA() { return getTokens(SimpleSpeakQlParser.COMMA); }
+		public TerminalNode COMMA(int i) {
+			return getToken(SimpleSpeakQlParser.COMMA, i);
+		}
+		public AtomTableItemContext(TableSourceItemContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterAtomTableItem(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitAtomTableItem(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitAtomTableItem(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -4744,69 +5775,136 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final TableSourceItemContext tableSourceItem() throws RecognitionException {
 		TableSourceItemContext _localctx = new TableSourceItemContext(_ctx, getState());
-		enterRule(_localctx, 100, RULE_tableSourceItem);
+		enterRule(_localctx, 104, RULE_tableSourceItem);
 		int _la;
 		try {
-			setState(640);
+			int _alt;
+			setState(778);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,70,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,91,_ctx) ) {
 			case 1:
-				_localctx = new OnlyTableNameItemContext(_localctx);
+				_localctx = new SubqueryTableItemContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(624);
+				setState(738);
+				leftParen();
+				setState(739);
+				subQueryTable();
+				setState(740);
+				rightParen();
+				setState(741);
+				tableAlias();
+				}
+				break;
+			case 2:
+				_localctx = new OnlyTableNameItemContext(_localctx);
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(744);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==THE) {
 					{
-					setState(623);
+					setState(743);
 					theKeyword();
 					}
 				}
 
-				setState(626);
+				setState(746);
 				tableName();
-				setState(628);
+				setState(748);
 				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,68,_ctx) ) {
+				switch ( getInterpreter().adaptivePredict(_input,85,_ctx) ) {
 				case 1:
 					{
-					setState(627);
+					setState(747);
 					tableKeyword();
 					}
 					break;
 				}
-				setState(631);
+				setState(751);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==AS || ((((_la - 352)) & ~0x3f) == 0 && ((1L << (_la - 352)) & ((1L << (QUARTER - 352)) | (1L << (MONTH - 352)) | (1L << (DAY - 352)) | (1L << (HOUR - 352)) | (1L << (MINUTE - 352)) | (1L << (WEEK - 352)) | (1L << (SECOND - 352)) | (1L << (MICROSECOND - 352)))) != 0) || _la==ID) {
 					{
-					setState(630);
+					setState(750);
 					tableAlias();
 					}
 				}
 
 				}
 				break;
-			case 2:
-				_localctx = new SubqueryTableItemContext(_localctx);
-				enterOuterAlt(_localctx, 2);
-				{
-				setState(633);
-				subQueryTable();
-				setState(634);
-				tableAlias();
-				}
-				break;
 			case 3:
-				_localctx = new TableSourcesItemContext(_localctx);
+				_localctx = new AtomTableItemContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(636);
+				setState(753);
+				tableName();
+				setState(759);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==PARTITION) {
+					{
+					setState(754);
+					match(PARTITION);
+					setState(755);
+					leftParen();
+					setState(756);
+					uidList();
+					setState(757);
+					rightParen();
+					}
+				}
+
+				setState(762);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==AS || ((((_la - 352)) & ~0x3f) == 0 && ((1L << (_la - 352)) & ((1L << (QUARTER - 352)) | (1L << (MONTH - 352)) | (1L << (DAY - 352)) | (1L << (HOUR - 352)) | (1L << (MINUTE - 352)) | (1L << (WEEK - 352)) | (1L << (SECOND - 352)) | (1L << (MICROSECOND - 352)))) != 0) || _la==ID) {
+					{
+					setState(761);
+					tableAlias();
+					}
+				}
+
+				setState(772);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==FORCE || _la==IGNORE || _la==USE) {
+					{
+					setState(764);
+					indexHint();
+					setState(769);
+					_errHandler.sync(this);
+					_alt = getInterpreter().adaptivePredict(_input,89,_ctx);
+					while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+						if ( _alt==1 ) {
+							{
+							{
+							setState(765);
+							match(COMMA);
+							setState(766);
+							indexHint();
+							}
+							} 
+						}
+						setState(771);
+						_errHandler.sync(this);
+						_alt = getInterpreter().adaptivePredict(_input,89,_ctx);
+					}
+					}
+				}
+
+				}
+				break;
+			case 4:
+				_localctx = new TableSourcesItemContext(_localctx);
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(774);
 				leftParen();
-				setState(637);
+				setState(775);
 				tableSources();
-				setState(638);
+				setState(776);
 				rightParen();
 				}
 				break;
@@ -4825,12 +5923,6 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public static class SubQueryTableContext extends ParserRuleContext {
 		public SelectStatementContext parenthesisSubquery;
-		public LeftParenContext leftParen() {
-			return getRuleContext(LeftParenContext.class,0);
-		}
-		public RightParenContext rightParen() {
-			return getRuleContext(RightParenContext.class,0);
-		}
 		public SelectStatementContext selectStatement() {
 			return getRuleContext(SelectStatementContext.class,0);
 		}
@@ -4855,16 +5947,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final SubQueryTableContext subQueryTable() throws RecognitionException {
 		SubQueryTableContext _localctx = new SubQueryTableContext(_ctx, getState());
-		enterRule(_localctx, 102, RULE_subQueryTable);
+		enterRule(_localctx, 106, RULE_subQueryTable);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(642);
-			leftParen();
-			setState(643);
+			setState(780);
 			((SubQueryTableContext)_localctx).parenthesisSubquery = selectStatement();
-			setState(644);
-			rightParen();
 			}
 		}
 		catch (RecognitionException re) {
@@ -4907,22 +5995,22 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final TableAliasContext tableAlias() throws RecognitionException {
 		TableAliasContext _localctx = new TableAliasContext(_ctx, getState());
-		enterRule(_localctx, 104, RULE_tableAlias);
+		enterRule(_localctx, 108, RULE_tableAlias);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(647);
+			setState(783);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==AS) {
 				{
-				setState(646);
+				setState(782);
 				tableAliasAs();
 				}
 			}
 
-			setState(649);
+			setState(785);
 			((TableAliasContext)_localctx).alias = uid();
 			}
 		}
@@ -4960,11 +6048,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final TableAliasAsContext tableAliasAs() throws RecognitionException {
 		TableAliasAsContext _localctx = new TableAliasAsContext(_ctx, getState());
-		enterRule(_localctx, 106, RULE_tableAliasAs);
+		enterRule(_localctx, 110, RULE_tableAliasAs);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(651);
+			setState(787);
 			match(AS);
 			}
 		}
@@ -5004,11 +6092,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final TableNameContext tableName() throws RecognitionException {
 		TableNameContext _localctx = new TableNameContext(_ctx, getState());
-		enterRule(_localctx, 108, RULE_tableName);
+		enterRule(_localctx, 112, RULE_tableName);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(653);
+			setState(789);
 			fullId();
 			}
 		}
@@ -5055,26 +6143,26 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final UidListContext uidList() throws RecognitionException {
 		UidListContext _localctx = new UidListContext(_ctx, getState());
-		enterRule(_localctx, 110, RULE_uidList);
+		enterRule(_localctx, 114, RULE_uidList);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(655);
+			setState(791);
 			uid();
-			setState(660);
+			setState(796);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(656);
+				setState(792);
 				match(COMMA);
-				setState(657);
+				setState(793);
 				uid();
 				}
 				}
-				setState(662);
+				setState(798);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -5133,12 +6221,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final IndexHintContext indexHint() throws RecognitionException {
 		IndexHintContext _localctx = new IndexHintContext(_ctx, getState());
-		enterRule(_localctx, 112, RULE_indexHint);
+		enterRule(_localctx, 116, RULE_indexHint);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(663);
+			setState(799);
 			((IndexHintContext)_localctx).indexHintAction = _input.LT(1);
 			_la = _input.LA(1);
 			if ( !(_la==FORCE || _la==IGNORE || _la==USE) ) {
@@ -5149,7 +6237,7 @@ public class SimpleSpeakQlParser extends Parser {
 				_errHandler.reportMatch(this);
 				consume();
 			}
-			setState(664);
+			setState(800);
 			((IndexHintContext)_localctx).keyFormat = _input.LT(1);
 			_la = _input.LA(1);
 			if ( !(_la==INDEX || _la==KEY) ) {
@@ -5160,23 +6248,23 @@ public class SimpleSpeakQlParser extends Parser {
 				_errHandler.reportMatch(this);
 				consume();
 			}
-			setState(667);
+			setState(803);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==FOR) {
 				{
-				setState(665);
+				setState(801);
 				match(FOR);
-				setState(666);
+				setState(802);
 				indexHintType();
 				}
 			}
 
-			setState(669);
+			setState(805);
 			leftParen();
-			setState(670);
+			setState(806);
 			uidList();
-			setState(671);
+			setState(807);
 			rightParen();
 			}
 		}
@@ -5217,33 +6305,33 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final IndexHintTypeContext indexHintType() throws RecognitionException {
 		IndexHintTypeContext _localctx = new IndexHintTypeContext(_ctx, getState());
-		enterRule(_localctx, 114, RULE_indexHintType);
+		enterRule(_localctx, 118, RULE_indexHintType);
 		try {
-			setState(678);
+			setState(814);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case JOIN:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(673);
+				setState(809);
 				match(JOIN);
 				}
 				break;
 			case ORDER:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(674);
+				setState(810);
 				match(ORDER);
-				setState(675);
+				setState(811);
 				match(BY);
 				}
 				break;
 			case GROUP:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(676);
+				setState(812);
 				match(GROUP);
-				setState(677);
+				setState(813);
 				match(BY);
 				}
 				break;
@@ -5293,12 +6381,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final JoinKeywordContext joinKeyword() throws RecognitionException {
 		JoinKeywordContext _localctx = new JoinKeywordContext(_ctx, getState());
-		enterRule(_localctx, 116, RULE_joinKeyword);
+		enterRule(_localctx, 120, RULE_joinKeyword);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(680);
+			setState(816);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << JOIN_TABLE) | (1L << BY_JOINING) | (1L << BY_JOINING_TABLE) | (1L << JOIN_WITH) | (1L << JOIN_WITH_TABLE) | (1L << JOINED_WITH) | (1L << JOINED_WITH_TABLE) | (1L << BY_JOINING_WITH_TABLE))) != 0) || _la==JOIN) ) {
 			_errHandler.recoverInline(this);
@@ -5355,30 +6443,30 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final MultiJoinExpressionContext multiJoinExpression() throws RecognitionException {
 		MultiJoinExpressionContext _localctx = new MultiJoinExpressionContext(_ctx, getState());
-		enterRule(_localctx, 118, RULE_multiJoinExpression);
+		enterRule(_localctx, 122, RULE_multiJoinExpression);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(682);
+			setState(818);
 			multiJoinPart();
-			setState(688);
+			setState(824);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,75,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,96,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(683);
+					setState(819);
 					expressionDelimiter();
-					setState(684);
+					setState(820);
 					multiJoinPart();
 					}
 					} 
 				}
-				setState(690);
+				setState(826);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,75,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,96,_ctx);
 			}
 			}
 		}
@@ -5424,9 +6512,9 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final MultiJoinPartContext multiJoinPart() throws RecognitionException {
 		MultiJoinPartContext _localctx = new MultiJoinPartContext(_ctx, getState());
-		enterRule(_localctx, 120, RULE_multiJoinPart);
+		enterRule(_localctx, 124, RULE_multiJoinPart);
 		try {
-			setState(694);
+			setState(830);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case JOIN_TABLE:
@@ -5442,7 +6530,7 @@ public class SimpleSpeakQlParser extends Parser {
 			case JOIN:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(691);
+				setState(827);
 				multiInnerJoin();
 				}
 				break;
@@ -5450,14 +6538,14 @@ public class SimpleSpeakQlParser extends Parser {
 			case RIGHT:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(692);
+				setState(828);
 				multiOuterJoin();
 				}
 				break;
 			case NATURAL:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(693);
+				setState(829);
 				multiNaturalJoin();
 				}
 				break;
@@ -5529,55 +6617,59 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final MultiInnerJoinContext multiInnerJoin() throws RecognitionException {
 		MultiInnerJoinContext _localctx = new MultiInnerJoinContext(_ctx, getState());
-		enterRule(_localctx, 122, RULE_multiInnerJoin);
+		enterRule(_localctx, 126, RULE_multiInnerJoin);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(697);
+			setState(833);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==CROSS || _la==INNER) {
 				{
-				setState(696);
+				setState(832);
 				innerJoinKeyword();
 				}
 			}
 
-			setState(699);
+			setState(835);
 			joinKeyword();
-			setState(700);
+			setState(836);
 			tableSourceItem();
-			setState(701);
+			setState(837);
 			withKeyword();
-			setState(702);
+			setState(838);
 			tableSourceItem();
-			setState(711);
+			setState(847);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case ON:
 				{
-				setState(703);
+				setState(839);
 				onKeyword();
-				setState(704);
-				expression();
+				setState(840);
+				expression(0);
 				}
 				break;
 			case USING:
 				{
-				setState(706);
+				setState(842);
 				match(USING);
-				setState(707);
+				setState(843);
 				leftParen();
-				setState(708);
+				setState(844);
 				uidList();
-				setState(709);
+				setState(845);
 				rightParen();
 				}
 				break;
 			case EOF:
 			case END_OF_FILE:
 			case AND_THEN:
+			case CLOSE_PARENTHESIS:
+			case RIGHT_PARENTHESIS:
+			case CLOSE_PAREN:
+			case RIGHT_PAREN:
 			case THEN:
 			case RR_BRACKET:
 				break;
@@ -5653,53 +6745,53 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final MultiOuterJoinContext multiOuterJoin() throws RecognitionException {
 		MultiOuterJoinContext _localctx = new MultiOuterJoinContext(_ctx, getState());
-		enterRule(_localctx, 124, RULE_multiOuterJoin);
+		enterRule(_localctx, 128, RULE_multiOuterJoin);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(713);
+			setState(849);
 			joinDirection();
 			}
-			setState(715);
+			setState(851);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==OUTER) {
 				{
-				setState(714);
+				setState(850);
 				outerJoinKeyword();
 				}
 			}
 
-			setState(717);
+			setState(853);
 			joinKeyword();
-			setState(718);
+			setState(854);
 			tableSourceItem();
-			setState(719);
+			setState(855);
 			withKeyword();
-			setState(720);
+			setState(856);
 			tableSourceItem();
-			setState(729);
+			setState(865);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case ON:
 				{
-				setState(721);
+				setState(857);
 				onKeyword();
-				setState(722);
-				expression();
+				setState(858);
+				expression(0);
 				}
 				break;
 			case USING:
 				{
-				setState(724);
+				setState(860);
 				match(USING);
-				setState(725);
+				setState(861);
 				leftParen();
-				setState(726);
+				setState(862);
 				uidList();
-				setState(727);
+				setState(863);
 				rightParen();
 				}
 				break;
@@ -5762,28 +6854,28 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final MultiNaturalJoinContext multiNaturalJoin() throws RecognitionException {
 		MultiNaturalJoinContext _localctx = new MultiNaturalJoinContext(_ctx, getState());
-		enterRule(_localctx, 126, RULE_multiNaturalJoin);
+		enterRule(_localctx, 130, RULE_multiNaturalJoin);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(731);
+			setState(867);
 			naturalJoinKeyword();
-			setState(736);
+			setState(872);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==LEFT || _la==RIGHT) {
 				{
 				{
-				setState(732);
+				setState(868);
 				joinDirection();
 				}
-				setState(734);
+				setState(870);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==OUTER) {
 					{
-					setState(733);
+					setState(869);
 					outerJoinKeyword();
 					}
 				}
@@ -5791,13 +6883,13 @@ public class SimpleSpeakQlParser extends Parser {
 				}
 			}
 
-			setState(738);
+			setState(874);
 			joinKeyword();
-			setState(739);
+			setState(875);
 			tableSourceItem();
-			setState(740);
+			setState(876);
 			withKeyword();
-			setState(741);
+			setState(877);
 			tableSourceItem();
 			}
 		}
@@ -5836,12 +6928,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final WithKeywordContext withKeyword() throws RecognitionException {
 		WithKeywordContext _localctx = new WithKeywordContext(_ctx, getState());
-		enterRule(_localctx, 128, RULE_withKeyword);
+		enterRule(_localctx, 132, RULE_withKeyword);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(743);
+			setState(879);
 			_la = _input.LA(1);
 			if ( !(_la==WITH_TABLE || _la==WITH) ) {
 			_errHandler.recoverInline(this);
@@ -5895,9 +6987,9 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final JoinPartContext joinPart() throws RecognitionException {
 		JoinPartContext _localctx = new JoinPartContext(_ctx, getState());
-		enterRule(_localctx, 130, RULE_joinPart);
+		enterRule(_localctx, 134, RULE_joinPart);
 		try {
-			setState(748);
+			setState(884);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case JOIN_TABLE:
@@ -5913,7 +7005,7 @@ public class SimpleSpeakQlParser extends Parser {
 			case JOIN:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(745);
+				setState(881);
 				innerJoin();
 				}
 				break;
@@ -5921,14 +7013,14 @@ public class SimpleSpeakQlParser extends Parser {
 			case RIGHT:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(746);
+				setState(882);
 				outerJoin();
 				}
 				break;
 			case NATURAL:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(747);
+				setState(883);
 				naturalJoin();
 				}
 				break;
@@ -5994,45 +7086,45 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final InnerJoinContext innerJoin() throws RecognitionException {
 		InnerJoinContext _localctx = new InnerJoinContext(_ctx, getState());
-		enterRule(_localctx, 132, RULE_innerJoin);
+		enterRule(_localctx, 136, RULE_innerJoin);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(751);
+			setState(887);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==CROSS || _la==INNER) {
 				{
-				setState(750);
+				setState(886);
 				innerJoinKeyword();
 				}
 			}
 
-			setState(753);
+			setState(889);
 			joinKeyword();
-			setState(754);
+			setState(890);
 			tableSourceItem();
-			setState(763);
+			setState(899);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case ON:
 				{
-				setState(755);
+				setState(891);
 				onKeyword();
-				setState(756);
-				expression();
+				setState(892);
+				expression(0);
 				}
 				break;
 			case USING:
 				{
-				setState(758);
+				setState(894);
 				match(USING);
-				setState(759);
+				setState(895);
 				leftParen();
-				setState(760);
+				setState(896);
 				uidList();
-				setState(761);
+				setState(897);
 				rightParen();
 				}
 				break;
@@ -6055,6 +7147,10 @@ public class SimpleSpeakQlParser extends Parser {
 			case JOINED_WITH:
 			case JOINED_WITH_TABLE:
 			case BY_JOINING_WITH_TABLE:
+			case CLOSE_PARENTHESIS:
+			case RIGHT_PARENTHESIS:
+			case CLOSE_PAREN:
+			case RIGHT_PAREN:
 			case AND:
 			case CROSS:
 			case GET:
@@ -6113,12 +7209,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final InnerJoinKeywordContext innerJoinKeyword() throws RecognitionException {
 		InnerJoinKeywordContext _localctx = new InnerJoinKeywordContext(_ctx, getState());
-		enterRule(_localctx, 134, RULE_innerJoinKeyword);
+		enterRule(_localctx, 138, RULE_innerJoinKeyword);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(765);
+			setState(901);
 			_la = _input.LA(1);
 			if ( !(_la==CROSS || _la==INNER) ) {
 			_errHandler.recoverInline(this);
@@ -6164,11 +7260,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final OnKeywordContext onKeyword() throws RecognitionException {
 		OnKeywordContext _localctx = new OnKeywordContext(_ctx, getState());
-		enterRule(_localctx, 136, RULE_onKeyword);
+		enterRule(_localctx, 140, RULE_onKeyword);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(767);
+			setState(903);
 			match(ON);
 			}
 		}
@@ -6233,49 +7329,49 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final OuterJoinContext outerJoin() throws RecognitionException {
 		OuterJoinContext _localctx = new OuterJoinContext(_ctx, getState());
-		enterRule(_localctx, 138, RULE_outerJoin);
+		enterRule(_localctx, 142, RULE_outerJoin);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(769);
+			setState(905);
 			joinDirection();
 			}
-			setState(771);
+			setState(907);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==OUTER) {
 				{
-				setState(770);
+				setState(906);
 				outerJoinKeyword();
 				}
 			}
 
-			setState(773);
+			setState(909);
 			joinKeyword();
-			setState(774);
+			setState(910);
 			tableSourceItem();
-			setState(783);
+			setState(919);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case ON:
 				{
-				setState(775);
+				setState(911);
 				onKeyword();
-				setState(776);
-				expression();
+				setState(912);
+				expression(0);
 				}
 				break;
 			case USING:
 				{
-				setState(778);
+				setState(914);
 				match(USING);
-				setState(779);
+				setState(915);
 				leftParen();
-				setState(780);
+				setState(916);
 				uidList();
-				setState(781);
+				setState(917);
 				rightParen();
 				}
 				break;
@@ -6319,12 +7415,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final JoinDirectionContext joinDirection() throws RecognitionException {
 		JoinDirectionContext _localctx = new JoinDirectionContext(_ctx, getState());
-		enterRule(_localctx, 140, RULE_joinDirection);
+		enterRule(_localctx, 144, RULE_joinDirection);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(785);
+			setState(921);
 			_la = _input.LA(1);
 			if ( !(_la==LEFT || _la==RIGHT) ) {
 			_errHandler.recoverInline(this);
@@ -6370,11 +7466,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final OuterJoinKeywordContext outerJoinKeyword() throws RecognitionException {
 		OuterJoinKeywordContext _localctx = new OuterJoinKeywordContext(_ctx, getState());
-		enterRule(_localctx, 142, RULE_outerJoinKeyword);
+		enterRule(_localctx, 146, RULE_outerJoinKeyword);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(787);
+			setState(923);
 			match(OUTER);
 			}
 		}
@@ -6426,28 +7522,28 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final NaturalJoinContext naturalJoin() throws RecognitionException {
 		NaturalJoinContext _localctx = new NaturalJoinContext(_ctx, getState());
-		enterRule(_localctx, 144, RULE_naturalJoin);
+		enterRule(_localctx, 148, RULE_naturalJoin);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(789);
+			setState(925);
 			naturalJoinKeyword();
-			setState(794);
+			setState(930);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==LEFT || _la==RIGHT) {
 				{
 				{
-				setState(790);
+				setState(926);
 				joinDirection();
 				}
-				setState(792);
+				setState(928);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==OUTER) {
 					{
-					setState(791);
+					setState(927);
 					outerJoinKeyword();
 					}
 				}
@@ -6455,9 +7551,9 @@ public class SimpleSpeakQlParser extends Parser {
 				}
 			}
 
-			setState(796);
+			setState(932);
 			joinKeyword();
-			setState(797);
+			setState(933);
 			tableSourceItem();
 			}
 		}
@@ -6495,11 +7591,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final NaturalJoinKeywordContext naturalJoinKeyword() throws RecognitionException {
 		NaturalJoinKeywordContext _localctx = new NaturalJoinKeywordContext(_ctx, getState());
-		enterRule(_localctx, 146, RULE_naturalJoinKeyword);
+		enterRule(_localctx, 150, RULE_naturalJoinKeyword);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(799);
+			setState(935);
 			match(NATURAL);
 			}
 		}
@@ -6538,12 +7634,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final TableSourceDelimiterContext tableSourceDelimiter() throws RecognitionException {
 		TableSourceDelimiterContext _localctx = new TableSourceDelimiterContext(_ctx, getState());
-		enterRule(_localctx, 148, RULE_tableSourceDelimiter);
+		enterRule(_localctx, 152, RULE_tableSourceDelimiter);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(801);
+			setState(937);
 			_la = _input.LA(1);
 			if ( !(_la==AND || _la==COMMA) ) {
 			_errHandler.recoverInline(this);
@@ -6573,11 +7669,9 @@ public class SimpleSpeakQlParser extends Parser {
 		public ExpressionContext expression(int i) {
 			return getRuleContext(ExpressionContext.class,i);
 		}
-		public List<WhereExpressionDelimiterContext> whereExpressionDelimiter() {
-			return getRuleContexts(WhereExpressionDelimiterContext.class);
-		}
-		public WhereExpressionDelimiterContext whereExpressionDelimiter(int i) {
-			return getRuleContext(WhereExpressionDelimiterContext.class,i);
+		public List<TerminalNode> COMMA() { return getTokens(SimpleSpeakQlParser.COMMA); }
+		public TerminalNode COMMA(int i) {
+			return getToken(SimpleSpeakQlParser.COMMA, i);
 		}
 		public ExpressionsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -6600,80 +7694,28 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final ExpressionsContext expressions() throws RecognitionException {
 		ExpressionsContext _localctx = new ExpressionsContext(_ctx, getState());
-		enterRule(_localctx, 150, RULE_expressions);
+		enterRule(_localctx, 154, RULE_expressions);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(803);
-			expression();
-			setState(809);
+			setState(939);
+			expression(0);
+			setState(944);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==AND || _la==COMMA) {
+			while (_la==COMMA) {
 				{
 				{
-				setState(804);
-				whereExpressionDelimiter();
-				setState(805);
-				expression();
+				setState(940);
+				match(COMMA);
+				setState(941);
+				expression(0);
 				}
 				}
-				setState(811);
+				setState(946);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class WhereExpressionDelimiterContext extends ParserRuleContext {
-		public TerminalNode COMMA() { return getToken(SimpleSpeakQlParser.COMMA, 0); }
-		public TerminalNode AND() { return getToken(SimpleSpeakQlParser.AND, 0); }
-		public WhereExpressionDelimiterContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_whereExpressionDelimiter; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterWhereExpressionDelimiter(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitWhereExpressionDelimiter(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitWhereExpressionDelimiter(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final WhereExpressionDelimiterContext whereExpressionDelimiter() throws RecognitionException {
-		WhereExpressionDelimiterContext _localctx = new WhereExpressionDelimiterContext(_ctx, getState());
-		enterRule(_localctx, 152, RULE_whereExpressionDelimiter);
-		int _la;
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(812);
-			_la = _input.LA(1);
-			if ( !(_la==AND || _la==COMMA) ) {
-			_errHandler.recoverInline(this);
-			}
-			else {
-				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
-				_errHandler.reportMatch(this);
-				consume();
 			}
 			}
 		}
@@ -6713,22 +7755,22 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final NullNotnullContext nullNotnull() throws RecognitionException {
 		NullNotnullContext _localctx = new NullNotnullContext(_ctx, getState());
-		enterRule(_localctx, 154, RULE_nullNotnull);
+		enterRule(_localctx, 156, RULE_nullNotnull);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(815);
+			setState(948);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==NOT) {
 				{
-				setState(814);
+				setState(947);
 				match(NOT);
 				}
 			}
 
-			setState(817);
+			setState(950);
 			_la = _input.LA(1);
 			if ( !(_la==NULL_LITERAL || _la==NULL_SPEC_LITERAL) ) {
 			_errHandler.recoverInline(this);
@@ -6777,76 +7819,76 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final ComparisonOperatorContext comparisonOperator() throws RecognitionException {
 		ComparisonOperatorContext _localctx = new ComparisonOperatorContext(_ctx, getState());
-		enterRule(_localctx, 156, RULE_comparisonOperator);
+		enterRule(_localctx, 158, RULE_comparisonOperator);
 		try {
-			setState(833);
+			setState(966);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,92,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,113,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(819);
+				setState(952);
 				match(EQUAL_SYMBOL);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(820);
+				setState(953);
 				match(GREATER_SYMBOL);
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(821);
+				setState(954);
 				match(LESS_SYMBOL);
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(822);
+				setState(955);
 				match(LESS_SYMBOL);
-				setState(823);
+				setState(956);
 				match(EQUAL_SYMBOL);
 				}
 				break;
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(824);
+				setState(957);
 				match(GREATER_SYMBOL);
-				setState(825);
+				setState(958);
 				match(EQUAL_SYMBOL);
 				}
 				break;
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(826);
+				setState(959);
 				match(LESS_SYMBOL);
-				setState(827);
+				setState(960);
 				match(GREATER_SYMBOL);
 				}
 				break;
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(828);
+				setState(961);
 				match(EXCLAMATION_SYMBOL);
-				setState(829);
+				setState(962);
 				match(EQUAL_SYMBOL);
 				}
 				break;
 			case 8:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(830);
+				setState(963);
 				match(LESS_SYMBOL);
-				setState(831);
+				setState(964);
 				match(EQUAL_SYMBOL);
-				setState(832);
+				setState(965);
 				match(GREATER_SYMBOL);
 				}
 				break;
@@ -6863,158 +7905,413 @@ public class SimpleSpeakQlParser extends Parser {
 		return _localctx;
 	}
 
-	public static class SimpleExpressionAtomContext extends ParserRuleContext {
-		public List<ConstantContext> constant() {
-			return getRuleContexts(ConstantContext.class);
+	public static class ExpressionAtomContext extends ParserRuleContext {
+		public ExpressionAtomContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
 		}
-		public ConstantContext constant(int i) {
-			return getRuleContext(ConstantContext.class,i);
+		@Override public int getRuleIndex() { return RULE_expressionAtom; }
+	 
+		public ExpressionAtomContext() { }
+		public void copyFrom(ExpressionAtomContext ctx) {
+			super.copyFrom(ctx);
 		}
-		public List<FullColumnNameContext> fullColumnName() {
-			return getRuleContexts(FullColumnNameContext.class);
-		}
-		public FullColumnNameContext fullColumnName(int i) {
-			return getRuleContext(FullColumnNameContext.class,i);
-		}
-		public MathOperatorContext mathOperator() {
-			return getRuleContext(MathOperatorContext.class,0);
-		}
+	}
+	public static class UnaryExpressionAtomContext extends ExpressionAtomContext {
 		public UnaryOperatorContext unaryOperator() {
 			return getRuleContext(UnaryOperatorContext.class,0);
 		}
-		public SimpleExpressionAtomContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
+		public ExpressionAtomContext expressionAtom() {
+			return getRuleContext(ExpressionAtomContext.class,0);
 		}
-		@Override public int getRuleIndex() { return RULE_simpleExpressionAtom; }
+		public UnaryExpressionAtomContext(ExpressionAtomContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterSimpleExpressionAtom(this);
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterUnaryExpressionAtom(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitSimpleExpressionAtom(this);
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitUnaryExpressionAtom(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitSimpleExpressionAtom(this);
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitUnaryExpressionAtom(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class SubqueryExpressionAtomContext extends ExpressionAtomContext {
+		public LeftParenContext leftParen() {
+			return getRuleContext(LeftParenContext.class,0);
+		}
+		public SelectStatementContext selectStatement() {
+			return getRuleContext(SelectStatementContext.class,0);
+		}
+		public RightParenContext rightParen() {
+			return getRuleContext(RightParenContext.class,0);
+		}
+		public SubqueryExpressionAtomContext(ExpressionAtomContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterSubqueryExpressionAtom(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitSubqueryExpressionAtom(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitSubqueryExpressionAtom(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class ConstantExpressionAtomContext extends ExpressionAtomContext {
+		public ConstantContext constant() {
+			return getRuleContext(ConstantContext.class,0);
+		}
+		public ConstantExpressionAtomContext(ExpressionAtomContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterConstantExpressionAtom(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitConstantExpressionAtom(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitConstantExpressionAtom(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class FunctionCallExpressionAtomContext extends ExpressionAtomContext {
+		public FunctionCallContext functionCall() {
+			return getRuleContext(FunctionCallContext.class,0);
+		}
+		public FunctionCallExpressionAtomContext(ExpressionAtomContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterFunctionCallExpressionAtom(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitFunctionCallExpressionAtom(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitFunctionCallExpressionAtom(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class FullColumnNameExpressionAtomContext extends ExpressionAtomContext {
+		public FullColumnNameContext fullColumnName() {
+			return getRuleContext(FullColumnNameContext.class,0);
+		}
+		public FullColumnNameExpressionAtomContext(ExpressionAtomContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterFullColumnNameExpressionAtom(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitFullColumnNameExpressionAtom(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitFullColumnNameExpressionAtom(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class NestedExpressionAtomContext extends ExpressionAtomContext {
+		public LeftParenContext leftParen() {
+			return getRuleContext(LeftParenContext.class,0);
+		}
+		public List<ExpressionContext> expression() {
+			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
+		}
+		public RightParenContext rightParen() {
+			return getRuleContext(RightParenContext.class,0);
+		}
+		public List<TerminalNode> COMMA() { return getTokens(SimpleSpeakQlParser.COMMA); }
+		public TerminalNode COMMA(int i) {
+			return getToken(SimpleSpeakQlParser.COMMA, i);
+		}
+		public NestedExpressionAtomContext(ExpressionAtomContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterNestedExpressionAtom(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitNestedExpressionAtom(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitNestedExpressionAtom(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class NestedRowExpressionAtomContext extends ExpressionAtomContext {
+		public TerminalNode ROW() { return getToken(SimpleSpeakQlParser.ROW, 0); }
+		public LeftParenContext leftParen() {
+			return getRuleContext(LeftParenContext.class,0);
+		}
+		public List<ExpressionContext> expression() {
+			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
+		}
+		public RightParenContext rightParen() {
+			return getRuleContext(RightParenContext.class,0);
+		}
+		public List<TerminalNode> COMMA() { return getTokens(SimpleSpeakQlParser.COMMA); }
+		public TerminalNode COMMA(int i) {
+			return getToken(SimpleSpeakQlParser.COMMA, i);
+		}
+		public NestedRowExpressionAtomContext(ExpressionAtomContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterNestedRowExpressionAtom(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitNestedRowExpressionAtom(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitNestedRowExpressionAtom(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class MathExpressionAtomContext extends ExpressionAtomContext {
+		public ExpressionAtomContext left;
+		public ExpressionAtomContext right;
+		public MathOperatorContext mathOperator() {
+			return getRuleContext(MathOperatorContext.class,0);
+		}
+		public List<ExpressionAtomContext> expressionAtom() {
+			return getRuleContexts(ExpressionAtomContext.class);
+		}
+		public ExpressionAtomContext expressionAtom(int i) {
+			return getRuleContext(ExpressionAtomContext.class,i);
+		}
+		public MathExpressionAtomContext(ExpressionAtomContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterMathExpressionAtom(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitMathExpressionAtom(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitMathExpressionAtom(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class ExistsExpressionAtomContext extends ExpressionAtomContext {
+		public TerminalNode EXISTS() { return getToken(SimpleSpeakQlParser.EXISTS, 0); }
+		public LeftParenContext leftParen() {
+			return getRuleContext(LeftParenContext.class,0);
+		}
+		public SelectStatementContext selectStatement() {
+			return getRuleContext(SelectStatementContext.class,0);
+		}
+		public RightParenContext rightParen() {
+			return getRuleContext(RightParenContext.class,0);
+		}
+		public ExistsExpressionAtomContext(ExpressionAtomContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterExistsExpressionAtom(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitExistsExpressionAtom(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitExistsExpressionAtom(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final SimpleExpressionAtomContext simpleExpressionAtom() throws RecognitionException {
-		SimpleExpressionAtomContext _localctx = new SimpleExpressionAtomContext(_ctx, getState());
-		enterRule(_localctx, 158, RULE_simpleExpressionAtom);
+	public final ExpressionAtomContext expressionAtom() throws RecognitionException {
+		return expressionAtom(0);
+	}
+
+	private ExpressionAtomContext expressionAtom(int _p) throws RecognitionException {
+		ParserRuleContext _parentctx = _ctx;
+		int _parentState = getState();
+		ExpressionAtomContext _localctx = new ExpressionAtomContext(_ctx, _parentState);
+		ExpressionAtomContext _prevctx = _localctx;
+		int _startState = 160;
+		enterRecursionRule(_localctx, 160, RULE_expressionAtom, _p);
+		int _la;
 		try {
-			setState(858);
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1006);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,94,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,116,_ctx) ) {
 			case 1:
-				enterOuterAlt(_localctx, 1);
 				{
-				setState(835);
+				_localctx = new ConstantExpressionAtomContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+
+				setState(969);
 				constant();
 				}
 				break;
 			case 2:
-				enterOuterAlt(_localctx, 2);
 				{
-				setState(836);
+				_localctx = new FullColumnNameExpressionAtomContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(970);
 				fullColumnName();
 				}
 				break;
 			case 3:
-				enterOuterAlt(_localctx, 3);
 				{
-				setState(837);
-				fullColumnName();
-				setState(838);
-				mathOperator();
-				setState(839);
-				fullColumnName();
+				_localctx = new FunctionCallExpressionAtomContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(971);
+				functionCall();
 				}
 				break;
 			case 4:
-				enterOuterAlt(_localctx, 4);
 				{
-				setState(841);
-				fullColumnName();
-				setState(842);
-				mathOperator();
-				setState(843);
-				constant();
+				_localctx = new UnaryExpressionAtomContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(972);
+				unaryOperator();
+				setState(973);
+				expressionAtom(6);
 				}
 				break;
 			case 5:
-				enterOuterAlt(_localctx, 5);
 				{
-				setState(845);
-				constant();
-				setState(846);
-				mathOperator();
-				setState(847);
-				fullColumnName();
+				_localctx = new NestedExpressionAtomContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(975);
+				leftParen();
+				setState(976);
+				expression(0);
+				setState(981);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==COMMA) {
+					{
+					{
+					setState(977);
+					match(COMMA);
+					setState(978);
+					expression(0);
+					}
+					}
+					setState(983);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(984);
+				rightParen();
 				}
 				break;
 			case 6:
-				enterOuterAlt(_localctx, 6);
 				{
-				setState(849);
-				constant();
-				setState(850);
-				mathOperator();
-				setState(851);
-				constant();
+				_localctx = new NestedRowExpressionAtomContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(986);
+				match(ROW);
+				setState(987);
+				leftParen();
+				setState(988);
+				expression(0);
+				setState(991); 
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				do {
+					{
+					{
+					setState(989);
+					match(COMMA);
+					setState(990);
+					expression(0);
+					}
+					}
+					setState(993); 
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				} while ( _la==COMMA );
+				setState(995);
+				rightParen();
 				}
 				break;
 			case 7:
-				enterOuterAlt(_localctx, 7);
 				{
-				setState(853);
-				unaryOperator();
-				setState(856);
-				_errHandler.sync(this);
-				switch (_input.LA(1)) {
-				case FALSE:
-				case NOT:
-				case NULL_LITERAL:
-				case TRUE:
-				case MINUS:
-				case ZERO_DECIMAL:
-				case ONE_DECIMAL:
-				case TWO_DECIMAL:
-				case START_NATIONAL_STRING_LITERAL:
-				case STRING_LITERAL:
-				case DECIMAL_LITERAL:
-				case HEXADECIMAL_LITERAL:
-				case REAL_LITERAL:
-				case NULL_SPEC_LITERAL:
-				case BIT_STRING:
-					{
-					setState(854);
-					constant();
-					}
-					break;
-				case SPOKEN_DOT:
-				case QUARTER:
-				case MONTH:
-				case DAY:
-				case HOUR:
-				case MINUTE:
-				case WEEK:
-				case SECOND:
-				case MICROSECOND:
-				case DOT:
-				case ID:
-					{
-					setState(855);
-					fullColumnName();
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
-				}
+				_localctx = new ExistsExpressionAtomContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(997);
+				match(EXISTS);
+				setState(998);
+				leftParen();
+				setState(999);
+				selectStatement();
+				setState(1000);
+				rightParen();
 				}
 				break;
+			case 8:
+				{
+				_localctx = new SubqueryExpressionAtomContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(1002);
+				leftParen();
+				setState(1003);
+				selectStatement();
+				setState(1004);
+				rightParen();
+				}
+				break;
+			}
+			_ctx.stop = _input.LT(-1);
+			setState(1014);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,117,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					if ( _parseListeners!=null ) triggerExitRuleEvent();
+					_prevctx = _localctx;
+					{
+					{
+					_localctx = new MathExpressionAtomContext(new ExpressionAtomContext(_parentctx, _parentState));
+					((MathExpressionAtomContext)_localctx).left = _prevctx;
+					pushNewRecursionContext(_localctx, _startState, RULE_expressionAtom);
+					setState(1008);
+					if (!(precpred(_ctx, 1))) throw new FailedPredicateException(this, "precpred(_ctx, 1)");
+					setState(1009);
+					mathOperator();
+					setState(1010);
+					((MathExpressionAtomContext)_localctx).right = expressionAtom(2);
+					}
+					} 
+				}
+				setState(1016);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,117,_ctx);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -7023,7 +8320,7 @@ public class SimpleSpeakQlParser extends Parser {
 			_errHandler.recover(this, re);
 		}
 		finally {
-			exitRule();
+			unrollRecursionContexts(_parentctx);
 		}
 		return _localctx;
 	}
@@ -7069,77 +8366,77 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final ConstantContext constant() throws RecognitionException {
 		ConstantContext _localctx = new ConstantContext(_ctx, getState());
-		enterRule(_localctx, 160, RULE_constant);
+		enterRule(_localctx, 162, RULE_constant);
 		int _la;
 		try {
-			setState(872);
+			setState(1029);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,96,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,119,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(860);
+				setState(1017);
 				stringLiteral();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(861);
+				setState(1018);
 				decimalLiteral();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(862);
+				setState(1019);
 				match(MINUS);
-				setState(863);
+				setState(1020);
 				decimalLiteral();
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(864);
+				setState(1021);
 				hexadecimalLiteral();
 				}
 				break;
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(865);
+				setState(1022);
 				booleanLiteral();
 				}
 				break;
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(866);
+				setState(1023);
 				match(REAL_LITERAL);
 				}
 				break;
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(867);
+				setState(1024);
 				match(BIT_STRING);
 				}
 				break;
 			case 8:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(869);
+				setState(1026);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==NOT) {
 					{
-					setState(868);
+					setState(1025);
 					match(NOT);
 					}
 				}
 
-				setState(871);
+				setState(1028);
 				((ConstantContext)_localctx).nullLiteral = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !(_la==NULL_LITERAL || _la==NULL_SPEC_LITERAL) ) {
@@ -7196,16 +8493,17 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final StringLiteralContext stringLiteral() throws RecognitionException {
 		StringLiteralContext _localctx = new StringLiteralContext(_ctx, getState());
-		enterRule(_localctx, 162, RULE_stringLiteral);
+		enterRule(_localctx, 164, RULE_stringLiteral);
 		int _la;
 		try {
-			setState(885);
+			int _alt;
+			setState(1042);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,99,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,122,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(874);
+				setState(1031);
 				_la = _input.LA(1);
 				if ( !(_la==START_NATIONAL_STRING_LITERAL || _la==STRING_LITERAL) ) {
 				_errHandler.recoverInline(this);
@@ -7215,26 +8513,32 @@ public class SimpleSpeakQlParser extends Parser {
 					_errHandler.reportMatch(this);
 					consume();
 				}
-				setState(876); 
+				setState(1033); 
 				_errHandler.sync(this);
-				_la = _input.LA(1);
+				_alt = 1;
 				do {
-					{
-					{
-					setState(875);
-					match(STRING_LITERAL);
+					switch (_alt) {
+					case 1:
+						{
+						{
+						setState(1032);
+						match(STRING_LITERAL);
+						}
+						}
+						break;
+					default:
+						throw new NoViableAltException(this);
 					}
-					}
-					setState(878); 
+					setState(1035); 
 					_errHandler.sync(this);
-					_la = _input.LA(1);
-				} while ( _la==STRING_LITERAL );
+					_alt = getInterpreter().adaptivePredict(_input,120,_ctx);
+				} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(880);
+				setState(1037);
 				_la = _input.LA(1);
 				if ( !(_la==START_NATIONAL_STRING_LITERAL || _la==STRING_LITERAL) ) {
 				_errHandler.recoverInline(this);
@@ -7244,18 +8548,18 @@ public class SimpleSpeakQlParser extends Parser {
 					_errHandler.reportMatch(this);
 					consume();
 				}
-				setState(883);
+				setState(1040);
 				_errHandler.sync(this);
-				_la = _input.LA(1);
-				if (_la==COLLATE) {
+				switch ( getInterpreter().adaptivePredict(_input,121,_ctx) ) {
+				case 1:
 					{
-					setState(881);
+					setState(1038);
 					match(COLLATE);
-					setState(882);
+					setState(1039);
 					collationName();
 					}
+					break;
 				}
-
 				}
 				break;
 			}
@@ -7297,9 +8601,9 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final CollationNameContext collationName() throws RecognitionException {
 		CollationNameContext _localctx = new CollationNameContext(_ctx, getState());
-		enterRule(_localctx, 164, RULE_collationName);
+		enterRule(_localctx, 166, RULE_collationName);
 		try {
-			setState(889);
+			setState(1046);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case QUARTER:
@@ -7313,14 +8617,14 @@ public class SimpleSpeakQlParser extends Parser {
 			case ID:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(887);
+				setState(1044);
 				uid();
 				}
 				break;
 			case STRING_LITERAL:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(888);
+				setState(1045);
 				match(STRING_LITERAL);
 				}
 				break;
@@ -7366,12 +8670,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final DecimalLiteralContext decimalLiteral() throws RecognitionException {
 		DecimalLiteralContext _localctx = new DecimalLiteralContext(_ctx, getState());
-		enterRule(_localctx, 166, RULE_decimalLiteral);
+		enterRule(_localctx, 168, RULE_decimalLiteral);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(891);
+			setState(1048);
 			_la = _input.LA(1);
 			if ( !(((((_la - 682)) & ~0x3f) == 0 && ((1L << (_la - 682)) & ((1L << (ZERO_DECIMAL - 682)) | (1L << (ONE_DECIMAL - 682)) | (1L << (TWO_DECIMAL - 682)) | (1L << (DECIMAL_LITERAL - 682)) | (1L << (REAL_LITERAL - 682)))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -7417,11 +8721,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final HexadecimalLiteralContext hexadecimalLiteral() throws RecognitionException {
 		HexadecimalLiteralContext _localctx = new HexadecimalLiteralContext(_ctx, getState());
-		enterRule(_localctx, 168, RULE_hexadecimalLiteral);
+		enterRule(_localctx, 170, RULE_hexadecimalLiteral);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(893);
+			setState(1050);
 			match(HEXADECIMAL_LITERAL);
 			}
 		}
@@ -7460,12 +8764,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final BooleanLiteralContext booleanLiteral() throws RecognitionException {
 		BooleanLiteralContext _localctx = new BooleanLiteralContext(_ctx, getState());
-		enterRule(_localctx, 170, RULE_booleanLiteral);
+		enterRule(_localctx, 172, RULE_booleanLiteral);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(895);
+			setState(1052);
 			_la = _input.LA(1);
 			if ( !(_la==FALSE || _la==TRUE) ) {
 			_errHandler.recoverInline(this);
@@ -7515,12 +8819,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final UnaryOperatorContext unaryOperator() throws RecognitionException {
 		UnaryOperatorContext _localctx = new UnaryOperatorContext(_ctx, getState());
-		enterRule(_localctx, 172, RULE_unaryOperator);
+		enterRule(_localctx, 174, RULE_unaryOperator);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(897);
+			setState(1054);
 			_la = _input.LA(1);
 			if ( !(_la==NOT || ((((_la - 664)) & ~0x3f) == 0 && ((1L << (_la - 664)) & ((1L << (PLUS - 664)) | (1L << (MINUS - 664)) | (1L << (EXCLAMATION_SYMBOL - 664)) | (1L << (BIT_NOT_OP - 664)))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -7572,12 +8876,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final MathOperatorContext mathOperator() throws RecognitionException {
 		MathOperatorContext _localctx = new MathOperatorContext(_ctx, getState());
-		enterRule(_localctx, 174, RULE_mathOperator);
+		enterRule(_localctx, 176, RULE_mathOperator);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(899);
+			setState(1056);
 			_la = _input.LA(1);
 			if ( !(((((_la - 661)) & ~0x3f) == 0 && ((1L << (_la - 661)) & ((1L << (STAR - 661)) | (1L << (DIVIDE - 661)) | (1L << (MODULE - 661)) | (1L << (PLUS - 661)) | (1L << (MINUS - 661)) | (1L << (DIV - 661)) | (1L << (MOD - 661)))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -7613,6 +8917,18 @@ public class SimpleSpeakQlParser extends Parser {
 		public FullColumnNameContext fullColumnName(int i) {
 			return getRuleContext(FullColumnNameContext.class,i);
 		}
+		public List<FunctionCallContext> functionCall() {
+			return getRuleContexts(FunctionCallContext.class);
+		}
+		public FunctionCallContext functionCall(int i) {
+			return getRuleContext(FunctionCallContext.class,i);
+		}
+		public List<ExpressionContext> expression() {
+			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
+		}
 		public List<TerminalNode> COMMA() { return getTokens(SimpleSpeakQlParser.COMMA); }
 		public TerminalNode COMMA(int i) {
 			return getToken(SimpleSpeakQlParser.COMMA, i);
@@ -7638,106 +8954,78 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final FunctionArgsContext functionArgs() throws RecognitionException {
 		FunctionArgsContext _localctx = new FunctionArgsContext(_ctx, getState());
-		enterRule(_localctx, 176, RULE_functionArgs);
+		enterRule(_localctx, 178, RULE_functionArgs);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(903);
+			setState(1062);
 			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case FALSE:
-			case NOT:
-			case NULL_LITERAL:
-			case TRUE:
-			case MINUS:
-			case ZERO_DECIMAL:
-			case ONE_DECIMAL:
-			case TWO_DECIMAL:
-			case START_NATIONAL_STRING_LITERAL:
-			case STRING_LITERAL:
-			case DECIMAL_LITERAL:
-			case HEXADECIMAL_LITERAL:
-			case REAL_LITERAL:
-			case NULL_SPEC_LITERAL:
-			case BIT_STRING:
+			switch ( getInterpreter().adaptivePredict(_input,124,_ctx) ) {
+			case 1:
 				{
-				setState(901);
+				setState(1058);
 				constant();
 				}
 				break;
-			case SPOKEN_DOT:
-			case QUARTER:
-			case MONTH:
-			case DAY:
-			case HOUR:
-			case MINUTE:
-			case WEEK:
-			case SECOND:
-			case MICROSECOND:
-			case DOT:
-			case ID:
+			case 2:
 				{
-				setState(902);
+				setState(1059);
 				fullColumnName();
 				}
 				break;
-			default:
-				throw new NoViableAltException(this);
+			case 3:
+				{
+				setState(1060);
+				functionCall();
+				}
+				break;
+			case 4:
+				{
+				setState(1061);
+				expression(0);
+				}
+				break;
 			}
-			setState(912);
+			setState(1073);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(905);
+				setState(1064);
 				match(COMMA);
-				setState(908);
+				setState(1069);
 				_errHandler.sync(this);
-				switch (_input.LA(1)) {
-				case FALSE:
-				case NOT:
-				case NULL_LITERAL:
-				case TRUE:
-				case MINUS:
-				case ZERO_DECIMAL:
-				case ONE_DECIMAL:
-				case TWO_DECIMAL:
-				case START_NATIONAL_STRING_LITERAL:
-				case STRING_LITERAL:
-				case DECIMAL_LITERAL:
-				case HEXADECIMAL_LITERAL:
-				case REAL_LITERAL:
-				case NULL_SPEC_LITERAL:
-				case BIT_STRING:
+				switch ( getInterpreter().adaptivePredict(_input,125,_ctx) ) {
+				case 1:
 					{
-					setState(906);
+					setState(1065);
 					constant();
 					}
 					break;
-				case SPOKEN_DOT:
-				case QUARTER:
-				case MONTH:
-				case DAY:
-				case HOUR:
-				case MINUTE:
-				case WEEK:
-				case SECOND:
-				case MICROSECOND:
-				case DOT:
-				case ID:
+				case 2:
 					{
-					setState(907);
+					setState(1066);
 					fullColumnName();
 					}
 					break;
-				default:
-					throw new NoViableAltException(this);
+				case 3:
+					{
+					setState(1067);
+					functionCall();
+					}
+					break;
+				case 4:
+					{
+					setState(1068);
+					expression(0);
+					}
+					break;
 				}
 				}
 				}
-				setState(914);
+				setState(1075);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -7757,6 +9045,7 @@ public class SimpleSpeakQlParser extends Parser {
 	public static class AggregateWindowedFunctionContext extends ParserRuleContext {
 		public Token aggregator;
 		public Token starArg;
+		public Token separator;
 		public LeftParenContext leftParen() {
 			return getRuleContext(LeftParenContext.class,0);
 		}
@@ -7789,6 +9078,31 @@ public class SimpleSpeakQlParser extends Parser {
 		public AllAggregatorKeywordContext allAggregatorKeyword() {
 			return getRuleContext(AllAggregatorKeywordContext.class,0);
 		}
+		public TerminalNode BIT_AND() { return getToken(SimpleSpeakQlParser.BIT_AND, 0); }
+		public TerminalNode BIT_OR() { return getToken(SimpleSpeakQlParser.BIT_OR, 0); }
+		public TerminalNode BIT_XOR() { return getToken(SimpleSpeakQlParser.BIT_XOR, 0); }
+		public TerminalNode STD() { return getToken(SimpleSpeakQlParser.STD, 0); }
+		public TerminalNode STDDEV() { return getToken(SimpleSpeakQlParser.STDDEV, 0); }
+		public TerminalNode STDDEV_POP() { return getToken(SimpleSpeakQlParser.STDDEV_POP, 0); }
+		public TerminalNode STDDEV_SAMP() { return getToken(SimpleSpeakQlParser.STDDEV_SAMP, 0); }
+		public TerminalNode VAR_POP() { return getToken(SimpleSpeakQlParser.VAR_POP, 0); }
+		public TerminalNode VAR_SAMP() { return getToken(SimpleSpeakQlParser.VAR_SAMP, 0); }
+		public TerminalNode VARIANCE() { return getToken(SimpleSpeakQlParser.VARIANCE, 0); }
+		public TerminalNode GROUP_CONCAT() { return getToken(SimpleSpeakQlParser.GROUP_CONCAT, 0); }
+		public TerminalNode ORDER() { return getToken(SimpleSpeakQlParser.ORDER, 0); }
+		public TerminalNode BY() { return getToken(SimpleSpeakQlParser.BY, 0); }
+		public List<OrderByExpressionContext> orderByExpression() {
+			return getRuleContexts(OrderByExpressionContext.class);
+		}
+		public OrderByExpressionContext orderByExpression(int i) {
+			return getRuleContext(OrderByExpressionContext.class,i);
+		}
+		public TerminalNode SEPARATOR() { return getToken(SimpleSpeakQlParser.SEPARATOR, 0); }
+		public TerminalNode STRING_LITERAL() { return getToken(SimpleSpeakQlParser.STRING_LITERAL, 0); }
+		public List<TerminalNode> COMMA() { return getTokens(SimpleSpeakQlParser.COMMA); }
+		public TerminalNode COMMA(int i) {
+			return getToken(SimpleSpeakQlParser.COMMA, i);
+		}
 		public AggregateWindowedFunctionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -7810,26 +9124,26 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final AggregateWindowedFunctionContext aggregateWindowedFunction() throws RecognitionException {
 		AggregateWindowedFunctionContext _localctx = new AggregateWindowedFunctionContext(_ctx, getState());
-		enterRule(_localctx, 178, RULE_aggregateWindowedFunction);
+		enterRule(_localctx, 180, RULE_aggregateWindowedFunction);
 		int _la;
 		try {
-			setState(949);
+			setState(1142);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,111,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,139,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(916);
+				setState(1077);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==THE) {
 					{
-					setState(915);
+					setState(1076);
 					theKeyword();
 					}
 				}
 
-				setState(918);
+				setState(1079);
 				_la = _input.LA(1);
 				if ( !(((((_la - 255)) & ~0x3f) == 0 && ((1L << (_la - 255)) & ((1L << (AVG - 255)) | (1L << (MAX - 255)) | (1L << (MIN - 255)) | (1L << (SUM - 255)))) != 0)) ) {
 				_errHandler.recoverInline(this);
@@ -7839,24 +9153,24 @@ public class SimpleSpeakQlParser extends Parser {
 					_errHandler.reportMatch(this);
 					consume();
 				}
-				setState(920);
+				setState(1081);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==OF) {
 					{
-					setState(919);
+					setState(1080);
 					ofKeyword();
 					}
 				}
 
-				setState(922);
+				setState(1083);
 				leftParen();
-				setState(924);
+				setState(1085);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==ALL || _la==DISTINCT) {
 					{
-					setState(923);
+					setState(1084);
 					((AggregateWindowedFunctionContext)_localctx).aggregator = _input.LT(1);
 					_la = _input.LA(1);
 					if ( !(_la==ALL || _la==DISTINCT) ) {
@@ -7870,54 +9184,109 @@ public class SimpleSpeakQlParser extends Parser {
 					}
 				}
 
-				setState(926);
+				setState(1087);
 				functionArg();
-				setState(927);
+				setState(1088);
 				rightParen();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(930);
+				setState(1091);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==THE) {
 					{
-					setState(929);
+					setState(1090);
 					theKeyword();
 					}
 				}
 
-				setState(932);
+				setState(1093);
 				match(COUNT);
-				setState(934);
+				setState(1095);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==OF) {
 					{
-					setState(933);
+					setState(1094);
 					ofKeyword();
 					}
 				}
 
-				setState(936);
+				setState(1097);
 				leftParen();
-				setState(945);
+				setState(1106);
 				_errHandler.sync(this);
 				switch (_input.LA(1)) {
 				case STAR:
 					{
-					setState(937);
+					setState(1098);
 					((AggregateWindowedFunctionContext)_localctx).starArg = match(STAR);
 					}
 					break;
 				case SPOKEN_DOT:
+				case OPEN_PARENTHESIS:
+				case LEFT_PARENTHESIS:
+				case OPEN_PAREN:
+				case LEFT_PAREN:
+				case THE:
 				case ALL:
+				case EXISTS:
 				case FALSE:
+				case IF:
+				case INSERT:
 				case NOT:
 				case NULL_LITERAL:
+				case REPLACE:
 				case TRUE:
+				case AVG:
+				case BIT_AND:
+				case BIT_OR:
+				case BIT_XOR:
+				case COUNT:
+				case CUME_DIST:
+				case DENSE_RANK:
+				case FIRST_VALUE:
+				case GROUP_CONCAT:
+				case LAG:
+				case LAST_VALUE:
+				case LEAD:
+				case MAX:
+				case MIN:
+				case NTILE:
+				case NTH_VALUE:
+				case PERCENT_RANK:
+				case RANK:
+				case ROW_NUMBER:
+				case STD:
+				case STDDEV:
+				case STDDEV_POP:
+				case STDDEV_SAMP:
+				case SUM:
+				case VAR_POP:
+				case VAR_SAMP:
+				case VARIANCE:
+				case CURRENT_DATE:
+				case CURRENT_TIME:
+				case CURRENT_TIMESTAMP:
+				case LOCALTIME:
+				case CURDATE:
+				case CURTIME:
+				case DATE_ADD:
+				case DATE_SUB:
+				case LOCALTIMESTAMP:
+				case NOW:
+				case SUBSTR:
+				case SUBSTRING:
+				case SYSDATE:
+				case TRIM:
+				case UTC_DATE:
+				case UTC_TIME:
+				case UTC_TIMESTAMP:
+				case MID:
+				case ROW:
 				case QUARTER:
 				case MONTH:
 				case DAY:
@@ -7926,8 +9295,12 @@ public class SimpleSpeakQlParser extends Parser {
 				case WEEK:
 				case SECOND:
 				case MICROSECOND:
+				case PLUS:
 				case MINUS:
+				case EXCLAMATION_SYMBOL:
+				case BIT_NOT_OP:
 				case DOT:
+				case LR_BRACKET:
 				case ZERO_DECIMAL:
 				case ONE_DECIMAL:
 				case TWO_DECIMAL:
@@ -7939,33 +9312,130 @@ public class SimpleSpeakQlParser extends Parser {
 				case NULL_SPEC_LITERAL:
 				case BIT_STRING:
 				case ID:
+				case LOCAL_ID:
 					{
-					setState(939);
+					setState(1100);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 					if (_la==ALL) {
 						{
-						setState(938);
+						setState(1099);
 						allAggregatorKeyword();
 						}
 					}
 
-					setState(941);
+					setState(1102);
 					functionArg();
 					}
 					break;
 				case DISTINCT:
 					{
-					setState(942);
+					setState(1103);
 					distinctAggregatorKeyword();
-					setState(943);
+					setState(1104);
 					functionArgs();
 					}
 					break;
 				default:
 					throw new NoViableAltException(this);
 				}
-				setState(947);
+				setState(1108);
+				rightParen();
+				}
+				break;
+			case 3:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(1110);
+				_la = _input.LA(1);
+				if ( !(((((_la - 256)) & ~0x3f) == 0 && ((1L << (_la - 256)) & ((1L << (BIT_AND - 256)) | (1L << (BIT_OR - 256)) | (1L << (BIT_XOR - 256)) | (1L << (STD - 256)) | (1L << (STDDEV - 256)) | (1L << (STDDEV_POP - 256)) | (1L << (STDDEV_SAMP - 256)) | (1L << (VAR_POP - 256)) | (1L << (VAR_SAMP - 256)) | (1L << (VARIANCE - 256)))) != 0)) ) {
+				_errHandler.recoverInline(this);
+				}
+				else {
+					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+					_errHandler.reportMatch(this);
+					consume();
+				}
+				setState(1111);
+				leftParen();
+				setState(1113);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==ALL) {
+					{
+					setState(1112);
+					((AggregateWindowedFunctionContext)_localctx).aggregator = match(ALL);
+					}
+				}
+
+				setState(1115);
+				functionArg();
+				setState(1116);
+				rightParen();
+				}
+				break;
+			case 4:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(1118);
+				match(GROUP_CONCAT);
+				setState(1119);
+				leftParen();
+				setState(1121);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==DISTINCT) {
+					{
+					setState(1120);
+					((AggregateWindowedFunctionContext)_localctx).aggregator = match(DISTINCT);
+					}
+				}
+
+				setState(1123);
+				functionArgs();
+				setState(1134);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==ORDER) {
+					{
+					setState(1124);
+					match(ORDER);
+					setState(1125);
+					match(BY);
+					setState(1126);
+					orderByExpression();
+					setState(1131);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+					while (_la==COMMA) {
+						{
+						{
+						setState(1127);
+						match(COMMA);
+						setState(1128);
+						orderByExpression();
+						}
+						}
+						setState(1133);
+						_errHandler.sync(this);
+						_la = _input.LA(1);
+					}
+					}
+				}
+
+				setState(1138);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==SEPARATOR) {
+					{
+					setState(1136);
+					match(SEPARATOR);
+					setState(1137);
+					((AggregateWindowedFunctionContext)_localctx).separator = match(STRING_LITERAL);
+					}
+				}
+
+				setState(1140);
 				rightParen();
 				}
 				break;
@@ -8005,11 +9475,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final OfKeywordContext ofKeyword() throws RecognitionException {
 		OfKeywordContext _localctx = new OfKeywordContext(_ctx, getState());
-		enterRule(_localctx, 180, RULE_ofKeyword);
+		enterRule(_localctx, 182, RULE_ofKeyword);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(951);
+			setState(1144);
 			match(OF);
 			}
 		}
@@ -8047,11 +9517,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final TheKeywordContext theKeyword() throws RecognitionException {
 		TheKeywordContext _localctx = new TheKeywordContext(_ctx, getState());
-		enterRule(_localctx, 182, RULE_theKeyword);
+		enterRule(_localctx, 184, RULE_theKeyword);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(953);
+			setState(1146);
 			match(THE);
 			}
 		}
@@ -8072,6 +9542,12 @@ public class SimpleSpeakQlParser extends Parser {
 		}
 		public FullColumnNameContext fullColumnName() {
 			return getRuleContext(FullColumnNameContext.class,0);
+		}
+		public FunctionCallContext functionCall() {
+			return getRuleContext(FunctionCallContext.class,0);
+		}
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
 		}
 		public FunctionArgContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -8094,51 +9570,39 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final FunctionArgContext functionArg() throws RecognitionException {
 		FunctionArgContext _localctx = new FunctionArgContext(_ctx, getState());
-		enterRule(_localctx, 184, RULE_functionArg);
+		enterRule(_localctx, 186, RULE_functionArg);
 		try {
-			setState(957);
+			setState(1152);
 			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case FALSE:
-			case NOT:
-			case NULL_LITERAL:
-			case TRUE:
-			case MINUS:
-			case ZERO_DECIMAL:
-			case ONE_DECIMAL:
-			case TWO_DECIMAL:
-			case START_NATIONAL_STRING_LITERAL:
-			case STRING_LITERAL:
-			case DECIMAL_LITERAL:
-			case HEXADECIMAL_LITERAL:
-			case REAL_LITERAL:
-			case NULL_SPEC_LITERAL:
-			case BIT_STRING:
+			switch ( getInterpreter().adaptivePredict(_input,140,_ctx) ) {
+			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(955);
+				setState(1148);
 				constant();
 				}
 				break;
-			case SPOKEN_DOT:
-			case QUARTER:
-			case MONTH:
-			case DAY:
-			case HOUR:
-			case MINUTE:
-			case WEEK:
-			case SECOND:
-			case MICROSECOND:
-			case DOT:
-			case ID:
+			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(956);
+				setState(1149);
 				fullColumnName();
 				}
 				break;
-			default:
-				throw new NoViableAltException(this);
+			case 3:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(1150);
+				functionCall();
+				}
+				break;
+			case 4:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(1151);
+				expression(0);
+				}
+				break;
 			}
 		}
 		catch (RecognitionException re) {
@@ -8176,11 +9640,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final AllAggregatorKeywordContext allAggregatorKeyword() throws RecognitionException {
 		AllAggregatorKeywordContext _localctx = new AllAggregatorKeywordContext(_ctx, getState());
-		enterRule(_localctx, 186, RULE_allAggregatorKeyword);
+		enterRule(_localctx, 188, RULE_allAggregatorKeyword);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(959);
+			setState(1154);
 			((AllAggregatorKeywordContext)_localctx).aggregator = match(ALL);
 			}
 		}
@@ -8219,12 +9683,206 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final DistinctAggregatorKeywordContext distinctAggregatorKeyword() throws RecognitionException {
 		DistinctAggregatorKeywordContext _localctx = new DistinctAggregatorKeywordContext(_ctx, getState());
-		enterRule(_localctx, 188, RULE_distinctAggregatorKeyword);
+		enterRule(_localctx, 190, RULE_distinctAggregatorKeyword);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(961);
+			setState(1156);
 			((DistinctAggregatorKeywordContext)_localctx).aggregator = match(DISTINCT);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class NonAggregateWindowedFunctionContext extends ParserRuleContext {
+		public LeftParenContext leftParen() {
+			return getRuleContext(LeftParenContext.class,0);
+		}
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
+		}
+		public RightParenContext rightParen() {
+			return getRuleContext(RightParenContext.class,0);
+		}
+		public TerminalNode LAG() { return getToken(SimpleSpeakQlParser.LAG, 0); }
+		public TerminalNode LEAD() { return getToken(SimpleSpeakQlParser.LEAD, 0); }
+		public List<TerminalNode> COMMA() { return getTokens(SimpleSpeakQlParser.COMMA); }
+		public TerminalNode COMMA(int i) {
+			return getToken(SimpleSpeakQlParser.COMMA, i);
+		}
+		public List<DecimalLiteralContext> decimalLiteral() {
+			return getRuleContexts(DecimalLiteralContext.class);
+		}
+		public DecimalLiteralContext decimalLiteral(int i) {
+			return getRuleContext(DecimalLiteralContext.class,i);
+		}
+		public TerminalNode FIRST_VALUE() { return getToken(SimpleSpeakQlParser.FIRST_VALUE, 0); }
+		public TerminalNode LAST_VALUE() { return getToken(SimpleSpeakQlParser.LAST_VALUE, 0); }
+		public TerminalNode CUME_DIST() { return getToken(SimpleSpeakQlParser.CUME_DIST, 0); }
+		public TerminalNode DENSE_RANK() { return getToken(SimpleSpeakQlParser.DENSE_RANK, 0); }
+		public TerminalNode PERCENT_RANK() { return getToken(SimpleSpeakQlParser.PERCENT_RANK, 0); }
+		public TerminalNode RANK() { return getToken(SimpleSpeakQlParser.RANK, 0); }
+		public TerminalNode ROW_NUMBER() { return getToken(SimpleSpeakQlParser.ROW_NUMBER, 0); }
+		public TerminalNode NTH_VALUE() { return getToken(SimpleSpeakQlParser.NTH_VALUE, 0); }
+		public TerminalNode NTILE() { return getToken(SimpleSpeakQlParser.NTILE, 0); }
+		public NonAggregateWindowedFunctionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_nonAggregateWindowedFunction; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).enterNonAggregateWindowedFunction(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SimpleSpeakQlParserListener ) ((SimpleSpeakQlParserListener)listener).exitNonAggregateWindowedFunction(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SimpleSpeakQlParserVisitor ) return ((SimpleSpeakQlParserVisitor<? extends T>)visitor).visitNonAggregateWindowedFunction(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final NonAggregateWindowedFunctionContext nonAggregateWindowedFunction() throws RecognitionException {
+		NonAggregateWindowedFunctionContext _localctx = new NonAggregateWindowedFunctionContext(_ctx, getState());
+		enterRule(_localctx, 192, RULE_nonAggregateWindowedFunction);
+		int _la;
+		try {
+			setState(1192);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case LAG:
+			case LEAD:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(1158);
+				_la = _input.LA(1);
+				if ( !(_la==LAG || _la==LEAD) ) {
+				_errHandler.recoverInline(this);
+				}
+				else {
+					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+					_errHandler.reportMatch(this);
+					consume();
+				}
+				setState(1159);
+				leftParen();
+				setState(1160);
+				expression(0);
+				setState(1163);
+				_errHandler.sync(this);
+				switch ( getInterpreter().adaptivePredict(_input,141,_ctx) ) {
+				case 1:
+					{
+					setState(1161);
+					match(COMMA);
+					setState(1162);
+					decimalLiteral();
+					}
+					break;
+				}
+				setState(1167);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==COMMA) {
+					{
+					setState(1165);
+					match(COMMA);
+					setState(1166);
+					decimalLiteral();
+					}
+				}
+
+				setState(1169);
+				rightParen();
+				}
+				break;
+			case FIRST_VALUE:
+			case LAST_VALUE:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(1171);
+				_la = _input.LA(1);
+				if ( !(_la==FIRST_VALUE || _la==LAST_VALUE) ) {
+				_errHandler.recoverInline(this);
+				}
+				else {
+					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+					_errHandler.reportMatch(this);
+					consume();
+				}
+				setState(1172);
+				leftParen();
+				setState(1173);
+				expression(0);
+				setState(1174);
+				rightParen();
+				}
+				break;
+			case CUME_DIST:
+			case DENSE_RANK:
+			case PERCENT_RANK:
+			case RANK:
+			case ROW_NUMBER:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(1176);
+				_la = _input.LA(1);
+				if ( !(((((_la - 260)) & ~0x3f) == 0 && ((1L << (_la - 260)) & ((1L << (CUME_DIST - 260)) | (1L << (DENSE_RANK - 260)) | (1L << (PERCENT_RANK - 260)) | (1L << (RANK - 260)) | (1L << (ROW_NUMBER - 260)))) != 0)) ) {
+				_errHandler.recoverInline(this);
+				}
+				else {
+					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+					_errHandler.reportMatch(this);
+					consume();
+				}
+				setState(1177);
+				leftParen();
+				setState(1178);
+				rightParen();
+				}
+				break;
+			case NTH_VALUE:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(1180);
+				match(NTH_VALUE);
+				setState(1181);
+				leftParen();
+				setState(1182);
+				expression(0);
+				setState(1183);
+				match(COMMA);
+				setState(1184);
+				decimalLiteral();
+				setState(1185);
+				rightParen();
+				}
+				break;
+			case NTILE:
+				enterOuterAlt(_localctx, 5);
+				{
+				setState(1187);
+				match(NTILE);
+				setState(1188);
+				leftParen();
+				setState(1189);
+				decimalLiteral();
+				setState(1190);
+				rightParen();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -8281,12 +9939,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final ScalarFunctionNameContext scalarFunctionName() throws RecognitionException {
 		ScalarFunctionNameContext _localctx = new ScalarFunctionNameContext(_ctx, getState());
-		enterRule(_localctx, 190, RULE_scalarFunctionName);
+		enterRule(_localctx, 194, RULE_scalarFunctionName);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(963);
+			setState(1194);
 			_la = _input.LA(1);
 			if ( !(((((_la - 107)) & ~0x3f) == 0 && ((1L << (_la - 107)) & ((1L << (IF - 107)) | (1L << (INSERT - 107)) | (1L << (REPLACE - 107)))) != 0) || ((((_la - 282)) & ~0x3f) == 0 && ((1L << (_la - 282)) & ((1L << (CURRENT_DATE - 282)) | (1L << (CURRENT_TIME - 282)) | (1L << (CURRENT_TIMESTAMP - 282)) | (1L << (LOCALTIME - 282)) | (1L << (CURDATE - 282)) | (1L << (CURTIME - 282)) | (1L << (DATE_ADD - 282)) | (1L << (DATE_SUB - 282)) | (1L << (LOCALTIMESTAMP - 282)) | (1L << (NOW - 282)) | (1L << (SUBSTR - 282)) | (1L << (SUBSTRING - 282)) | (1L << (SYSDATE - 282)) | (1L << (TRIM - 282)) | (1L << (UTC_DATE - 282)) | (1L << (UTC_TIME - 282)) | (1L << (UTC_TIMESTAMP - 282)) | (1L << (MID - 282)))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -8333,12 +9991,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final SelectElementDelimiterContext selectElementDelimiter() throws RecognitionException {
 		SelectElementDelimiterContext _localctx = new SelectElementDelimiterContext(_ctx, getState());
-		enterRule(_localctx, 192, RULE_selectElementDelimiter);
+		enterRule(_localctx, 196, RULE_selectElementDelimiter);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(965);
+			setState(1196);
 			_la = _input.LA(1);
 			if ( !(_la==AND || _la==COMMA) ) {
 			_errHandler.recoverInline(this);
@@ -8384,11 +10042,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final WhereKeywordContext whereKeyword() throws RecognitionException {
 		WhereKeywordContext _localctx = new WhereKeywordContext(_ctx, getState());
-		enterRule(_localctx, 194, RULE_whereKeyword);
+		enterRule(_localctx, 198, RULE_whereKeyword);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(967);
+			setState(1198);
 			match(WHERE);
 			}
 		}
@@ -8404,17 +10062,9 @@ public class SimpleSpeakQlParser extends Parser {
 	}
 
 	public static class WhereExpressionContext extends ParserRuleContext {
-		public List<ExpressionContext> expression() {
-			return getRuleContexts(ExpressionContext.class);
-		}
-		public ExpressionContext expression(int i) {
-			return getRuleContext(ExpressionContext.class,i);
-		}
-		public List<LogicalOperatorContext> logicalOperator() {
-			return getRuleContexts(LogicalOperatorContext.class);
-		}
-		public LogicalOperatorContext logicalOperator(int i) {
-			return getRuleContext(LogicalOperatorContext.class,i);
+		public ExpressionContext whereExpr;
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
 		}
 		public WhereExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -8437,29 +10087,12 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final WhereExpressionContext whereExpression() throws RecognitionException {
 		WhereExpressionContext _localctx = new WhereExpressionContext(_ctx, getState());
-		enterRule(_localctx, 196, RULE_whereExpression);
-		int _la;
+		enterRule(_localctx, 200, RULE_whereExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(969);
-			expression();
-			setState(975);
-			_errHandler.sync(this);
-			_la = _input.LA(1);
-			while (_la==AND || _la==OR || _la==XOR || _la==BIT_OR_OP || _la==BIT_AND_OP) {
-				{
-				{
-				setState(970);
-				logicalOperator();
-				setState(971);
-				expression();
-				}
-				}
-				setState(977);
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-			}
+			setState(1200);
+			((WhereExpressionContext)_localctx).whereExpr = expression(0);
 			}
 		}
 		catch (RecognitionException re) {
@@ -8498,11 +10131,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final TableExpressionNoJoinContext tableExpressionNoJoin() throws RecognitionException {
 		TableExpressionNoJoinContext _localctx = new TableExpressionNoJoinContext(_ctx, getState());
-		enterRule(_localctx, 198, RULE_tableExpressionNoJoin);
+		enterRule(_localctx, 202, RULE_tableExpressionNoJoin);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(978);
+			setState(1202);
 			fromClauseNoJoin();
 			}
 		}
@@ -8542,11 +10175,11 @@ public class SimpleSpeakQlParser extends Parser {
 
 	public final TableExpressionContext tableExpression() throws RecognitionException {
 		TableExpressionContext _localctx = new TableExpressionContext(_ctx, getState());
-		enterRule(_localctx, 200, RULE_tableExpression);
+		enterRule(_localctx, 204, RULE_tableExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(980);
+			setState(1204);
 			fromClause();
 			}
 		}
@@ -8561,8 +10194,57 @@ public class SimpleSpeakQlParser extends Parser {
 		return _localctx;
 	}
 
+	public boolean sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
+		switch (ruleIndex) {
+		case 24:
+			return expression_sempred((ExpressionContext)_localctx, predIndex);
+		case 26:
+			return predicate_sempred((PredicateContext)_localctx, predIndex);
+		case 80:
+			return expressionAtom_sempred((ExpressionAtomContext)_localctx, predIndex);
+		}
+		return true;
+	}
+	private boolean expression_sempred(ExpressionContext _localctx, int predIndex) {
+		switch (predIndex) {
+		case 0:
+			return precpred(_ctx, 3);
+		}
+		return true;
+	}
+	private boolean predicate_sempred(PredicateContext _localctx, int predIndex) {
+		switch (predIndex) {
+		case 1:
+			return precpred(_ctx, 8);
+		case 2:
+			return precpred(_ctx, 6);
+		case 3:
+			return precpred(_ctx, 5);
+		case 4:
+			return precpred(_ctx, 3);
+		case 5:
+			return precpred(_ctx, 10);
+		case 6:
+			return precpred(_ctx, 9);
+		case 7:
+			return precpred(_ctx, 7);
+		case 8:
+			return precpred(_ctx, 4);
+		case 9:
+			return precpred(_ctx, 1);
+		}
+		return true;
+	}
+	private boolean expressionAtom_sempred(ExpressionAtomContext _localctx, int predIndex) {
+		switch (predIndex) {
+		case 10:
+			return precpred(_ctx, 1);
+		}
+		return true;
+	}
+
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\u02c2\u03d9\4\2\t"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\u02c2\u04b9\4\2\t"+
 		"\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
 		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -8573,372 +10255,477 @@ public class SimpleSpeakQlParser extends Parser {
 		"\4>\t>\4?\t?\4@\t@\4A\tA\4B\tB\4C\tC\4D\tD\4E\tE\4F\tF\4G\tG\4H\tH\4I"+
 		"\tI\4J\tJ\4K\tK\4L\tL\4M\tM\4N\tN\4O\tO\4P\tP\4Q\tQ\4R\tR\4S\tS\4T\tT"+
 		"\4U\tU\4V\tV\4W\tW\4X\tX\4Y\tY\4Z\tZ\4[\t[\4\\\t\\\4]\t]\4^\t^\4_\t_\4"+
-		"`\t`\4a\ta\4b\tb\4c\tc\4d\td\4e\te\4f\tf\3\2\3\2\5\2\u00cf\n\2\3\3\3\3"+
-		"\5\3\u00d3\n\3\3\4\3\4\3\4\3\4\3\4\3\4\5\4\u00db\n\4\3\4\3\4\3\4\5\4\u00e0"+
-		"\n\4\3\4\3\4\3\4\3\4\5\4\u00e6\n\4\7\4\u00e8\n\4\f\4\16\4\u00eb\13\4\3"+
-		"\4\3\4\3\4\5\4\u00f0\n\4\5\4\u00f2\n\4\3\5\3\5\3\5\3\5\5\5\u00f8\n\5\3"+
-		"\5\3\5\3\5\3\5\3\5\3\5\3\5\5\5\u0101\n\5\3\5\3\5\3\5\3\5\3\5\5\5\u0108"+
-		"\n\5\3\5\3\5\3\5\3\5\5\5\u010e\n\5\3\5\3\5\5\5\u0112\n\5\3\6\3\6\3\6\3"+
-		"\6\5\6\u0118\n\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6\u0121\n\6\3\6\3\6\3\6"+
-		"\3\6\3\6\5\6\u0128\n\6\3\6\3\6\3\6\3\6\5\6\u012e\n\6\3\6\3\6\5\6\u0132"+
-		"\n\6\3\7\3\7\7\7\u0136\n\7\f\7\16\7\u0139\13\7\3\7\3\7\3\7\3\7\7\7\u013f"+
-		"\n\7\f\7\16\7\u0142\13\7\3\7\3\7\3\7\3\7\3\7\5\7\u0149\n\7\3\b\3\b\3\t"+
-		"\3\t\3\n\3\n\3\13\3\13\3\f\3\f\3\r\3\r\5\r\u0157\n\r\3\r\3\r\3\r\7\r\u015c"+
-		"\n\r\f\r\16\r\u015f\13\r\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\5\16"+
-		"\u0169\n\16\3\16\3\16\3\16\3\16\5\16\u016f\n\16\5\16\u0171\n\16\3\17\3"+
-		"\17\3\17\5\17\u0176\n\17\3\20\3\20\3\21\3\21\5\21\u017c\n\21\3\22\3\22"+
-		"\3\23\3\23\3\24\3\24\3\24\5\24\u0185\n\24\5\24\u0187\n\24\3\24\3\24\3"+
-		"\24\5\24\u018c\n\24\5\24\u018e\n\24\3\25\3\25\3\25\3\26\3\26\3\27\3\27"+
-		"\3\27\3\27\5\27\u0199\n\27\3\27\3\27\5\27\u019d\n\27\3\30\3\30\3\31\3"+
-		"\31\3\32\3\32\3\32\3\32\3\32\5\32\u01a8\n\32\3\32\3\32\3\32\5\32\u01ad"+
-		"\n\32\3\33\3\33\3\33\3\33\3\33\3\33\3\33\5\33\u01b6\n\33\3\34\3\34\3\34"+
-		"\3\34\3\34\3\34\3\34\3\34\3\34\5\34\u01c1\n\34\3\35\3\35\3\36\3\36\3\37"+
-		"\5\37\u01c8\n\37\3\37\5\37\u01cb\n\37\3\37\5\37\u01ce\n\37\3\37\5\37\u01d1"+
-		"\n\37\3 \3 \3 \3 \3 \7 \u01d8\n \f \16 \u01db\13 \3 \3 \5 \u01df\n \3"+
-		" \3 \5 \u01e3\n \3 \3 \3 \3 \7 \u01e9\n \f \16 \u01ec\13 \5 \u01ee\n "+
-		"\3!\3!\3!\5!\u01f3\n!\3\"\3\"\5\"\u01f7\n\"\3\"\5\"\u01fa\n\"\3#\3#\3"+
-		"$\3$\3$\3$\3$\5$\u0203\n$\3$\3$\3$\5$\u0208\n$\3%\3%\3&\3&\3&\3\'\3\'"+
-		"\3(\3(\3(\3(\3(\7(\u0216\n(\f(\16(\u0219\13(\3)\3)\5)\u021d\n)\3*\3*\3"+
-		"*\3*\5*\u0223\n*\3*\3*\3*\3*\3*\5*\u022a\n*\3+\3+\5+\u022e\n+\3,\3,\3"+
-		",\3,\3,\3,\3,\3,\5,\u0238\n,\3-\3-\3-\3.\3.\3.\3/\3/\3\60\3\60\3\61\5"+
-		"\61\u0245\n\61\3\61\3\61\5\61\u0249\n\61\3\61\3\61\5\61\u024d\n\61\3\61"+
-		"\3\61\5\61\u0251\n\61\7\61\u0253\n\61\f\61\16\61\u0256\13\61\3\62\3\62"+
-		"\3\62\3\62\3\62\5\62\u025d\n\62\3\63\3\63\7\63\u0261\n\63\f\63\16\63\u0264"+
-		"\13\63\3\63\3\63\3\63\7\63\u0269\n\63\f\63\16\63\u026c\13\63\3\63\3\63"+
-		"\5\63\u0270\n\63\3\64\5\64\u0273\n\64\3\64\3\64\5\64\u0277\n\64\3\64\5"+
-		"\64\u027a\n\64\3\64\3\64\3\64\3\64\3\64\3\64\3\64\5\64\u0283\n\64\3\65"+
-		"\3\65\3\65\3\65\3\66\5\66\u028a\n\66\3\66\3\66\3\67\3\67\38\38\39\39\3"+
-		"9\79\u0295\n9\f9\169\u0298\139\3:\3:\3:\3:\5:\u029e\n:\3:\3:\3:\3:\3;"+
-		"\3;\3;\3;\3;\5;\u02a9\n;\3<\3<\3=\3=\3=\3=\7=\u02b1\n=\f=\16=\u02b4\13"+
-		"=\3>\3>\3>\5>\u02b9\n>\3?\5?\u02bc\n?\3?\3?\3?\3?\3?\3?\3?\3?\3?\3?\3"+
-		"?\3?\5?\u02ca\n?\3@\3@\5@\u02ce\n@\3@\3@\3@\3@\3@\3@\3@\3@\3@\3@\3@\3"+
-		"@\5@\u02dc\n@\3A\3A\3A\5A\u02e1\nA\5A\u02e3\nA\3A\3A\3A\3A\3A\3B\3B\3"+
-		"C\3C\3C\5C\u02ef\nC\3D\5D\u02f2\nD\3D\3D\3D\3D\3D\3D\3D\3D\3D\3D\5D\u02fe"+
-		"\nD\3E\3E\3F\3F\3G\3G\5G\u0306\nG\3G\3G\3G\3G\3G\3G\3G\3G\3G\3G\5G\u0312"+
-		"\nG\3H\3H\3I\3I\3J\3J\3J\5J\u031b\nJ\5J\u031d\nJ\3J\3J\3J\3K\3K\3L\3L"+
-		"\3M\3M\3M\3M\7M\u032a\nM\fM\16M\u032d\13M\3N\3N\3O\5O\u0332\nO\3O\3O\3"+
-		"P\3P\3P\3P\3P\3P\3P\3P\3P\3P\3P\3P\3P\3P\5P\u0344\nP\3Q\3Q\3Q\3Q\3Q\3"+
-		"Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\5Q\u035b\nQ\5Q\u035d\n"+
-		"Q\3R\3R\3R\3R\3R\3R\3R\3R\3R\5R\u0368\nR\3R\5R\u036b\nR\3S\3S\6S\u036f"+
-		"\nS\rS\16S\u0370\3S\3S\3S\5S\u0376\nS\5S\u0378\nS\3T\3T\5T\u037c\nT\3"+
-		"U\3U\3V\3V\3W\3W\3X\3X\3Y\3Y\3Z\3Z\5Z\u038a\nZ\3Z\3Z\3Z\5Z\u038f\nZ\7"+
-		"Z\u0391\nZ\fZ\16Z\u0394\13Z\3[\5[\u0397\n[\3[\3[\5[\u039b\n[\3[\3[\5["+
-		"\u039f\n[\3[\3[\3[\3[\5[\u03a5\n[\3[\3[\5[\u03a9\n[\3[\3[\3[\5[\u03ae"+
-		"\n[\3[\3[\3[\3[\5[\u03b4\n[\3[\3[\5[\u03b8\n[\3\\\3\\\3]\3]\3^\3^\5^\u03c0"+
-		"\n^\3_\3_\3`\3`\3a\3a\3b\3b\3c\3c\3d\3d\3d\3d\7d\u03d0\nd\fd\16d\u03d3"+
-		"\13d\3e\3e\3f\3f\3f\2\2g\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&("+
-		"*,.\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080\u0082\u0084"+
-		"\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094\u0096\u0098\u009a\u009c"+
-		"\u009e\u00a0\u00a2\u00a4\u00a6\u00a8\u00aa\u00ac\u00ae\u00b0\u00b2\u00b4"+
-		"\u00b6\u00b8\u00ba\u00bc\u00be\u00c0\u00c2\u00c4\u00c6\u00c8\u00ca\2\35"+
-		"\5\2\b\20gg\u00a9\u00a9\3\2$%\4\2\60\60RS\3\2\u0162\u0169\4\2\36\36\u02a6"+
-		"\u02a6\4\2\u0089\u0089\u02a1\u02a1\5\2__\u00bb\u00bb\u015b\u015b\4\2\37"+
+		"`\t`\4a\ta\4b\tb\4c\tc\4d\td\4e\te\4f\tf\4g\tg\4h\th\3\2\3\2\5\2\u00d3"+
+		"\n\2\3\3\3\3\5\3\u00d7\n\3\3\4\3\4\3\4\3\4\3\4\3\4\5\4\u00df\n\4\3\4\3"+
+		"\4\3\4\5\4\u00e4\n\4\3\4\3\4\3\4\3\4\5\4\u00ea\n\4\7\4\u00ec\n\4\f\4\16"+
+		"\4\u00ef\13\4\3\4\3\4\3\4\5\4\u00f4\n\4\5\4\u00f6\n\4\3\5\3\5\3\5\3\5"+
+		"\5\5\u00fc\n\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\5\5\u0105\n\5\3\5\3\5\3\5\3"+
+		"\5\3\5\5\5\u010c\n\5\3\5\3\5\3\5\3\5\5\5\u0112\n\5\3\5\3\5\5\5\u0116\n"+
+		"\5\3\6\3\6\3\6\3\6\5\6\u011c\n\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6\u0125"+
+		"\n\6\3\6\3\6\3\6\3\6\3\6\5\6\u012c\n\6\3\6\3\6\3\6\3\6\5\6\u0132\n\6\3"+
+		"\6\3\6\5\6\u0136\n\6\3\7\3\7\7\7\u013a\n\7\f\7\16\7\u013d\13\7\3\7\3\7"+
+		"\3\7\3\7\7\7\u0143\n\7\f\7\16\7\u0146\13\7\3\7\3\7\3\7\3\7\3\7\5\7\u014d"+
+		"\n\7\3\b\3\b\3\t\3\t\3\n\3\n\3\13\3\13\3\f\3\f\3\r\3\r\5\r\u015b\n\r\3"+
+		"\r\3\r\3\r\7\r\u0160\n\r\f\r\16\r\u0163\13\r\3\16\3\16\3\16\3\16\3\16"+
+		"\3\16\3\16\3\16\5\16\u016d\n\16\3\16\3\16\3\16\3\16\5\16\u0173\n\16\3"+
+		"\16\3\16\5\16\u0177\n\16\3\16\3\16\3\16\3\16\5\16\u017d\n\16\5\16\u017f"+
+		"\n\16\3\17\3\17\3\17\3\17\5\17\u0185\n\17\3\20\3\20\3\21\3\21\5\21\u018b"+
+		"\n\21\3\22\3\22\3\23\3\23\3\24\3\24\3\24\5\24\u0194\n\24\5\24\u0196\n"+
+		"\24\3\24\3\24\3\24\5\24\u019b\n\24\5\24\u019d\n\24\3\25\3\25\3\25\3\25"+
+		"\5\25\u01a3\n\25\3\26\3\26\3\27\3\27\3\27\3\27\3\27\5\27\u01ac\n\27\3"+
+		"\27\3\27\3\27\3\27\3\27\5\27\u01b3\n\27\3\27\3\27\5\27\u01b7\n\27\3\30"+
+		"\3\30\3\31\3\31\3\32\3\32\3\32\3\32\3\32\3\32\5\32\u01c3\n\32\3\32\3\32"+
+		"\3\32\5\32\u01c8\n\32\3\32\3\32\3\32\3\32\7\32\u01ce\n\32\f\32\16\32\u01d1"+
+		"\13\32\3\33\3\33\3\33\3\33\3\33\3\33\3\33\5\33\u01da\n\33\3\34\3\34\3"+
+		"\34\5\34\u01df\n\34\3\34\3\34\3\34\3\34\3\34\3\34\3\34\3\34\5\34\u01e9"+
+		"\n\34\3\34\3\34\3\34\3\34\3\34\3\34\3\34\3\34\3\34\3\34\3\34\5\34\u01f6"+
+		"\n\34\3\34\3\34\3\34\3\34\5\34\u01fc\n\34\3\34\5\34\u01ff\n\34\3\34\3"+
+		"\34\3\34\3\34\5\34\u0205\n\34\3\34\3\34\3\34\3\34\3\34\3\34\3\34\3\34"+
+		"\3\34\3\34\3\34\3\34\3\34\3\34\5\34\u0215\n\34\3\34\3\34\3\34\3\34\5\34"+
+		"\u021b\n\34\3\34\3\34\3\34\3\34\3\34\3\34\3\34\7\34\u0224\n\34\f\34\16"+
+		"\34\u0227\13\34\3\35\3\35\3\36\3\36\3\37\3\37\3 \5 \u0230\n \3 \5 \u0233"+
+		"\n \3 \5 \u0236\n \3 \5 \u0239\n \3!\3!\3!\3!\5!\u023f\n!\3\"\3\"\3\""+
+		"\3\"\3\"\7\"\u0246\n\"\f\"\16\"\u0249\13\"\3\"\3\"\5\"\u024d\n\"\3\"\3"+
+		"\"\5\"\u0251\n\"\3\"\3\"\3\"\3\"\7\"\u0257\n\"\f\"\16\"\u025a\13\"\5\""+
+		"\u025c\n\"\3#\3#\3#\5#\u0261\n#\3$\3$\5$\u0265\n$\3$\5$\u0268\n$\3%\3"+
+		"%\3&\3&\3&\3&\3&\5&\u0271\n&\3&\3&\3&\5&\u0276\n&\3\'\3\'\3(\3(\3(\3)"+
+		"\3)\3*\3*\3*\3*\3*\7*\u0284\n*\f*\16*\u0287\13*\3+\3+\5+\u028b\n+\3,\3"+
+		",\3,\3,\5,\u0291\n,\3,\3,\3,\3,\3,\5,\u0298\n,\3-\3-\5-\u029c\n-\3.\3"+
+		".\3.\3.\3.\3.\3.\3.\5.\u02a6\n.\3/\3/\5/\u02aa\n/\3/\3/\5/\u02ae\n/\3"+
+		"\60\3\60\3\60\3\61\3\61\3\62\3\62\3\63\5\63\u02b8\n\63\3\63\3\63\5\63"+
+		"\u02bc\n\63\3\63\3\63\5\63\u02c0\n\63\3\63\3\63\5\63\u02c4\n\63\7\63\u02c6"+
+		"\n\63\f\63\16\63\u02c9\13\63\3\64\3\64\3\64\3\64\3\64\5\64\u02d0\n\64"+
+		"\3\65\3\65\7\65\u02d4\n\65\f\65\16\65\u02d7\13\65\3\65\3\65\3\65\7\65"+
+		"\u02dc\n\65\f\65\16\65\u02df\13\65\3\65\3\65\5\65\u02e3\n\65\3\66\3\66"+
+		"\3\66\3\66\3\66\3\66\5\66\u02eb\n\66\3\66\3\66\5\66\u02ef\n\66\3\66\5"+
+		"\66\u02f2\n\66\3\66\3\66\3\66\3\66\3\66\3\66\5\66\u02fa\n\66\3\66\5\66"+
+		"\u02fd\n\66\3\66\3\66\3\66\7\66\u0302\n\66\f\66\16\66\u0305\13\66\5\66"+
+		"\u0307\n\66\3\66\3\66\3\66\3\66\5\66\u030d\n\66\3\67\3\67\38\58\u0312"+
+		"\n8\38\38\39\39\3:\3:\3;\3;\3;\7;\u031d\n;\f;\16;\u0320\13;\3<\3<\3<\3"+
+		"<\5<\u0326\n<\3<\3<\3<\3<\3=\3=\3=\3=\3=\5=\u0331\n=\3>\3>\3?\3?\3?\3"+
+		"?\7?\u0339\n?\f?\16?\u033c\13?\3@\3@\3@\5@\u0341\n@\3A\5A\u0344\nA\3A"+
+		"\3A\3A\3A\3A\3A\3A\3A\3A\3A\3A\3A\5A\u0352\nA\3B\3B\5B\u0356\nB\3B\3B"+
+		"\3B\3B\3B\3B\3B\3B\3B\3B\3B\3B\5B\u0364\nB\3C\3C\3C\5C\u0369\nC\5C\u036b"+
+		"\nC\3C\3C\3C\3C\3C\3D\3D\3E\3E\3E\5E\u0377\nE\3F\5F\u037a\nF\3F\3F\3F"+
+		"\3F\3F\3F\3F\3F\3F\3F\5F\u0386\nF\3G\3G\3H\3H\3I\3I\5I\u038e\nI\3I\3I"+
+		"\3I\3I\3I\3I\3I\3I\3I\3I\5I\u039a\nI\3J\3J\3K\3K\3L\3L\3L\5L\u03a3\nL"+
+		"\5L\u03a5\nL\3L\3L\3L\3M\3M\3N\3N\3O\3O\3O\7O\u03b1\nO\fO\16O\u03b4\13"+
+		"O\3P\5P\u03b7\nP\3P\3P\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\3Q\5Q\u03c9"+
+		"\nQ\3R\3R\3R\3R\3R\3R\3R\3R\3R\3R\3R\7R\u03d6\nR\fR\16R\u03d9\13R\3R\3"+
+		"R\3R\3R\3R\3R\3R\6R\u03e2\nR\rR\16R\u03e3\3R\3R\3R\3R\3R\3R\3R\3R\3R\3"+
+		"R\3R\5R\u03f1\nR\3R\3R\3R\3R\7R\u03f7\nR\fR\16R\u03fa\13R\3S\3S\3S\3S"+
+		"\3S\3S\3S\3S\3S\5S\u0405\nS\3S\5S\u0408\nS\3T\3T\6T\u040c\nT\rT\16T\u040d"+
+		"\3T\3T\3T\5T\u0413\nT\5T\u0415\nT\3U\3U\5U\u0419\nU\3V\3V\3W\3W\3X\3X"+
+		"\3Y\3Y\3Z\3Z\3[\3[\3[\3[\5[\u0429\n[\3[\3[\3[\3[\3[\5[\u0430\n[\7[\u0432"+
+		"\n[\f[\16[\u0435\13[\3\\\5\\\u0438\n\\\3\\\3\\\5\\\u043c\n\\\3\\\3\\\5"+
+		"\\\u0440\n\\\3\\\3\\\3\\\3\\\5\\\u0446\n\\\3\\\3\\\5\\\u044a\n\\\3\\\3"+
+		"\\\3\\\5\\\u044f\n\\\3\\\3\\\3\\\3\\\5\\\u0455\n\\\3\\\3\\\3\\\3\\\3\\"+
+		"\5\\\u045c\n\\\3\\\3\\\3\\\3\\\3\\\3\\\5\\\u0464\n\\\3\\\3\\\3\\\3\\\3"+
+		"\\\3\\\7\\\u046c\n\\\f\\\16\\\u046f\13\\\5\\\u0471\n\\\3\\\3\\\5\\\u0475"+
+		"\n\\\3\\\3\\\5\\\u0479\n\\\3]\3]\3^\3^\3_\3_\3_\3_\5_\u0483\n_\3`\3`\3"+
+		"a\3a\3b\3b\3b\3b\3b\5b\u048e\nb\3b\3b\5b\u0492\nb\3b\3b\3b\3b\3b\3b\3"+
+		"b\3b\3b\3b\3b\3b\3b\3b\3b\3b\3b\3b\3b\3b\3b\3b\3b\5b\u04ab\nb\3c\3c\3"+
+		"d\3d\3e\3e\3f\3f\3g\3g\3h\3h\3h\2\5\62\66\u00a2i\2\4\6\b\n\f\16\20\22"+
+		"\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnp"+
+		"rtvxz|~\u0080\u0082\u0084\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094"+
+		"\u0096\u0098\u009a\u009c\u009e\u00a0\u00a2\u00a4\u00a6\u00a8\u00aa\u00ac"+
+		"\u00ae\u00b0\u00b2\u00b4\u00b6\u00b8\u00ba\u00bc\u00be\u00c0\u00c2\u00c4"+
+		"\u00c6\u00c8\u00ca\u00cc\u00ce\2%\5\2\b\20gg\u00a9\u00a9\3\2$%\4\2\60"+
+		"\60RS\3\2\u0162\u0169\4\2\36\36\u02a6\u02a6\5\2&\'*+\u02a7\u02a7\5\2("+
+		"),-\u02a8\u02a8\4\2\u0089\u0089\u02a1\u02a1\5\2__\u00bb\u00bb\u015b\u015b"+
+		"\4\2\u009c\u009c\u00a8\u00a8\5\2\60\60\u0132\u0132\u0155\u0155\4\2\37"+
 		"\37\u00b9\u00b9\4\2\67\67NN\3\2\"#\4\2\64\64\u02a9\u02a9\5\2\21\24ddo"+
 		"o\5\2bbnn\u00c0\u00c0\4\2ppzz\4\2\25\34yy\4\2\35\35\u00c6\u00c6\4\2HH"+
 		"rr\4\2}}\u00a7\u00a7\4\2\u008b\u008b\u02b9\u02b9\3\2\u02b4\u02b5\5\2\u02ac"+
 		"\u02ae\u02b6\u02b6\u02b8\u02b8\4\2__\u00bb\u00bb\5\2\u0089\u0089\u029a"+
 		"\u029b\u02a1\u02a2\3\2\u0297\u029d\5\2\u0101\u0101\u010d\u010e\u0118\u0118"+
-		"\4\2\60\60RR\t\2mmtt\u00a0\u00a0\u011c\u0123\u0125\u0126\u0128\u012e\u014d"+
-		"\u014d\2\u0409\2\u00cc\3\2\2\2\4\u00d2\3\2\2\2\6\u00f1\3\2\2\2\b\u0111"+
-		"\3\2\2\2\n\u0131\3\2\2\2\f\u0148\3\2\2\2\16\u014a\3\2\2\2\20\u014c\3\2"+
-		"\2\2\22\u014e\3\2\2\2\24\u0150\3\2\2\2\26\u0152\3\2\2\2\30\u0156\3\2\2"+
-		"\2\32\u0170\3\2\2\2\34\u0172\3\2\2\2\36\u0177\3\2\2\2 \u017b\3\2\2\2\""+
-		"\u017d\3\2\2\2$\u017f\3\2\2\2&\u018d\3\2\2\2(\u018f\3\2\2\2*\u0192\3\2"+
-		"\2\2,\u019c\3\2\2\2.\u019e\3\2\2\2\60\u01a0\3\2\2\2\62\u01ac\3\2\2\2\64"+
-		"\u01b5\3\2\2\2\66\u01c0\3\2\2\28\u01c2\3\2\2\2:\u01c4\3\2\2\2<\u01c7\3"+
-		"\2\2\2>\u01d2\3\2\2\2@\u01f2\3\2\2\2B\u01f9\3\2\2\2D\u01fb\3\2\2\2F\u0207"+
-		"\3\2\2\2H\u0209\3\2\2\2J\u020b\3\2\2\2L\u020e\3\2\2\2N\u0210\3\2\2\2P"+
-		"\u021a\3\2\2\2R\u021e\3\2\2\2T\u022d\3\2\2\2V\u0237\3\2\2\2X\u0239\3\2"+
-		"\2\2Z\u023c\3\2\2\2\\\u023f\3\2\2\2^\u0241\3\2\2\2`\u0244\3\2\2\2b\u025c"+
-		"\3\2\2\2d\u026f\3\2\2\2f\u0282\3\2\2\2h\u0284\3\2\2\2j\u0289\3\2\2\2l"+
-		"\u028d\3\2\2\2n\u028f\3\2\2\2p\u0291\3\2\2\2r\u0299\3\2\2\2t\u02a8\3\2"+
-		"\2\2v\u02aa\3\2\2\2x\u02ac\3\2\2\2z\u02b8\3\2\2\2|\u02bb\3\2\2\2~\u02cb"+
-		"\3\2\2\2\u0080\u02dd\3\2\2\2\u0082\u02e9\3\2\2\2\u0084\u02ee\3\2\2\2\u0086"+
-		"\u02f1\3\2\2\2\u0088\u02ff\3\2\2\2\u008a\u0301\3\2\2\2\u008c\u0303\3\2"+
-		"\2\2\u008e\u0313\3\2\2\2\u0090\u0315\3\2\2\2\u0092\u0317\3\2\2\2\u0094"+
-		"\u0321\3\2\2\2\u0096\u0323\3\2\2\2\u0098\u0325\3\2\2\2\u009a\u032e\3\2"+
-		"\2\2\u009c\u0331\3\2\2\2\u009e\u0343\3\2\2\2\u00a0\u035c\3\2\2\2\u00a2"+
-		"\u036a\3\2\2\2\u00a4\u0377\3\2\2\2\u00a6\u037b\3\2\2\2\u00a8\u037d\3\2"+
-		"\2\2\u00aa\u037f\3\2\2\2\u00ac\u0381\3\2\2\2\u00ae\u0383\3\2\2\2\u00b0"+
-		"\u0385\3\2\2\2\u00b2\u0389\3\2\2\2\u00b4\u03b7\3\2\2\2\u00b6\u03b9\3\2"+
-		"\2\2\u00b8\u03bb\3\2\2\2\u00ba\u03bf\3\2\2\2\u00bc\u03c1\3\2\2\2\u00be"+
-		"\u03c3\3\2\2\2\u00c0\u03c5\3\2\2\2\u00c2\u03c7\3\2\2\2\u00c4\u03c9\3\2"+
-		"\2\2\u00c6\u03cb\3\2\2\2\u00c8\u03d4\3\2\2\2\u00ca\u03d6\3\2\2\2\u00cc"+
-		"\u00ce\5\4\3\2\u00cd\u00cf\7\7\2\2\u00ce\u00cd\3\2\2\2\u00ce\u00cf\3\2"+
-		"\2\2\u00cf\3\3\2\2\2\u00d0\u00d3\5\6\4\2\u00d1\u00d3\5V,\2\u00d2\u00d0"+
-		"\3\2\2\2\u00d2\u00d1\3\2\2\2\u00d3\5\3\2\2\2\u00d4\u00d5\5\b\5\2\u00d5"+
-		"\u00d6\5<\37\2\u00d6\u00f2\3\2\2\2\u00d7\u00d8\5x=\2\u00d8\u00d9\5:\36"+
-		"\2\u00d9\u00db\3\2\2\2\u00da\u00d7\3\2\2\2\u00da\u00db\3\2\2\2\u00db\u00df"+
-		"\3\2\2\2\u00dc\u00dd\5<\37\2\u00dd\u00de\5:\36\2\u00de\u00e0\3\2\2\2\u00df"+
-		"\u00dc\3\2\2\2\u00df\u00e0\3\2\2\2\u00e0\u00e1\3\2\2\2\u00e1\u00e9\5\n"+
-		"\6\2\u00e2\u00e5\5:\36\2\u00e3\u00e6\5\n\6\2\u00e4\u00e6\5x=\2\u00e5\u00e3"+
-		"\3\2\2\2\u00e5\u00e4\3\2\2\2\u00e6\u00e8\3\2\2\2\u00e7\u00e2\3\2\2\2\u00e8"+
-		"\u00eb\3\2\2\2\u00e9\u00e7\3\2\2\2\u00e9\u00ea\3\2\2\2\u00ea\u00ef\3\2"+
-		"\2\2\u00eb\u00e9\3\2\2\2\u00ec\u00ed\5:\36\2\u00ed\u00ee\5<\37\2\u00ee"+
-		"\u00f0\3\2\2\2\u00ef\u00ec\3\2\2\2\u00ef\u00f0\3\2\2\2\u00f0\u00f2\3\2"+
-		"\2\2\u00f1\u00d4\3\2\2\2\u00f1\u00da\3\2\2\2\u00f2\7\3\2\2\2\u00f3\u00f7"+
-		"\5\f\7\2\u00f4\u00f5\5\u00c4c\2\u00f5\u00f6\5\u00c6d\2\u00f6\u00f8\3\2"+
-		"\2\2\u00f7\u00f4\3\2\2\2\u00f7\u00f8\3\2\2\2\u00f8\u00f9\3\2\2\2\u00f9"+
-		"\u00fa\5\u00caf\2\u00fa\u0112\3\2\2\2\u00fb\u00fc\5\f\7\2\u00fc\u0100"+
-		"\5\u00caf\2\u00fd\u00fe\5\u00c4c\2\u00fe\u00ff\5\u00c6d\2\u00ff\u0101"+
-		"\3\2\2\2\u0100\u00fd\3\2\2\2\u0100\u0101\3\2\2\2\u0101\u0112\3\2\2\2\u0102"+
-		"\u0103\5\u00caf\2\u0103\u0107\5\f\7\2\u0104\u0105\5\u00c4c\2\u0105\u0106"+
-		"\5\u00c6d\2\u0106\u0108\3\2\2\2\u0107\u0104\3\2\2\2\u0107\u0108\3\2\2"+
-		"\2\u0108\u0112\3\2\2\2\u0109\u010d\5\u00caf\2\u010a\u010b\5\u00c4c\2\u010b"+
-		"\u010c\5\u00c6d\2\u010c\u010e\3\2\2\2\u010d\u010a\3\2\2\2\u010d\u010e"+
-		"\3\2\2\2\u010e\u010f\3\2\2\2\u010f\u0110\5\f\7\2\u0110\u0112\3\2\2\2\u0111"+
-		"\u00f3\3\2\2\2\u0111\u00fb\3\2\2\2\u0111\u0102\3\2\2\2\u0111\u0109\3\2"+
-		"\2\2\u0112\t\3\2\2\2\u0113\u0117\5\f\7\2\u0114\u0115\5\u00c4c\2\u0115"+
-		"\u0116\5\u00c6d\2\u0116\u0118\3\2\2\2\u0117\u0114\3\2\2\2\u0117\u0118"+
-		"\3\2\2\2\u0118\u0119\3\2\2\2\u0119\u011a\5\u00c8e\2\u011a\u0132\3\2\2"+
-		"\2\u011b\u011c\5\f\7\2\u011c\u0120\5\u00c8e\2\u011d\u011e\5\u00c4c\2\u011e"+
-		"\u011f\5\u00c6d\2\u011f\u0121\3\2\2\2\u0120\u011d\3\2\2\2\u0120\u0121"+
-		"\3\2\2\2\u0121\u0132\3\2\2\2\u0122\u0123\5\u00c8e\2\u0123\u0127\5\f\7"+
-		"\2\u0124\u0125\5\u00c4c\2\u0125\u0126\5\u00c6d\2\u0126\u0128\3\2\2\2\u0127"+
-		"\u0124\3\2\2\2\u0127\u0128\3\2\2\2\u0128\u0132\3\2\2\2\u0129\u012d\5\u00c8"+
-		"e\2\u012a\u012b\5\u00c4c\2\u012b\u012c\5\u00c6d\2\u012c\u012e\3\2\2\2"+
-		"\u012d\u012a\3\2\2\2\u012d\u012e\3\2\2\2\u012e\u012f\3\2\2\2\u012f\u0130"+
-		"\5\f\7\2\u0130\u0132\3\2\2\2\u0131\u0113\3\2\2\2\u0131\u011b\3\2\2\2\u0131"+
-		"\u0122\3\2\2\2\u0131\u0129\3\2\2\2\u0132\13\3\2\2\2\u0133\u0137\5\16\b"+
-		"\2\u0134\u0136\5\26\f\2\u0135\u0134\3\2\2\2\u0136\u0139\3\2\2\2\u0137"+
-		"\u0135\3\2\2\2\u0137\u0138\3\2\2\2\u0138\u013a\3\2\2\2\u0139\u0137\3\2"+
-		"\2\2\u013a\u013b\5\30\r\2\u013b\u0149\3\2\2\2\u013c\u0140\5\16\b\2\u013d"+
-		"\u013f\5\26\f\2\u013e\u013d\3\2\2\2\u013f\u0142\3\2\2\2\u0140\u013e\3"+
-		"\2\2\2\u0140\u0141\3\2\2\2\u0141\u0143\3\2\2\2\u0142\u0140\3\2\2\2\u0143"+
-		"\u0144\5\30\r\2\u0144\u0149\3\2\2\2\u0145\u0146\5\16\b\2\u0146\u0147\5"+
-		"\22\n\2\u0147\u0149\3\2\2\2\u0148\u0133\3\2\2\2\u0148\u013c\3\2\2\2\u0148"+
-		"\u0145\3\2\2\2\u0149\r\3\2\2\2\u014a\u014b\5\20\t\2\u014b\17\3\2\2\2\u014c"+
-		"\u014d\t\2\2\2\u014d\21\3\2\2\2\u014e\u014f\5\24\13\2\u014f\23\3\2\2\2"+
-		"\u0150\u0151\t\3\2\2\u0151\25\3\2\2\2\u0152\u0153\t\4\2\2\u0153\27\3\2"+
-		"\2\2\u0154\u0157\7\u0297\2\2\u0155\u0157\5\32\16\2\u0156\u0154\3\2\2\2"+
-		"\u0156\u0155\3\2\2\2\u0157\u015d\3\2\2\2\u0158\u0159\5\u00c2b\2\u0159"+
-		"\u015a\5\32\16\2\u015a\u015c\3\2\2\2\u015b\u0158\3\2\2\2\u015c\u015f\3"+
-		"\2\2\2\u015d\u015b\3\2\2\2\u015d\u015e\3\2\2\2\u015e\31\3\2\2\2\u015f"+
-		"\u015d\3\2\2\2\u0160\u0161\5\34\17\2\u0161\u0162\5$\23\2\u0162\u0163\7"+
-		"\u0297\2\2\u0163\u0171\3\2\2\2\u0164\u0168\5&\24\2\u0165\u0166\5*\26\2"+
-		"\u0166\u0167\5\36\20\2\u0167\u0169\3\2\2\2\u0168\u0165\3\2\2\2\u0168\u0169"+
-		"\3\2\2\2\u0169\u0171\3\2\2\2\u016a\u016e\5,\27\2\u016b\u016c\5*\26\2\u016c"+
-		"\u016d\5\36\20\2\u016d\u016f\3\2\2\2\u016e\u016b\3\2\2\2\u016e\u016f\3"+
-		"\2\2\2\u016f\u0171\3\2\2\2\u0170\u0160\3\2\2\2\u0170\u0164\3\2\2\2\u0170"+
-		"\u016a\3\2\2\2\u0171\33\3\2\2\2\u0172\u0175\5\36\20\2\u0173\u0174\7\u02a6"+
-		"\2\2\u0174\u0176\5\36\20\2\u0175\u0173\3\2\2\2\u0175\u0176\3\2\2\2\u0176"+
-		"\35\3\2\2\2\u0177\u0178\5 \21\2\u0178\37\3\2\2\2\u0179\u017c\7\u02bc\2"+
-		"\2\u017a\u017c\5\"\22\2\u017b\u0179\3\2\2\2\u017b\u017a\3\2\2\2\u017c"+
-		"!\3\2\2\2\u017d\u017e\t\5\2\2\u017e#\3\2\2\2\u017f\u0180\t\6\2\2\u0180"+
-		"%\3\2\2\2\u0181\u0186\5\36\20\2\u0182\u0184\5(\25\2\u0183\u0185\5(\25"+
-		"\2\u0184\u0183\3\2\2\2\u0184\u0185\3\2\2\2\u0185\u0187\3\2\2\2\u0186\u0182"+
-		"\3\2\2\2\u0186\u0187\3\2\2\2\u0187\u018e\3\2\2\2\u0188\u0189\5$\23\2\u0189"+
-		"\u018b\5(\25\2\u018a\u018c\5(\25\2\u018b\u018a\3\2\2\2\u018b\u018c\3\2"+
-		"\2\2\u018c\u018e\3\2\2\2\u018d\u0181\3\2\2\2\u018d\u0188\3\2\2\2\u018e"+
-		"\'\3\2\2\2\u018f\u0190\5$\23\2\u0190\u0191\5\36\20\2\u0191)\3\2\2\2\u0192"+
-		"\u0193\7\66\2\2\u0193+\3\2\2\2\u0194\u019d\5\u00b4[\2\u0195\u0196\5\u00c0"+
-		"a\2\u0196\u0198\5.\30\2\u0197\u0199\5\u00b2Z\2\u0198\u0197\3\2\2\2\u0198"+
-		"\u0199\3\2\2\2\u0199\u019a\3\2\2\2\u019a\u019b\5\60\31\2\u019b\u019d\3"+
-		"\2\2\2\u019c\u0194\3\2\2\2\u019c\u0195\3\2\2\2\u019d-\3\2\2\2\u019e\u019f"+
-		"\7\u02a7\2\2\u019f/\3\2\2\2\u01a0\u01a1\7\u02a8\2\2\u01a1\61\3\2\2\2\u01a2"+
-		"\u01a3\t\7\2\2\u01a3\u01ad\5\66\34\2\u01a4\u01a5\5\66\34\2\u01a5\u01a7"+
-		"\7w\2\2\u01a6\u01a8\7\u0089\2\2\u01a7\u01a6\3\2\2\2\u01a7\u01a8\3\2\2"+
-		"\2\u01a8\u01a9\3\2\2\2\u01a9\u01aa\t\b\2\2\u01aa\u01ad\3\2\2\2\u01ab\u01ad"+
-		"\5\66\34\2\u01ac\u01a2\3\2\2\2\u01ac\u01a4\3\2\2\2\u01ac\u01ab\3\2\2\2"+
-		"\u01ad\63\3\2\2\2\u01ae\u01b6\7\64\2\2\u01af\u01b0\7\u02a4\2\2\u01b0\u01b6"+
-		"\7\u02a4\2\2\u01b1\u01b6\7\u00c8\2\2\u01b2\u01b6\7\u0091\2\2\u01b3\u01b4"+
-		"\7\u02a3\2\2\u01b4\u01b6\7\u02a3\2\2\u01b5\u01ae\3\2\2\2\u01b5\u01af\3"+
-		"\2\2\2\u01b5\u01b1\3\2\2\2\u01b5\u01b2\3\2\2\2\u01b5\u01b3\3\2\2\2\u01b6"+
-		"\65\3\2\2\2\u01b7\u01b8\5\u00a0Q\2\u01b8\u01b9\7w\2\2\u01b9\u01ba\5\u009c"+
-		"O\2\u01ba\u01c1\3\2\2\2\u01bb\u01bc\5\u00a0Q\2\u01bc\u01bd\5\u009eP\2"+
-		"\u01bd\u01be\5\u00a0Q\2\u01be\u01c1\3\2\2\2\u01bf\u01c1\5\u00a0Q\2\u01c0"+
-		"\u01b7\3\2\2\2\u01c0\u01bb\3\2\2\2\u01c0\u01bf\3\2\2\2\u01c1\67\3\2\2"+
-		"\2\u01c2\u01c3\7w\2\2\u01c39\3\2\2\2\u01c4\u01c5\t\t\2\2\u01c5;\3\2\2"+
-		"\2\u01c6\u01c8\5> \2\u01c7\u01c6\3\2\2\2\u01c7\u01c8\3\2\2\2\u01c8\u01ca"+
-		"\3\2\2\2\u01c9\u01cb\5J&\2\u01ca\u01c9\3\2\2\2\u01ca\u01cb\3\2\2\2\u01cb"+
-		"\u01cd\3\2\2\2\u01cc\u01ce\5N(\2\u01cd\u01cc\3\2\2\2\u01cd\u01ce\3\2\2"+
-		"\2\u01ce\u01d0\3\2\2\2\u01cf\u01d1\5R*\2\u01d0\u01cf\3\2\2\2\u01d0\u01d1"+
-		"\3\2\2\2\u01d1=\3\2\2\2\u01d2\u01d3\5@!\2\u01d3\u01d9\5B\"\2\u01d4\u01d5"+
-		"\5H%\2\u01d5\u01d6\5B\"\2\u01d6\u01d8\3\2\2\2\u01d7\u01d4\3\2\2\2\u01d8"+
-		"\u01db\3\2\2\2\u01d9\u01d7\3\2\2\2\u01d9\u01da\3\2\2\2\u01da\u01de\3\2"+
-		"\2\2\u01db\u01d9\3\2\2\2\u01dc\u01dd\7\u00c6\2\2\u01dd\u01df\7\u0152\2"+
-		"\2\u01de\u01dc\3\2\2\2\u01de\u01df\3\2\2\2\u01df\u01ed\3\2\2\2\u01e0\u01e2"+
-		"\5:\36\2\u01e1\u01e3\5\20\t\2\u01e2\u01e1\3\2\2\2\u01e2\u01e3\3\2\2\2"+
-		"\u01e3\u01e4\3\2\2\2\u01e4\u01ea\5\u00b4[\2\u01e5\u01e6\5\u00c2b\2\u01e6"+
-		"\u01e7\5\u00b4[\2\u01e7\u01e9\3\2\2\2\u01e8\u01e5\3\2\2\2\u01e9\u01ec"+
-		"\3\2\2\2\u01ea\u01e8\3\2\2\2\u01ea\u01eb\3\2\2\2\u01eb\u01ee\3\2\2\2\u01ec"+
-		"\u01ea\3\2\2\2\u01ed\u01e0\3\2\2\2\u01ed\u01ee\3\2\2\2\u01ee?\3\2\2\2"+
-		"\u01ef\u01f0\7i\2\2\u01f0\u01f3\7;\2\2\u01f1\u01f3\7i\2\2\u01f2\u01ef"+
-		"\3\2\2\2\u01f2\u01f1\3\2\2\2\u01f3A\3\2\2\2\u01f4\u01f6\5F$\2\u01f5\u01f7"+
-		"\t\n\2\2\u01f6\u01f5\3\2\2\2\u01f6\u01f7\3\2\2\2\u01f7\u01fa\3\2\2\2\u01f8"+
-		"\u01fa\5D#\2\u01f9\u01f4\3\2\2\2\u01f9\u01f8\3\2\2\2\u01faC\3\2\2\2\u01fb"+
-		"\u01fc\t\13\2\2\u01fcE\3\2\2\2\u01fd\u01fe\t\7\2\2\u01fe\u0208\5F$\2\u01ff"+
-		"\u0200\5\66\34\2\u0200\u0202\7w\2\2\u0201\u0203\7\u0089\2\2\u0202\u0201"+
-		"\3\2\2\2\u0202\u0203\3\2\2\2\u0203\u0204\3\2\2\2\u0204\u0205\t\b\2\2\u0205"+
-		"\u0208\3\2\2\2\u0206\u0208\5\66\34\2\u0207\u01fd\3\2\2\2\u0207\u01ff\3"+
-		"\2\2\2\u0207\u0206\3\2\2\2\u0208G\3\2\2\2\u0209\u020a\t\f\2\2\u020aI\3"+
-		"\2\2\2\u020b\u020c\5L\'\2\u020c\u020d\5\62\32\2\u020dK\3\2\2\2\u020e\u020f"+
-		"\7j\2\2\u020fM\3\2\2\2\u0210\u0211\7\u0092\2\2\u0211\u0212\7;\2\2\u0212"+
-		"\u0217\5P)\2\u0213\u0214\7\u02a9\2\2\u0214\u0216\5P)\2\u0215\u0213\3\2"+
-		"\2\2\u0216\u0219\3\2\2\2\u0217\u0215\3\2\2\2\u0217\u0218\3\2\2\2\u0218"+
-		"O\3\2\2\2\u0219\u0217\3\2\2\2\u021a\u021c\5\62\32\2\u021b\u021d\t\n\2"+
-		"\2\u021c\u021b\3\2\2\2\u021c\u021d\3\2\2\2\u021dQ\3\2\2\2\u021e\u0229"+
-		"\7\177\2\2\u021f\u0220\5T+\2\u0220\u0221\7\u02a9\2\2\u0221\u0223\3\2\2"+
-		"\2\u0222\u021f\3\2\2\2\u0222\u0223\3\2\2\2\u0223\u0224\3\2\2\2\u0224\u022a"+
-		"\5T+\2\u0225\u0226\5T+\2\u0226\u0227\7\u014f\2\2\u0227\u0228\5T+\2\u0228"+
-		"\u022a\3\2\2\2\u0229\u0222\3\2\2\2\u0229\u0225\3\2\2\2\u022aS\3\2\2\2"+
-		"\u022b\u022e\5\u00a8U\2\u022c\u022e\5 \21\2\u022d\u022b\3\2\2\2\u022d"+
-		"\u022c\3\2\2\2\u022eU\3\2\2\2\u022f\u0230\5.\30\2\u0230\u0231\5\6\4\2"+
-		"\u0231\u0232\5\60\31\2\u0232\u0238\3\2\2\2\u0233\u0234\5.\30\2\u0234\u0235"+
-		"\5V,\2\u0235\u0236\5\60\31\2\u0236\u0238\3\2\2\2\u0237\u022f\3\2\2\2\u0237"+
-		"\u0233\3\2\2\2\u0238W\3\2\2\2\u0239\u023a\5\\/\2\u023a\u023b\5b\62\2\u023b"+
-		"Y\3\2\2\2\u023c\u023d\5\\/\2\u023d\u023e\5`\61\2\u023e[\3\2\2\2\u023f"+
-		"\u0240\t\r\2\2\u0240]\3\2\2\2\u0241\u0242\7\u00b7\2\2\u0242_\3\2\2\2\u0243"+
-		"\u0245\5\u00b8]\2\u0244\u0243\3\2\2\2\u0244\u0245\3\2\2\2\u0245\u0246"+
-		"\3\2\2\2\u0246\u0248\5d\63\2\u0247\u0249\5^\60\2\u0248\u0247\3\2\2\2\u0248"+
-		"\u0249\3\2\2\2\u0249\u0254\3\2\2\2\u024a\u024c\5\u0096L\2\u024b\u024d"+
-		"\5\u00b8]\2\u024c\u024b\3\2\2\2\u024c\u024d\3\2\2\2\u024d\u024e\3\2\2"+
-		"\2\u024e\u0250\5d\63\2\u024f\u0251\5^\60\2\u0250\u024f\3\2\2\2\u0250\u0251"+
-		"\3\2\2\2\u0251\u0253\3\2\2\2\u0252\u024a\3\2\2\2\u0253\u0256\3\2\2\2\u0254"+
-		"\u0252\3\2\2\2\u0254\u0255\3\2\2\2\u0255a\3\2\2\2\u0256\u0254\3\2\2\2"+
-		"\u0257\u025d\5f\64\2\u0258\u0259\5.\30\2\u0259\u025a\5f\64\2\u025a\u025b"+
-		"\5\60\31\2\u025b\u025d\3\2\2\2\u025c\u0257\3\2\2\2\u025c\u0258\3\2\2\2"+
-		"\u025dc\3\2\2\2\u025e\u0262\5f\64\2\u025f\u0261\5\u0084C\2\u0260\u025f"+
-		"\3\2\2\2\u0261\u0264\3\2\2\2\u0262\u0260\3\2\2\2\u0262\u0263\3\2\2\2\u0263"+
-		"\u0270\3\2\2\2\u0264\u0262\3\2\2\2\u0265\u0266\5.\30\2\u0266\u026a\5f"+
-		"\64\2\u0267\u0269\5\u0084C\2\u0268\u0267\3\2\2\2\u0269\u026c\3\2\2\2\u026a"+
-		"\u0268\3\2\2\2\u026a\u026b\3\2\2\2\u026b\u026d\3\2\2\2\u026c\u026a\3\2"+
-		"\2\2\u026d\u026e\5\60\31\2\u026e\u0270\3\2\2\2\u026f\u025e\3\2\2\2\u026f"+
-		"\u0265\3\2\2\2\u0270e\3\2\2\2\u0271\u0273\5\u00b8]\2\u0272\u0271\3\2\2"+
-		"\2\u0272\u0273\3\2\2\2\u0273\u0274\3\2\2\2\u0274\u0276\5n8\2\u0275\u0277"+
-		"\5^\60\2\u0276\u0275\3\2\2\2\u0276\u0277\3\2\2\2\u0277\u0279\3\2\2\2\u0278"+
-		"\u027a\5j\66\2\u0279\u0278\3\2\2\2\u0279\u027a\3\2\2\2\u027a\u0283\3\2"+
-		"\2\2\u027b\u027c\5h\65\2\u027c\u027d\5j\66\2\u027d\u0283\3\2\2\2\u027e"+
-		"\u027f\5.\30\2\u027f\u0280\5`\61\2\u0280\u0281\5\60\31\2\u0281\u0283\3"+
-		"\2\2\2\u0282\u0272\3\2\2\2\u0282\u027b\3\2\2\2\u0282\u027e\3\2\2\2\u0283"+
-		"g\3\2\2\2\u0284\u0285\5.\30\2\u0285\u0286\5\4\3\2\u0286\u0287\5\60\31"+
-		"\2\u0287i\3\2\2\2\u0288\u028a\5l\67\2\u0289\u0288\3\2\2\2\u0289\u028a"+
-		"\3\2\2\2\u028a\u028b\3\2\2\2\u028b\u028c\5\36\20\2\u028ck\3\2\2\2\u028d"+
-		"\u028e\7\66\2\2\u028em\3\2\2\2\u028f\u0290\5\34\17\2\u0290o\3\2\2\2\u0291"+
-		"\u0296\5\36\20\2\u0292\u0293\7\u02a9\2\2\u0293\u0295\5\36\20\2\u0294\u0292"+
-		"\3\2\2\2\u0295\u0298\3\2\2\2\u0296\u0294\3\2\2\2\u0296\u0297\3\2\2\2\u0297"+
-		"q\3\2\2\2\u0298\u0296\3\2\2\2\u0299\u029a\t\16\2\2\u029a\u029d\t\17\2"+
-		"\2\u029b\u029c\7a\2\2\u029c\u029e\5t;\2\u029d\u029b\3\2\2\2\u029d\u029e"+
-		"\3\2\2\2\u029e\u029f\3\2\2\2\u029f\u02a0\5.\30\2\u02a0\u02a1\5p9\2\u02a1"+
-		"\u02a2\5\60\31\2\u02a2s\3\2\2\2\u02a3\u02a9\7y\2\2\u02a4\u02a5\7\u0092"+
-		"\2\2\u02a5\u02a9\7;\2\2\u02a6\u02a7\7i\2\2\u02a7\u02a9\7;\2\2\u02a8\u02a3"+
-		"\3\2\2\2\u02a8\u02a4\3\2\2\2\u02a8\u02a6\3\2\2\2\u02a9u\3\2\2\2\u02aa"+
-		"\u02ab\t\20\2\2\u02abw\3\2\2\2\u02ac\u02b2\5z>\2\u02ad\u02ae\5:\36\2\u02ae"+
-		"\u02af\5z>\2\u02af\u02b1\3\2\2\2\u02b0\u02ad\3\2\2\2\u02b1\u02b4\3\2\2"+
-		"\2\u02b2\u02b0\3\2\2\2\u02b2\u02b3\3\2\2\2\u02b3y\3\2\2\2\u02b4\u02b2"+
-		"\3\2\2\2\u02b5\u02b9\5|?\2\u02b6\u02b9\5~@\2\u02b7\u02b9\5\u0080A\2\u02b8"+
-		"\u02b5\3\2\2\2\u02b8\u02b6\3\2\2\2\u02b8\u02b7\3\2\2\2\u02b9{\3\2\2\2"+
-		"\u02ba\u02bc\5\u0088E\2\u02bb\u02ba\3\2\2\2\u02bb\u02bc\3\2\2\2\u02bc"+
-		"\u02bd\3\2\2\2\u02bd\u02be\5v<\2\u02be\u02bf\5f\64\2\u02bf\u02c0\5\u0082"+
-		"B\2\u02c0\u02c9\5f\64\2\u02c1\u02c2\5\u008aF\2\u02c2\u02c3\5\62\32\2\u02c3"+
-		"\u02ca\3\2\2\2\u02c4\u02c5\7\u00c1\2\2\u02c5\u02c6\5.\30\2\u02c6\u02c7"+
-		"\5p9\2\u02c7\u02c8\5\60\31\2\u02c8\u02ca\3\2\2\2\u02c9\u02c1\3\2\2\2\u02c9"+
-		"\u02c4\3\2\2\2\u02c9\u02ca\3\2\2\2\u02ca}\3\2\2\2\u02cb\u02cd\5\u008e"+
-		"H\2\u02cc\u02ce\5\u0090I\2\u02cd\u02cc\3\2\2\2\u02cd\u02ce\3\2\2\2\u02ce"+
-		"\u02cf\3\2\2\2\u02cf\u02d0\5v<\2\u02d0\u02d1\5f\64\2\u02d1\u02d2\5\u0082"+
-		"B\2\u02d2\u02db\5f\64\2\u02d3\u02d4\5\u008aF\2\u02d4\u02d5\5\62\32\2\u02d5"+
-		"\u02dc\3\2\2\2\u02d6\u02d7\7\u00c1\2\2\u02d7\u02d8\5.\30\2\u02d8\u02d9"+
-		"\5p9\2\u02d9\u02da\5\60\31\2\u02da\u02dc\3\2\2\2\u02db\u02d3\3\2\2\2\u02db"+
-		"\u02d6\3\2\2\2\u02dc\177\3\2\2\2\u02dd\u02e2\5\u0094K\2\u02de\u02e0\5"+
-		"\u008eH\2\u02df\u02e1\5\u0090I\2\u02e0\u02df\3\2\2\2\u02e0\u02e1\3\2\2"+
-		"\2\u02e1\u02e3\3\2\2\2\u02e2\u02de\3\2\2\2\u02e2\u02e3\3\2\2\2\u02e3\u02e4"+
-		"\3\2\2\2\u02e4\u02e5\5v<\2\u02e5\u02e6\5f\64\2\u02e6\u02e7\5\u0082B\2"+
-		"\u02e7\u02e8\5f\64\2\u02e8\u0081\3\2\2\2\u02e9\u02ea\t\21\2\2\u02ea\u0083"+
-		"\3\2\2\2\u02eb\u02ef\5\u0086D\2\u02ec\u02ef\5\u008cG\2\u02ed\u02ef\5\u0092"+
-		"J\2\u02ee\u02eb\3\2\2\2\u02ee\u02ec\3\2\2\2\u02ee\u02ed\3\2\2\2\u02ef"+
-		"\u0085\3\2\2\2\u02f0\u02f2\5\u0088E\2\u02f1\u02f0\3\2\2\2\u02f1\u02f2"+
-		"\3\2\2\2\u02f2\u02f3\3\2\2\2\u02f3\u02f4\5v<\2\u02f4\u02fd\5f\64\2\u02f5"+
-		"\u02f6\5\u008aF\2\u02f6\u02f7\5\62\32\2\u02f7\u02fe\3\2\2\2\u02f8\u02f9"+
-		"\7\u00c1\2\2\u02f9\u02fa\5.\30\2\u02fa\u02fb\5p9\2\u02fb\u02fc\5\60\31"+
-		"\2\u02fc\u02fe\3\2\2\2\u02fd\u02f5\3\2\2\2\u02fd\u02f8\3\2\2\2\u02fd\u02fe"+
-		"\3\2\2\2\u02fe\u0087\3\2\2\2\u02ff\u0300\t\22\2\2\u0300\u0089\3\2\2\2"+
-		"\u0301\u0302\7\u008d\2\2\u0302\u008b\3\2\2\2\u0303\u0305\5\u008eH\2\u0304"+
-		"\u0306\5\u0090I\2\u0305\u0304\3\2\2\2\u0305\u0306\3\2\2\2\u0306\u0307"+
-		"\3\2\2\2\u0307\u0308\5v<\2\u0308\u0311\5f\64\2\u0309\u030a\5\u008aF\2"+
-		"\u030a\u030b\5\62\32\2\u030b\u0312\3\2\2\2\u030c\u030d\7\u00c1\2\2\u030d"+
-		"\u030e\5.\30\2\u030e\u030f\5p9\2\u030f\u0310\5\60\31\2\u0310\u0312\3\2"+
-		"\2\2\u0311\u0309\3\2\2\2\u0311\u030c\3\2\2\2\u0312\u008d\3\2\2\2\u0313"+
-		"\u0314\t\23\2\2\u0314\u008f\3\2\2\2\u0315\u0316\7\u0094\2\2\u0316\u0091"+
-		"\3\2\2\2\u0317\u031c\5\u0094K\2\u0318\u031a\5\u008eH\2\u0319\u031b\5\u0090"+
-		"I\2\u031a\u0319\3\2\2\2\u031a\u031b\3\2\2\2\u031b\u031d\3\2\2\2\u031c"+
-		"\u0318\3\2\2\2\u031c\u031d\3\2\2\2\u031d\u031e\3\2\2\2\u031e\u031f\5v"+
-		"<\2\u031f\u0320\5f\64\2\u0320\u0093\3\2\2\2\u0321\u0322\7\u0088\2\2\u0322"+
-		"\u0095\3\2\2\2\u0323\u0324\t\f\2\2\u0324\u0097\3\2\2\2\u0325\u032b\5\62"+
-		"\32\2\u0326\u0327\5\u009aN\2\u0327\u0328\5\62\32\2\u0328\u032a\3\2\2\2"+
-		"\u0329\u0326\3\2\2\2\u032a\u032d\3\2\2\2\u032b\u0329\3\2\2\2\u032b\u032c"+
-		"\3\2\2\2\u032c\u0099\3\2\2\2\u032d\u032b\3\2\2\2\u032e\u032f\t\f\2\2\u032f"+
-		"\u009b\3\2\2\2\u0330\u0332\7\u0089\2\2\u0331\u0330\3\2\2\2\u0331\u0332"+
-		"\3\2\2\2\u0332\u0333\3\2\2\2\u0333\u0334\t\24\2\2\u0334\u009d\3\2\2\2"+
-		"\u0335\u0344\7\u029e\2\2\u0336\u0344\7\u029f\2\2\u0337\u0344\7\u02a0\2"+
-		"\2\u0338\u0339\7\u02a0\2\2\u0339\u0344\7\u029e\2\2\u033a\u033b\7\u029f"+
-		"\2\2\u033b\u0344\7\u029e\2\2\u033c\u033d\7\u02a0\2\2\u033d\u0344\7\u029f"+
-		"\2\2\u033e\u033f\7\u02a1\2\2\u033f\u0344\7\u029e\2\2\u0340\u0341\7\u02a0"+
-		"\2\2\u0341\u0342\7\u029e\2\2\u0342\u0344\7\u029f\2\2\u0343\u0335\3\2\2"+
-		"\2\u0343\u0336\3\2\2\2\u0343\u0337\3\2\2\2\u0343\u0338\3\2\2\2\u0343\u033a"+
-		"\3\2\2\2\u0343\u033c\3\2\2\2\u0343\u033e\3\2\2\2\u0343\u0340\3\2\2\2\u0344"+
-		"\u009f\3\2\2\2\u0345\u035d\5\u00a2R\2\u0346\u035d\5&\24\2\u0347\u0348"+
-		"\5&\24\2\u0348\u0349\5\u00b0Y\2\u0349\u034a\5&\24\2\u034a\u035d\3\2\2"+
-		"\2\u034b\u034c\5&\24\2\u034c\u034d\5\u00b0Y\2\u034d\u034e\5\u00a2R\2\u034e"+
-		"\u035d\3\2\2\2\u034f\u0350\5\u00a2R\2\u0350\u0351\5\u00b0Y\2\u0351\u0352"+
-		"\5&\24\2\u0352\u035d\3\2\2\2\u0353\u0354\5\u00a2R\2\u0354\u0355\5\u00b0"+
-		"Y\2\u0355\u0356\5\u00a2R\2\u0356\u035d\3\2\2\2\u0357\u035a\5\u00aeX\2"+
-		"\u0358\u035b\5\u00a2R\2\u0359\u035b\5&\24\2\u035a\u0358\3\2\2\2\u035a"+
-		"\u0359\3\2\2\2\u035b\u035d\3\2\2\2\u035c\u0345\3\2\2\2\u035c\u0346\3\2"+
-		"\2\2\u035c\u0347\3\2\2\2\u035c\u034b\3\2\2\2\u035c\u034f\3\2\2\2\u035c"+
-		"\u0353\3\2\2\2\u035c\u0357\3\2\2\2\u035d\u00a1\3\2\2\2\u035e\u036b\5\u00a4"+
-		"S\2\u035f\u036b\5\u00a8U\2\u0360\u0361\7\u029b\2\2\u0361\u036b\5\u00a8"+
-		"U\2\u0362\u036b\5\u00aaV\2\u0363\u036b\5\u00acW\2\u0364\u036b\7\u02b8"+
-		"\2\2\u0365\u036b\7\u02ba\2\2\u0366\u0368\7\u0089\2\2\u0367\u0366\3\2\2"+
-		"\2\u0367\u0368\3\2\2\2\u0368\u0369\3\2\2\2\u0369\u036b\t\24\2\2\u036a"+
-		"\u035e\3\2\2\2\u036a\u035f\3\2\2\2\u036a\u0360\3\2\2\2\u036a\u0362\3\2"+
-		"\2\2\u036a\u0363\3\2\2\2\u036a\u0364\3\2\2\2\u036a\u0365\3\2\2\2\u036a"+
-		"\u0367\3\2\2\2\u036b\u00a3\3\2\2\2\u036c\u036e\t\25\2\2\u036d\u036f\7"+
-		"\u02b5\2\2\u036e\u036d\3\2\2\2\u036f\u0370\3\2\2\2\u0370\u036e\3\2\2\2"+
-		"\u0370\u0371\3\2\2\2\u0371\u0378\3\2\2\2\u0372\u0375\t\25\2\2\u0373\u0374"+
-		"\7A\2\2\u0374\u0376\5\u00a6T\2\u0375\u0373\3\2\2\2\u0375\u0376\3\2\2\2"+
-		"\u0376\u0378\3\2\2\2\u0377\u036c\3\2\2\2\u0377\u0372\3\2\2\2\u0378\u00a5"+
-		"\3\2\2\2\u0379\u037c\5\36\20\2\u037a\u037c\7\u02b5\2\2\u037b\u0379\3\2"+
-		"\2\2\u037b\u037a\3\2\2\2\u037c\u00a7\3\2\2\2\u037d\u037e\t\26\2\2\u037e"+
-		"\u00a9\3\2\2\2\u037f\u0380\7\u02b7\2\2\u0380\u00ab\3\2\2\2\u0381\u0382"+
-		"\t\27\2\2\u0382\u00ad\3\2\2\2\u0383\u0384\t\30\2\2\u0384\u00af\3\2\2\2"+
-		"\u0385\u0386\t\31\2\2\u0386\u00b1\3\2\2\2\u0387\u038a\5\u00a2R\2\u0388"+
-		"\u038a\5&\24\2\u0389\u0387\3\2\2\2\u0389\u0388\3\2\2\2\u038a\u0392\3\2"+
-		"\2\2\u038b\u038e\7\u02a9\2\2\u038c\u038f\5\u00a2R\2\u038d\u038f\5&\24"+
-		"\2\u038e\u038c\3\2\2\2\u038e\u038d\3\2\2\2\u038f\u0391\3\2\2\2\u0390\u038b"+
-		"\3\2\2\2\u0391\u0394\3\2\2\2\u0392\u0390\3\2\2\2\u0392\u0393\3\2\2\2\u0393"+
-		"\u00b3\3\2\2\2\u0394\u0392\3\2\2\2\u0395\u0397\5\u00b8]\2\u0396\u0395"+
-		"\3\2\2\2\u0396\u0397\3\2\2\2\u0397\u0398\3\2\2\2\u0398\u039a\t\32\2\2"+
-		"\u0399\u039b\5\u00b6\\\2\u039a\u0399\3\2\2\2\u039a\u039b\3\2\2\2\u039b"+
-		"\u039c\3\2\2\2\u039c\u039e\5.\30\2\u039d\u039f\t\33\2\2\u039e\u039d\3"+
-		"\2\2\2\u039e\u039f\3\2\2\2\u039f\u03a0\3\2\2\2\u03a0\u03a1\5\u00ba^\2"+
-		"\u03a1\u03a2\5\60\31\2\u03a2\u03b8\3\2\2\2\u03a3\u03a5\5\u00b8]\2\u03a4"+
-		"\u03a3\3\2\2\2\u03a4\u03a5\3\2\2\2\u03a5\u03a6\3\2\2\2\u03a6\u03a8\7\u0105"+
-		"\2\2\u03a7\u03a9\5\u00b6\\\2\u03a8\u03a7\3\2\2\2\u03a8\u03a9\3\2\2\2\u03a9"+
-		"\u03aa\3\2\2\2\u03aa\u03b3\5.\30\2\u03ab\u03b4\7\u0297\2\2\u03ac\u03ae"+
-		"\5\u00bc_\2\u03ad\u03ac\3\2\2\2\u03ad\u03ae\3\2\2\2\u03ae\u03af\3\2\2"+
-		"\2\u03af\u03b4\5\u00ba^\2\u03b0\u03b1\5\u00be`\2\u03b1\u03b2\5\u00b2Z"+
-		"\2\u03b2\u03b4\3\2\2\2\u03b3\u03ab\3\2\2\2\u03b3\u03ad\3\2\2\2\u03b3\u03b0"+
-		"\3\2\2\2\u03b4\u03b5\3\2\2\2\u03b5\u03b6\5\60\31\2\u03b6\u03b8\3\2\2\2"+
-		"\u03b7\u0396\3\2\2\2\u03b7\u03a4\3\2\2\2\u03b8\u00b5\3\2\2\2\u03b9\u03ba"+
-		"\7\u0150\2\2\u03ba\u00b7\3\2\2\2\u03bb\u03bc\7.\2\2\u03bc\u00b9\3\2\2"+
-		"\2\u03bd\u03c0\5\u00a2R\2\u03be\u03c0\5&\24\2\u03bf\u03bd\3\2\2\2\u03bf"+
-		"\u03be\3\2\2\2\u03c0\u00bb\3\2\2\2\u03c1\u03c2\7\60\2\2\u03c2\u00bd\3"+
-		"\2\2\2\u03c3\u03c4\7R\2\2\u03c4\u00bf\3\2\2\2\u03c5\u03c6\t\34\2\2\u03c6"+
-		"\u00c1\3\2\2\2\u03c7\u03c8\t\f\2\2\u03c8\u00c3\3\2\2\2\u03c9\u03ca\7\u00c4"+
-		"\2\2\u03ca\u00c5\3\2\2\2\u03cb\u03d1\5\62\32\2\u03cc\u03cd\5\64\33\2\u03cd"+
-		"\u03ce\5\62\32\2\u03ce\u03d0\3\2\2\2\u03cf\u03cc\3\2\2\2\u03d0\u03d3\3"+
-		"\2\2\2\u03d1\u03cf\3\2\2\2\u03d1\u03d2\3\2\2\2\u03d2\u00c7\3\2\2\2\u03d3"+
-		"\u03d1\3\2\2\2\u03d4\u03d5\5X-\2\u03d5\u00c9\3\2\2\2\u03d6\u03d7\5Z.\2"+
-		"\u03d7\u00cb\3\2\2\2t\u00ce\u00d2\u00da\u00df\u00e5\u00e9\u00ef\u00f1"+
-		"\u00f7\u0100\u0107\u010d\u0111\u0117\u0120\u0127\u012d\u0131\u0137\u0140"+
-		"\u0148\u0156\u015d\u0168\u016e\u0170\u0175\u017b\u0184\u0186\u018b\u018d"+
-		"\u0198\u019c\u01a7\u01ac\u01b5\u01c0\u01c7\u01ca\u01cd\u01d0\u01d9\u01de"+
-		"\u01e2\u01ea\u01ed\u01f2\u01f6\u01f9\u0202\u0207\u0217\u021c\u0222\u0229"+
-		"\u022d\u0237\u0244\u0248\u024c\u0250\u0254\u025c\u0262\u026a\u026f\u0272"+
-		"\u0276\u0279\u0282\u0289\u0296\u029d\u02a8\u02b2\u02b8\u02bb\u02c9\u02cd"+
-		"\u02db\u02e0\u02e2\u02ee\u02f1\u02fd\u0305\u0311\u031a\u031c\u032b\u0331"+
-		"\u0343\u035a\u035c\u0367\u036a\u0370\u0375\u0377\u037b\u0389\u038e\u0392"+
-		"\u0396\u039a\u039e\u03a4\u03a8\u03ad\u03b3\u03b7\u03bf\u03d1";
+		"\4\2\60\60RR\5\2\u0102\u0104\u0114\u0117\u0119\u011b\4\2\u010a\u010a\u010c"+
+		"\u010c\4\2\u0108\u0108\u010b\u010b\4\2\u0106\u0107\u0111\u0113\t\2mmt"+
+		"t\u00a0\u00a0\u011c\u0123\u0125\u0126\u0128\u012e\u014d\u014d\2\u051e"+
+		"\2\u00d0\3\2\2\2\4\u00d6\3\2\2\2\6\u00f5\3\2\2\2\b\u0115\3\2\2\2\n\u0135"+
+		"\3\2\2\2\f\u014c\3\2\2\2\16\u014e\3\2\2\2\20\u0150\3\2\2\2\22\u0152\3"+
+		"\2\2\2\24\u0154\3\2\2\2\26\u0156\3\2\2\2\30\u015a\3\2\2\2\32\u017e\3\2"+
+		"\2\2\34\u0180\3\2\2\2\36\u0186\3\2\2\2 \u018a\3\2\2\2\"\u018c\3\2\2\2"+
+		"$\u018e\3\2\2\2&\u019c\3\2\2\2(\u01a2\3\2\2\2*\u01a4\3\2\2\2,\u01b6\3"+
+		"\2\2\2.\u01b8\3\2\2\2\60\u01ba\3\2\2\2\62\u01c7\3\2\2\2\64\u01d9\3\2\2"+
+		"\2\66\u01db\3\2\2\28\u0228\3\2\2\2:\u022a\3\2\2\2<\u022c\3\2\2\2>\u022f"+
+		"\3\2\2\2@\u023e\3\2\2\2B\u0240\3\2\2\2D\u0260\3\2\2\2F\u0267\3\2\2\2H"+
+		"\u0269\3\2\2\2J\u0275\3\2\2\2L\u0277\3\2\2\2N\u0279\3\2\2\2P\u027c\3\2"+
+		"\2\2R\u027e\3\2\2\2T\u0288\3\2\2\2V\u028c\3\2\2\2X\u029b\3\2\2\2Z\u02a5"+
+		"\3\2\2\2\\\u02a7\3\2\2\2^\u02af\3\2\2\2`\u02b2\3\2\2\2b\u02b4\3\2\2\2"+
+		"d\u02b7\3\2\2\2f\u02cf\3\2\2\2h\u02e2\3\2\2\2j\u030c\3\2\2\2l\u030e\3"+
+		"\2\2\2n\u0311\3\2\2\2p\u0315\3\2\2\2r\u0317\3\2\2\2t\u0319\3\2\2\2v\u0321"+
+		"\3\2\2\2x\u0330\3\2\2\2z\u0332\3\2\2\2|\u0334\3\2\2\2~\u0340\3\2\2\2\u0080"+
+		"\u0343\3\2\2\2\u0082\u0353\3\2\2\2\u0084\u0365\3\2\2\2\u0086\u0371\3\2"+
+		"\2\2\u0088\u0376\3\2\2\2\u008a\u0379\3\2\2\2\u008c\u0387\3\2\2\2\u008e"+
+		"\u0389\3\2\2\2\u0090\u038b\3\2\2\2\u0092\u039b\3\2\2\2\u0094\u039d\3\2"+
+		"\2\2\u0096\u039f\3\2\2\2\u0098\u03a9\3\2\2\2\u009a\u03ab\3\2\2\2\u009c"+
+		"\u03ad\3\2\2\2\u009e\u03b6\3\2\2\2\u00a0\u03c8\3\2\2\2\u00a2\u03f0\3\2"+
+		"\2\2\u00a4\u0407\3\2\2\2\u00a6\u0414\3\2\2\2\u00a8\u0418\3\2\2\2\u00aa"+
+		"\u041a\3\2\2\2\u00ac\u041c\3\2\2\2\u00ae\u041e\3\2\2\2\u00b0\u0420\3\2"+
+		"\2\2\u00b2\u0422\3\2\2\2\u00b4\u0428\3\2\2\2\u00b6\u0478\3\2\2\2\u00b8"+
+		"\u047a\3\2\2\2\u00ba\u047c\3\2\2\2\u00bc\u0482\3\2\2\2\u00be\u0484\3\2"+
+		"\2\2\u00c0\u0486\3\2\2\2\u00c2\u04aa\3\2\2\2\u00c4\u04ac\3\2\2\2\u00c6"+
+		"\u04ae\3\2\2\2\u00c8\u04b0\3\2\2\2\u00ca\u04b2\3\2\2\2\u00cc\u04b4\3\2"+
+		"\2\2\u00ce\u04b6\3\2\2\2\u00d0\u00d2\5\4\3\2\u00d1\u00d3\7\7\2\2\u00d2"+
+		"\u00d1\3\2\2\2\u00d2\u00d3\3\2\2\2\u00d3\3\3\2\2\2\u00d4\u00d7\5\6\4\2"+
+		"\u00d5\u00d7\5Z.\2\u00d6\u00d4\3\2\2\2\u00d6\u00d5\3\2\2\2\u00d7\5\3\2"+
+		"\2\2\u00d8\u00d9\5\b\5\2\u00d9\u00da\5> \2\u00da\u00f6\3\2\2\2\u00db\u00dc"+
+		"\5|?\2\u00dc\u00dd\5<\37\2\u00dd\u00df\3\2\2\2\u00de\u00db\3\2\2\2\u00de"+
+		"\u00df\3\2\2\2\u00df\u00e3\3\2\2\2\u00e0\u00e1\5> \2\u00e1\u00e2\5<\37"+
+		"\2\u00e2\u00e4\3\2\2\2\u00e3\u00e0\3\2\2\2\u00e3\u00e4\3\2\2\2\u00e4\u00e5"+
+		"\3\2\2\2\u00e5\u00ed\5\n\6\2\u00e6\u00e9\5<\37\2\u00e7\u00ea\5\n\6\2\u00e8"+
+		"\u00ea\5|?\2\u00e9\u00e7\3\2\2\2\u00e9\u00e8\3\2\2\2\u00ea\u00ec\3\2\2"+
+		"\2\u00eb\u00e6\3\2\2\2\u00ec\u00ef\3\2\2\2\u00ed\u00eb\3\2\2\2\u00ed\u00ee"+
+		"\3\2\2\2\u00ee\u00f3\3\2\2\2\u00ef\u00ed\3\2\2\2\u00f0\u00f1\5<\37\2\u00f1"+
+		"\u00f2\5> \2\u00f2\u00f4\3\2\2\2\u00f3\u00f0\3\2\2\2\u00f3\u00f4\3\2\2"+
+		"\2\u00f4\u00f6\3\2\2\2\u00f5\u00d8\3\2\2\2\u00f5\u00de\3\2\2\2\u00f6\7"+
+		"\3\2\2\2\u00f7\u00fb\5\f\7\2\u00f8\u00f9\5\u00c8e\2\u00f9\u00fa\5\u00ca"+
+		"f\2\u00fa\u00fc\3\2\2\2\u00fb\u00f8\3\2\2\2\u00fb\u00fc\3\2\2\2\u00fc"+
+		"\u00fd\3\2\2\2\u00fd\u00fe\5\u00ceh\2\u00fe\u0116\3\2\2\2\u00ff\u0100"+
+		"\5\f\7\2\u0100\u0104\5\u00ceh\2\u0101\u0102\5\u00c8e\2\u0102\u0103\5\u00ca"+
+		"f\2\u0103\u0105\3\2\2\2\u0104\u0101\3\2\2\2\u0104\u0105\3\2\2\2\u0105"+
+		"\u0116\3\2\2\2\u0106\u0107\5\u00ceh\2\u0107\u010b\5\f\7\2\u0108\u0109"+
+		"\5\u00c8e\2\u0109\u010a\5\u00caf\2\u010a\u010c\3\2\2\2\u010b\u0108\3\2"+
+		"\2\2\u010b\u010c\3\2\2\2\u010c\u0116\3\2\2\2\u010d\u0111\5\u00ceh\2\u010e"+
+		"\u010f\5\u00c8e\2\u010f\u0110\5\u00caf\2\u0110\u0112\3\2\2\2\u0111\u010e"+
+		"\3\2\2\2\u0111\u0112\3\2\2\2\u0112\u0113\3\2\2\2\u0113\u0114\5\f\7\2\u0114"+
+		"\u0116\3\2\2\2\u0115\u00f7\3\2\2\2\u0115\u00ff\3\2\2\2\u0115\u0106\3\2"+
+		"\2\2\u0115\u010d\3\2\2\2\u0116\t\3\2\2\2\u0117\u011b\5\f\7\2\u0118\u0119"+
+		"\5\u00c8e\2\u0119\u011a\5\u00caf\2\u011a\u011c\3\2\2\2\u011b\u0118\3\2"+
+		"\2\2\u011b\u011c\3\2\2\2\u011c\u011d\3\2\2\2\u011d\u011e\5\u00ccg\2\u011e"+
+		"\u0136\3\2\2\2\u011f\u0120\5\f\7\2\u0120\u0124\5\u00ccg\2\u0121\u0122"+
+		"\5\u00c8e\2\u0122\u0123\5\u00caf\2\u0123\u0125\3\2\2\2\u0124\u0121\3\2"+
+		"\2\2\u0124\u0125\3\2\2\2\u0125\u0136\3\2\2\2\u0126\u0127\5\u00ccg\2\u0127"+
+		"\u012b\5\f\7\2\u0128\u0129\5\u00c8e\2\u0129\u012a\5\u00caf\2\u012a\u012c"+
+		"\3\2\2\2\u012b\u0128\3\2\2\2\u012b\u012c\3\2\2\2\u012c\u0136\3\2\2\2\u012d"+
+		"\u0131\5\u00ccg\2\u012e\u012f\5\u00c8e\2\u012f\u0130\5\u00caf\2\u0130"+
+		"\u0132\3\2\2\2\u0131\u012e\3\2\2\2\u0131\u0132\3\2\2\2\u0132\u0133\3\2"+
+		"\2\2\u0133\u0134\5\f\7\2\u0134\u0136\3\2\2\2\u0135\u0117\3\2\2\2\u0135"+
+		"\u011f\3\2\2\2\u0135\u0126\3\2\2\2\u0135\u012d\3\2\2\2\u0136\13\3\2\2"+
+		"\2\u0137\u013b\5\16\b\2\u0138\u013a\5\26\f\2\u0139\u0138\3\2\2\2\u013a"+
+		"\u013d\3\2\2\2\u013b\u0139\3\2\2\2\u013b\u013c\3\2\2\2\u013c\u013e\3\2"+
+		"\2\2\u013d\u013b\3\2\2\2\u013e\u013f\5\30\r\2\u013f\u014d\3\2\2\2\u0140"+
+		"\u0144\5\16\b\2\u0141\u0143\5\26\f\2\u0142\u0141\3\2\2\2\u0143\u0146\3"+
+		"\2\2\2\u0144\u0142\3\2\2\2\u0144\u0145\3\2\2\2\u0145\u0147\3\2\2\2\u0146"+
+		"\u0144\3\2\2\2\u0147\u0148\5\30\r\2\u0148\u014d\3\2\2\2\u0149\u014a\5"+
+		"\16\b\2\u014a\u014b\5\22\n\2\u014b\u014d\3\2\2\2\u014c\u0137\3\2\2\2\u014c"+
+		"\u0140\3\2\2\2\u014c\u0149\3\2\2\2\u014d\r\3\2\2\2\u014e\u014f\5\20\t"+
+		"\2\u014f\17\3\2\2\2\u0150\u0151\t\2\2\2\u0151\21\3\2\2\2\u0152\u0153\5"+
+		"\24\13\2\u0153\23\3\2\2\2\u0154\u0155\t\3\2\2\u0155\25\3\2\2\2\u0156\u0157"+
+		"\t\4\2\2\u0157\27\3\2\2\2\u0158\u015b\7\u0297\2\2\u0159\u015b\5\32\16"+
+		"\2\u015a\u0158\3\2\2\2\u015a\u0159\3\2\2\2\u015b\u0161\3\2\2\2\u015c\u015d"+
+		"\5\u00c6d\2\u015d\u015e\5\32\16\2\u015e\u0160\3\2\2\2\u015f\u015c\3\2"+
+		"\2\2\u0160\u0163\3\2\2\2\u0161\u015f\3\2\2\2\u0161\u0162\3\2\2\2\u0162"+
+		"\31\3\2\2\2\u0163\u0161\3\2\2\2\u0164\u0165\5\34\17\2\u0165\u0166\5$\23"+
+		"\2\u0166\u0167\7\u0297\2\2\u0167\u017f\3\2\2\2\u0168\u016c\5&\24\2\u0169"+
+		"\u016a\5*\26\2\u016a\u016b\5\36\20\2\u016b\u016d\3\2\2\2\u016c\u0169\3"+
+		"\2\2\2\u016c\u016d\3\2\2\2\u016d\u017f\3\2\2\2\u016e\u0172\5,\27\2\u016f"+
+		"\u0170\5*\26\2\u0170\u0171\5\36\20\2\u0171\u0173\3\2\2\2\u0172\u016f\3"+
+		"\2\2\2\u0172\u0173\3\2\2\2\u0173\u017f\3\2\2\2\u0174\u0175\7\u02c0\2\2"+
+		"\u0175\u0177\7\u028e\2\2\u0176\u0174\3\2\2\2\u0176\u0177\3\2\2\2\u0177"+
+		"\u0178\3\2\2\2\u0178\u017c\5\62\32\2\u0179\u017a\5*\26\2\u017a\u017b\5"+
+		"\36\20\2\u017b\u017d\3\2\2\2\u017c\u0179\3\2\2\2\u017c\u017d\3\2\2\2\u017d"+
+		"\u017f\3\2\2\2\u017e\u0164\3\2\2\2\u017e\u0168\3\2\2\2\u017e\u016e\3\2"+
+		"\2\2\u017e\u0176\3\2\2\2\u017f\33\3\2\2\2\u0180\u0184\5\36\20\2\u0181"+
+		"\u0185\7\u02bb\2\2\u0182\u0183\7\u02a6\2\2\u0183\u0185\5\36\20\2\u0184"+
+		"\u0181\3\2\2\2\u0184\u0182\3\2\2\2\u0184\u0185\3\2\2\2\u0185\35\3\2\2"+
+		"\2\u0186\u0187\5 \21\2\u0187\37\3\2\2\2\u0188\u018b\7\u02bc\2\2\u0189"+
+		"\u018b\5\"\22\2\u018a\u0188\3\2\2\2\u018a\u0189\3\2\2\2\u018b!\3\2\2\2"+
+		"\u018c\u018d\t\5\2\2\u018d#\3\2\2\2\u018e\u018f\t\6\2\2\u018f%\3\2\2\2"+
+		"\u0190\u0195\5\36\20\2\u0191\u0193\5(\25\2\u0192\u0194\5(\25\2\u0193\u0192"+
+		"\3\2\2\2\u0193\u0194\3\2\2\2\u0194\u0196\3\2\2\2\u0195\u0191\3\2\2\2\u0195"+
+		"\u0196\3\2\2\2\u0196\u019d\3\2\2\2\u0197\u0198\5$\23\2\u0198\u019a\5("+
+		"\25\2\u0199\u019b\5(\25\2\u019a\u0199\3\2\2\2\u019a\u019b\3\2\2\2\u019b"+
+		"\u019d\3\2\2\2\u019c\u0190\3\2\2\2\u019c\u0197\3\2\2\2\u019d\'\3\2\2\2"+
+		"\u019e\u01a3\7\u02bb\2\2\u019f\u01a0\5$\23\2\u01a0\u01a1\5\36\20\2\u01a1"+
+		"\u01a3\3\2\2\2\u01a2\u019e\3\2\2\2\u01a2\u019f\3\2\2\2\u01a3)\3\2\2\2"+
+		"\u01a4\u01a5\7\66\2\2\u01a5+\3\2\2\2\u01a6\u01b7\5\u00b6\\\2\u01a7\u01b7"+
+		"\5\u00c2b\2\u01a8\u01a9\5\u00c4c\2\u01a9\u01ab\5.\30\2\u01aa\u01ac\5\u00b4"+
+		"[\2\u01ab\u01aa\3\2\2\2\u01ab\u01ac\3\2\2\2\u01ac\u01ad\3\2\2\2\u01ad"+
+		"\u01ae\5\60\31\2\u01ae\u01b7\3\2\2\2\u01af\u01b0\5\34\17\2\u01b0\u01b2"+
+		"\5.\30\2\u01b1\u01b3\5\u00b4[\2\u01b2\u01b1\3\2\2\2\u01b2\u01b3\3\2\2"+
+		"\2\u01b3\u01b4\3\2\2\2\u01b4\u01b5\5\60\31\2\u01b5\u01b7\3\2\2\2\u01b6"+
+		"\u01a6\3\2\2\2\u01b6\u01a7\3\2\2\2\u01b6\u01a8\3\2\2\2\u01b6\u01af\3\2"+
+		"\2\2\u01b7-\3\2\2\2\u01b8\u01b9\t\7\2\2\u01b9/\3\2\2\2\u01ba\u01bb\t\b"+
+		"\2\2\u01bb\61\3\2\2\2\u01bc\u01bd\b\32\1\2\u01bd\u01be\t\t\2\2\u01be\u01c8"+
+		"\5\62\32\6\u01bf\u01c0\5\66\34\2\u01c0\u01c2\7w\2\2\u01c1\u01c3\7\u0089"+
+		"\2\2\u01c2\u01c1\3\2\2\2\u01c2\u01c3\3\2\2\2\u01c3\u01c4\3\2\2\2\u01c4"+
+		"\u01c5\t\n\2\2\u01c5\u01c8\3\2\2\2\u01c6\u01c8\5\66\34\2\u01c7\u01bc\3"+
+		"\2\2\2\u01c7\u01bf\3\2\2\2\u01c7\u01c6\3\2\2\2\u01c8\u01cf\3\2\2\2\u01c9"+
+		"\u01ca\f\5\2\2\u01ca\u01cb\5\64\33\2\u01cb\u01cc\5\62\32\6\u01cc\u01ce"+
+		"\3\2\2\2\u01cd\u01c9\3\2\2\2\u01ce\u01d1\3\2\2\2\u01cf\u01cd\3\2\2\2\u01cf"+
+		"\u01d0\3\2\2\2\u01d0\63\3\2\2\2\u01d1\u01cf\3\2\2\2\u01d2\u01da\7\64\2"+
+		"\2\u01d3\u01d4\7\u02a4\2\2\u01d4\u01da\7\u02a4\2\2\u01d5\u01da\7\u00c8"+
+		"\2\2\u01d6\u01da\7\u0091\2\2\u01d7\u01d8\7\u02a3\2\2\u01d8\u01da\7\u02a3"+
+		"\2\2\u01d9\u01d2\3\2\2\2\u01d9\u01d3\3\2\2\2\u01d9\u01d5\3\2\2\2\u01d9"+
+		"\u01d6\3\2\2\2\u01d9\u01d7\3\2\2\2\u01da\65\3\2\2\2\u01db\u01de\b\34\1"+
+		"\2\u01dc\u01dd\7\u02c0\2\2\u01dd\u01df\7\u028e\2\2\u01de\u01dc\3\2\2\2"+
+		"\u01de\u01df\3\2\2\2\u01df\u01e0\3\2\2\2\u01e0\u01e1\5\u00a2R\2\u01e1"+
+		"\u0225\3\2\2\2\u01e2\u01e3\f\n\2\2\u01e3\u01e4\5\u00a0Q\2\u01e4\u01e5"+
+		"\5\66\34\13\u01e5\u0224\3\2\2\2\u01e6\u01e8\f\b\2\2\u01e7\u01e9\7\u0089"+
+		"\2\2\u01e8\u01e7\3\2\2\2\u01e8\u01e9\3\2\2\2\u01e9\u01ea\3\2\2\2\u01ea"+
+		"\u01eb\79\2\2\u01eb\u01ec\5\66\34\2\u01ec\u01ed\7\64\2\2\u01ed\u01ee\5"+
+		"\66\34\t\u01ee\u0224\3\2\2\2\u01ef\u01f0\f\7\2\2\u01f0\u01f1\7\u0156\2"+
+		"\2\u01f1\u01f2\7~\2\2\u01f2\u0224\5\66\34\b\u01f3\u01f5\f\5\2\2\u01f4"+
+		"\u01f6\7\u0089\2\2\u01f5\u01f4\3\2\2\2\u01f5\u01f6\3\2\2\2\u01f6\u01f7"+
+		"\3\2\2\2\u01f7\u01f8\t\13\2\2\u01f8\u0224\5\66\34\6\u01f9\u01fb\f\f\2"+
+		"\2\u01fa\u01fc\7\u0089\2\2\u01fb\u01fa\3\2\2\2\u01fb\u01fc\3\2\2\2\u01fc"+
+		"\u01fe\3\2\2\2\u01fd\u01ff\5:\36\2\u01fe\u01fd\3\2\2\2\u01fe\u01ff\3\2"+
+		"\2\2\u01ff\u0200\3\2\2\2\u0200\u0201\7o\2\2\u0201\u0204\5.\30\2\u0202"+
+		"\u0205\58\35\2\u0203\u0205\5\u009cO\2\u0204\u0202\3\2\2\2\u0204\u0203"+
+		"\3\2\2\2\u0205\u0206\3\2\2\2\u0206\u0207\5\60\31\2\u0207\u0224\3\2\2\2"+
+		"\u0208\u0209\f\13\2\2\u0209\u020a\7w\2\2\u020a\u0224\5\u009eP\2\u020b"+
+		"\u020c\f\t\2\2\u020c\u020d\5\u00a0Q\2\u020d\u020e\t\f\2\2\u020e\u020f"+
+		"\5.\30\2\u020f\u0210\58\35\2\u0210\u0211\5\60\31\2\u0211\u0224\3\2\2\2"+
+		"\u0212\u0214\f\6\2\2\u0213\u0215\7\u0089\2\2\u0214\u0213\3\2\2\2\u0214"+
+		"\u0215\3\2\2\2\u0215\u0216\3\2\2\2\u0216\u0217\7~\2\2\u0217\u021a\5\66"+
+		"\34\2\u0218\u0219\7\u0141\2\2\u0219\u021b\7\u02b5\2\2\u021a\u0218\3\2"+
+		"\2\2\u021a\u021b\3\2\2\2\u021b\u0224\3\2\2\2\u021c\u021d\f\3\2\2\u021d"+
+		"\u021e\7\u014c\2\2\u021e\u021f\7\u0150\2\2\u021f\u0220\5.\30\2\u0220\u0221"+
+		"\5\66\34\2\u0221\u0222\5\60\31\2\u0222\u0224\3\2\2\2\u0223\u01e2\3\2\2"+
+		"\2\u0223\u01e6\3\2\2\2\u0223\u01ef\3\2\2\2\u0223\u01f3\3\2\2\2\u0223\u01f9"+
+		"\3\2\2\2\u0223\u0208\3\2\2\2\u0223\u020b\3\2\2\2\u0223\u0212\3\2\2\2\u0223"+
+		"\u021c\3\2\2\2\u0224\u0227\3\2\2\2\u0225\u0223\3\2\2\2\u0225\u0226\3\2"+
+		"\2\2\u0226\67\3\2\2\2\u0227\u0225\3\2\2\2\u0228\u0229\5\4\3\2\u02299\3"+
+		"\2\2\2\u022a\u022b\7w\2\2\u022b;\3\2\2\2\u022c\u022d\t\r\2\2\u022d=\3"+
+		"\2\2\2\u022e\u0230\5@!\2\u022f\u022e\3\2\2\2\u022f\u0230\3\2\2\2\u0230"+
+		"\u0232\3\2\2\2\u0231\u0233\5@!\2\u0232\u0231\3\2\2\2\u0232\u0233\3\2\2"+
+		"\2\u0233\u0235\3\2\2\2\u0234\u0236\5@!\2\u0235\u0234\3\2\2\2\u0235\u0236"+
+		"\3\2\2\2\u0236\u0238\3\2\2\2\u0237\u0239\5@!\2\u0238\u0237\3\2\2\2\u0238"+
+		"\u0239\3\2\2\2\u0239?\3\2\2\2\u023a\u023f\5B\"\2\u023b\u023f\5N(\2\u023c"+
+		"\u023f\5R*\2\u023d\u023f\5V,\2\u023e\u023a\3\2\2\2\u023e\u023b\3\2\2\2"+
+		"\u023e\u023c\3\2\2\2\u023e\u023d\3\2\2\2\u023fA\3\2\2\2\u0240\u0241\5"+
+		"D#\2\u0241\u0247\5F$\2\u0242\u0243\5L\'\2\u0243\u0244\5F$\2\u0244\u0246"+
+		"\3\2\2\2\u0245\u0242\3\2\2\2\u0246\u0249\3\2\2\2\u0247\u0245\3\2\2\2\u0247"+
+		"\u0248\3\2\2\2\u0248\u024c\3\2\2\2\u0249\u0247\3\2\2\2\u024a\u024b\7\u00c6"+
+		"\2\2\u024b\u024d\7\u0152\2\2\u024c\u024a\3\2\2\2\u024c\u024d\3\2\2\2\u024d"+
+		"\u025b\3\2\2\2\u024e\u0250\5<\37\2\u024f\u0251\5\20\t\2\u0250\u024f\3"+
+		"\2\2\2\u0250\u0251\3\2\2\2\u0251\u0252\3\2\2\2\u0252\u0258\5\u00b6\\\2"+
+		"\u0253\u0254\5\u00c6d\2\u0254\u0255\5\u00b6\\\2\u0255\u0257\3\2\2\2\u0256"+
+		"\u0253\3\2\2\2\u0257\u025a\3\2\2\2\u0258\u0256\3\2\2\2\u0258\u0259\3\2"+
+		"\2\2\u0259\u025c\3\2\2\2\u025a\u0258\3\2\2\2\u025b\u024e\3\2\2\2\u025b"+
+		"\u025c\3\2\2\2\u025cC\3\2\2\2\u025d\u025e\7i\2\2\u025e\u0261\7;\2\2\u025f"+
+		"\u0261\7i\2\2\u0260\u025d\3\2\2\2\u0260\u025f\3\2\2\2\u0261E\3\2\2\2\u0262"+
+		"\u0264\5J&\2\u0263\u0265\t\16\2\2\u0264\u0263\3\2\2\2\u0264\u0265\3\2"+
+		"\2\2\u0265\u0268\3\2\2\2\u0266\u0268\5H%\2\u0267\u0262\3\2\2\2\u0267\u0266"+
+		"\3\2\2\2\u0268G\3\2\2\2\u0269\u026a\t\17\2\2\u026aI\3\2\2\2\u026b\u026c"+
+		"\t\t\2\2\u026c\u0276\5J&\2\u026d\u026e\5\66\34\2\u026e\u0270\7w\2\2\u026f"+
+		"\u0271\7\u0089\2\2\u0270\u026f\3\2\2\2\u0270\u0271\3\2\2\2\u0271\u0272"+
+		"\3\2\2\2\u0272\u0273\t\n\2\2\u0273\u0276\3\2\2\2\u0274\u0276\5\66\34\2"+
+		"\u0275\u026b\3\2\2\2\u0275\u026d\3\2\2\2\u0275\u0274\3\2\2\2\u0276K\3"+
+		"\2\2\2\u0277\u0278\t\20\2\2\u0278M\3\2\2\2\u0279\u027a\5P)\2\u027a\u027b"+
+		"\5\62\32\2\u027bO\3\2\2\2\u027c\u027d\7j\2\2\u027dQ\3\2\2\2\u027e\u027f"+
+		"\7\u0092\2\2\u027f\u0280\7;\2\2\u0280\u0285\5T+\2\u0281\u0282\7\u02a9"+
+		"\2\2\u0282\u0284\5T+\2\u0283\u0281\3\2\2\2\u0284\u0287\3\2\2\2\u0285\u0283"+
+		"\3\2\2\2\u0285\u0286\3\2\2\2\u0286S\3\2\2\2\u0287\u0285\3\2\2\2\u0288"+
+		"\u028a\5\62\32\2\u0289\u028b\t\16\2\2\u028a\u0289\3\2\2\2\u028a\u028b"+
+		"\3\2\2\2\u028bU\3\2\2\2\u028c\u0297\7\177\2\2\u028d\u028e\5X-\2\u028e"+
+		"\u028f\7\u02a9\2\2\u028f\u0291\3\2\2\2\u0290\u028d\3\2\2\2\u0290\u0291"+
+		"\3\2\2\2\u0291\u0292\3\2\2\2\u0292\u0298\5X-\2\u0293\u0294\5X-\2\u0294"+
+		"\u0295\7\u014f\2\2\u0295\u0296\5X-\2\u0296\u0298\3\2\2\2\u0297\u0290\3"+
+		"\2\2\2\u0297\u0293\3\2\2\2\u0298W\3\2\2\2\u0299\u029c\5\u00aaV\2\u029a"+
+		"\u029c\5 \21\2\u029b\u0299\3\2\2\2\u029b\u029a\3\2\2\2\u029cY\3\2\2\2"+
+		"\u029d\u029e\5.\30\2\u029e\u029f\5\6\4\2\u029f\u02a0\5\60\31\2\u02a0\u02a6"+
+		"\3\2\2\2\u02a1\u02a2\5.\30\2\u02a2\u02a3\5Z.\2\u02a3\u02a4\5\60\31\2\u02a4"+
+		"\u02a6\3\2\2\2\u02a5\u029d\3\2\2\2\u02a5\u02a1\3\2\2\2\u02a6[\3\2\2\2"+
+		"\u02a7\u02a9\5`\61\2\u02a8\u02aa\5\u00ba^\2\u02a9\u02a8\3\2\2\2\u02a9"+
+		"\u02aa\3\2\2\2\u02aa\u02ab\3\2\2\2\u02ab\u02ad\5f\64\2\u02ac\u02ae\5b"+
+		"\62\2\u02ad\u02ac\3\2\2\2\u02ad\u02ae\3\2\2\2\u02ae]\3\2\2\2\u02af\u02b0"+
+		"\5`\61\2\u02b0\u02b1\5d\63\2\u02b1_\3\2\2\2\u02b2\u02b3\t\21\2\2\u02b3"+
+		"a\3\2\2\2\u02b4\u02b5\7\u00b7\2\2\u02b5c\3\2\2\2\u02b6\u02b8\5\u00ba^"+
+		"\2\u02b7\u02b6\3\2\2\2\u02b7\u02b8\3\2\2\2\u02b8\u02b9\3\2\2\2\u02b9\u02bb"+
+		"\5h\65\2\u02ba\u02bc\5b\62\2\u02bb\u02ba\3\2\2\2\u02bb\u02bc\3\2\2\2\u02bc"+
+		"\u02c7\3\2\2\2\u02bd\u02bf\5\u009aN\2\u02be\u02c0\5\u00ba^\2\u02bf\u02be"+
+		"\3\2\2\2\u02bf\u02c0\3\2\2\2\u02c0\u02c1\3\2\2\2\u02c1\u02c3\5h\65\2\u02c2"+
+		"\u02c4\5b\62\2\u02c3\u02c2\3\2\2\2\u02c3\u02c4\3\2\2\2\u02c4\u02c6\3\2"+
+		"\2\2\u02c5\u02bd\3\2\2\2\u02c6\u02c9\3\2\2\2\u02c7\u02c5\3\2\2\2\u02c7"+
+		"\u02c8\3\2\2\2\u02c8e\3\2\2\2\u02c9\u02c7\3\2\2\2\u02ca\u02d0\5j\66\2"+
+		"\u02cb\u02cc\5.\30\2\u02cc\u02cd\5j\66\2\u02cd\u02ce\5\60\31\2\u02ce\u02d0"+
+		"\3\2\2\2\u02cf\u02ca\3\2\2\2\u02cf\u02cb\3\2\2\2\u02d0g\3\2\2\2\u02d1"+
+		"\u02d5\5j\66\2\u02d2\u02d4\5\u0088E\2\u02d3\u02d2\3\2\2\2\u02d4\u02d7"+
+		"\3\2\2\2\u02d5\u02d3\3\2\2\2\u02d5\u02d6\3\2\2\2\u02d6\u02e3\3\2\2\2\u02d7"+
+		"\u02d5\3\2\2\2\u02d8\u02d9\5.\30\2\u02d9\u02dd\5j\66\2\u02da\u02dc\5\u0088"+
+		"E\2\u02db\u02da\3\2\2\2\u02dc\u02df\3\2\2\2\u02dd\u02db\3\2\2\2\u02dd"+
+		"\u02de\3\2\2\2\u02de\u02e0\3\2\2\2\u02df\u02dd\3\2\2\2\u02e0\u02e1\5\60"+
+		"\31\2\u02e1\u02e3\3\2\2\2\u02e2\u02d1\3\2\2\2\u02e2\u02d8\3\2\2\2\u02e3"+
+		"i\3\2\2\2\u02e4\u02e5\5.\30\2\u02e5\u02e6\5l\67\2\u02e6\u02e7\5\60\31"+
+		"\2\u02e7\u02e8\5n8\2\u02e8\u030d\3\2\2\2\u02e9\u02eb\5\u00ba^\2\u02ea"+
+		"\u02e9\3\2\2\2\u02ea\u02eb\3\2\2\2\u02eb\u02ec\3\2\2\2\u02ec\u02ee\5r"+
+		":\2\u02ed\u02ef\5b\62\2\u02ee\u02ed\3\2\2\2\u02ee\u02ef\3\2\2\2\u02ef"+
+		"\u02f1\3\2\2\2\u02f0\u02f2\5n8\2\u02f1\u02f0\3\2\2\2\u02f1\u02f2\3\2\2"+
+		"\2\u02f2\u030d\3\2\2\2\u02f3\u02f9\5r:\2\u02f4\u02f5\7\u0096\2\2\u02f5"+
+		"\u02f6\5.\30\2\u02f6\u02f7\5t;\2\u02f7\u02f8\5\60\31\2\u02f8\u02fa\3\2"+
+		"\2\2\u02f9\u02f4\3\2\2\2\u02f9\u02fa\3\2\2\2\u02fa\u02fc\3\2\2\2\u02fb"+
+		"\u02fd\5n8\2\u02fc\u02fb\3\2\2\2\u02fc\u02fd\3\2\2\2\u02fd\u0306\3\2\2"+
+		"\2\u02fe\u0303\5v<\2\u02ff\u0300\7\u02a9\2\2\u0300\u0302\5v<\2\u0301\u02ff"+
+		"\3\2\2\2\u0302\u0305\3\2\2\2\u0303\u0301\3\2\2\2\u0303\u0304\3\2\2\2\u0304"+
+		"\u0307\3\2\2\2\u0305\u0303\3\2\2\2\u0306\u02fe\3\2\2\2\u0306\u0307\3\2"+
+		"\2\2\u0307\u030d\3\2\2\2\u0308\u0309\5.\30\2\u0309\u030a\5d\63\2\u030a"+
+		"\u030b\5\60\31\2\u030b\u030d\3\2\2\2\u030c\u02e4\3\2\2\2\u030c\u02ea\3"+
+		"\2\2\2\u030c\u02f3\3\2\2\2\u030c\u0308\3\2\2\2\u030dk\3\2\2\2\u030e\u030f"+
+		"\5\4\3\2\u030fm\3\2\2\2\u0310\u0312\5p9\2\u0311\u0310\3\2\2\2\u0311\u0312"+
+		"\3\2\2\2\u0312\u0313\3\2\2\2\u0313\u0314\5\36\20\2\u0314o\3\2\2\2\u0315"+
+		"\u0316\7\66\2\2\u0316q\3\2\2\2\u0317\u0318\5\34\17\2\u0318s\3\2\2\2\u0319"+
+		"\u031e\5\36\20\2\u031a\u031b\7\u02a9\2\2\u031b\u031d\5\36\20\2\u031c\u031a"+
+		"\3\2\2\2\u031d\u0320\3\2\2\2\u031e\u031c\3\2\2\2\u031e\u031f\3\2\2\2\u031f"+
+		"u\3\2\2\2\u0320\u031e\3\2\2\2\u0321\u0322\t\22\2\2\u0322\u0325\t\23\2"+
+		"\2\u0323\u0324\7a\2\2\u0324\u0326\5x=\2\u0325\u0323\3\2\2\2\u0325\u0326"+
+		"\3\2\2\2\u0326\u0327\3\2\2\2\u0327\u0328\5.\30\2\u0328\u0329\5t;\2\u0329"+
+		"\u032a\5\60\31\2\u032aw\3\2\2\2\u032b\u0331\7y\2\2\u032c\u032d\7\u0092"+
+		"\2\2\u032d\u0331\7;\2\2\u032e\u032f\7i\2\2\u032f\u0331\7;\2\2\u0330\u032b"+
+		"\3\2\2\2\u0330\u032c\3\2\2\2\u0330\u032e\3\2\2\2\u0331y\3\2\2\2\u0332"+
+		"\u0333\t\24\2\2\u0333{\3\2\2\2\u0334\u033a\5~@\2\u0335\u0336\5<\37\2\u0336"+
+		"\u0337\5~@\2\u0337\u0339\3\2\2\2\u0338\u0335\3\2\2\2\u0339\u033c\3\2\2"+
+		"\2\u033a\u0338\3\2\2\2\u033a\u033b\3\2\2\2\u033b}\3\2\2\2\u033c\u033a"+
+		"\3\2\2\2\u033d\u0341\5\u0080A\2\u033e\u0341\5\u0082B\2\u033f\u0341\5\u0084"+
+		"C\2\u0340\u033d\3\2\2\2\u0340\u033e\3\2\2\2\u0340\u033f\3\2\2\2\u0341"+
+		"\177\3\2\2\2\u0342\u0344\5\u008cG\2\u0343\u0342\3\2\2\2\u0343\u0344\3"+
+		"\2\2\2\u0344\u0345\3\2\2\2\u0345\u0346\5z>\2\u0346\u0347\5j\66\2\u0347"+
+		"\u0348\5\u0086D\2\u0348\u0351\5j\66\2\u0349\u034a\5\u008eH\2\u034a\u034b"+
+		"\5\62\32\2\u034b\u0352\3\2\2\2\u034c\u034d\7\u00c1\2\2\u034d\u034e\5."+
+		"\30\2\u034e\u034f\5t;\2\u034f\u0350\5\60\31\2\u0350\u0352\3\2\2\2\u0351"+
+		"\u0349\3\2\2\2\u0351\u034c\3\2\2\2\u0351\u0352\3\2\2\2\u0352\u0081\3\2"+
+		"\2\2\u0353\u0355\5\u0092J\2\u0354\u0356\5\u0094K\2\u0355\u0354\3\2\2\2"+
+		"\u0355\u0356\3\2\2\2\u0356\u0357\3\2\2\2\u0357\u0358\5z>\2\u0358\u0359"+
+		"\5j\66\2\u0359\u035a\5\u0086D\2\u035a\u0363\5j\66\2\u035b\u035c\5\u008e"+
+		"H\2\u035c\u035d\5\62\32\2\u035d\u0364\3\2\2\2\u035e\u035f\7\u00c1\2\2"+
+		"\u035f\u0360\5.\30\2\u0360\u0361\5t;\2\u0361\u0362\5\60\31\2\u0362\u0364"+
+		"\3\2\2\2\u0363\u035b\3\2\2\2\u0363\u035e\3\2\2\2\u0364\u0083\3\2\2\2\u0365"+
+		"\u036a\5\u0098M\2\u0366\u0368\5\u0092J\2\u0367\u0369\5\u0094K\2\u0368"+
+		"\u0367\3\2\2\2\u0368\u0369\3\2\2\2\u0369\u036b\3\2\2\2\u036a\u0366\3\2"+
+		"\2\2\u036a\u036b\3\2\2\2\u036b\u036c\3\2\2\2\u036c\u036d\5z>\2\u036d\u036e"+
+		"\5j\66\2\u036e\u036f\5\u0086D\2\u036f\u0370\5j\66\2\u0370\u0085\3\2\2"+
+		"\2\u0371\u0372\t\25\2\2\u0372\u0087\3\2\2\2\u0373\u0377\5\u008aF\2\u0374"+
+		"\u0377\5\u0090I\2\u0375\u0377\5\u0096L\2\u0376\u0373\3\2\2\2\u0376\u0374"+
+		"\3\2\2\2\u0376\u0375\3\2\2\2\u0377\u0089\3\2\2\2\u0378\u037a\5\u008cG"+
+		"\2\u0379\u0378\3\2\2\2\u0379\u037a\3\2\2\2\u037a\u037b\3\2\2\2\u037b\u037c"+
+		"\5z>\2\u037c\u0385\5j\66\2\u037d\u037e\5\u008eH\2\u037e\u037f\5\62\32"+
+		"\2\u037f\u0386\3\2\2\2\u0380\u0381\7\u00c1\2\2\u0381\u0382\5.\30\2\u0382"+
+		"\u0383\5t;\2\u0383\u0384\5\60\31\2\u0384\u0386\3\2\2\2\u0385\u037d\3\2"+
+		"\2\2\u0385\u0380\3\2\2\2\u0385\u0386\3\2\2\2\u0386\u008b\3\2\2\2\u0387"+
+		"\u0388\t\26\2\2\u0388\u008d\3\2\2\2\u0389\u038a\7\u008d\2\2\u038a\u008f"+
+		"\3\2\2\2\u038b\u038d\5\u0092J\2\u038c\u038e\5\u0094K\2\u038d\u038c\3\2"+
+		"\2\2\u038d\u038e\3\2\2\2\u038e\u038f\3\2\2\2\u038f\u0390\5z>\2\u0390\u0399"+
+		"\5j\66\2\u0391\u0392\5\u008eH\2\u0392\u0393\5\62\32\2\u0393\u039a\3\2"+
+		"\2\2\u0394\u0395\7\u00c1\2\2\u0395\u0396\5.\30\2\u0396\u0397\5t;\2\u0397"+
+		"\u0398\5\60\31\2\u0398\u039a\3\2\2\2\u0399\u0391\3\2\2\2\u0399\u0394\3"+
+		"\2\2\2\u039a\u0091\3\2\2\2\u039b\u039c\t\27\2\2\u039c\u0093\3\2\2\2\u039d"+
+		"\u039e\7\u0094\2\2\u039e\u0095\3\2\2\2\u039f\u03a4\5\u0098M\2\u03a0\u03a2"+
+		"\5\u0092J\2\u03a1\u03a3\5\u0094K\2\u03a2\u03a1\3\2\2\2\u03a2\u03a3\3\2"+
+		"\2\2\u03a3\u03a5\3\2\2\2\u03a4\u03a0\3\2\2\2\u03a4\u03a5\3\2\2\2\u03a5"+
+		"\u03a6\3\2\2\2\u03a6\u03a7\5z>\2\u03a7\u03a8\5j\66\2\u03a8\u0097\3\2\2"+
+		"\2\u03a9\u03aa\7\u0088\2\2\u03aa\u0099\3\2\2\2\u03ab\u03ac\t\20\2\2\u03ac"+
+		"\u009b\3\2\2\2\u03ad\u03b2\5\62\32\2\u03ae\u03af\7\u02a9\2\2\u03af\u03b1"+
+		"\5\62\32\2\u03b0\u03ae\3\2\2\2\u03b1\u03b4\3\2\2\2\u03b2\u03b0\3\2\2\2"+
+		"\u03b2\u03b3\3\2\2\2\u03b3\u009d\3\2\2\2\u03b4\u03b2\3\2\2\2\u03b5\u03b7"+
+		"\7\u0089\2\2\u03b6\u03b5\3\2\2\2\u03b6\u03b7\3\2\2\2\u03b7\u03b8\3\2\2"+
+		"\2\u03b8\u03b9\t\30\2\2\u03b9\u009f\3\2\2\2\u03ba\u03c9\7\u029e\2\2\u03bb"+
+		"\u03c9\7\u029f\2\2\u03bc\u03c9\7\u02a0\2\2\u03bd\u03be\7\u02a0\2\2\u03be"+
+		"\u03c9\7\u029e\2\2\u03bf\u03c0\7\u029f\2\2\u03c0\u03c9\7\u029e\2\2\u03c1"+
+		"\u03c2\7\u02a0\2\2\u03c2\u03c9\7\u029f\2\2\u03c3\u03c4\7\u02a1\2\2\u03c4"+
+		"\u03c9\7\u029e\2\2\u03c5\u03c6\7\u02a0\2\2\u03c6\u03c7\7\u029e\2\2\u03c7"+
+		"\u03c9\7\u029f\2\2\u03c8\u03ba\3\2\2\2\u03c8\u03bb\3\2\2\2\u03c8\u03bc"+
+		"\3\2\2\2\u03c8\u03bd\3\2\2\2\u03c8\u03bf\3\2\2\2\u03c8\u03c1\3\2\2\2\u03c8"+
+		"\u03c3\3\2\2\2\u03c8\u03c5\3\2\2\2\u03c9\u00a1\3\2\2\2\u03ca\u03cb\bR"+
+		"\1\2\u03cb\u03f1\5\u00a4S\2\u03cc\u03f1\5&\24\2\u03cd\u03f1\5,\27\2\u03ce"+
+		"\u03cf\5\u00b0Y\2\u03cf\u03d0\5\u00a2R\b\u03d0\u03f1\3\2\2\2\u03d1\u03d2"+
+		"\5.\30\2\u03d2\u03d7\5\62\32\2\u03d3\u03d4\7\u02a9\2\2\u03d4\u03d6\5\62"+
+		"\32\2\u03d5\u03d3\3\2\2\2\u03d6\u03d9\3\2\2\2\u03d7\u03d5\3\2\2\2\u03d7"+
+		"\u03d8\3\2\2\2\u03d8\u03da\3\2\2\2\u03d9\u03d7\3\2\2\2\u03da\u03db\5\60"+
+		"\31\2\u03db\u03f1\3\2\2\2\u03dc\u03dd\7\u0153\2\2\u03dd\u03de\5.\30\2"+
+		"\u03de\u03e1\5\62\32\2\u03df\u03e0\7\u02a9\2\2\u03e0\u03e2\5\62\32\2\u03e1"+
+		"\u03df\3\2\2\2\u03e2\u03e3\3\2\2\2\u03e3\u03e1\3\2\2\2\u03e3\u03e4\3\2"+
+		"\2\2\u03e4\u03e5\3\2\2\2\u03e5\u03e6\5\60\31\2\u03e6\u03f1\3\2\2\2\u03e7"+
+		"\u03e8\7\\\2\2\u03e8\u03e9\5.\30\2\u03e9\u03ea\5\4\3\2\u03ea\u03eb\5\60"+
+		"\31\2\u03eb\u03f1\3\2\2\2\u03ec\u03ed\5.\30\2\u03ed\u03ee\5\4\3\2\u03ee"+
+		"\u03ef\5\60\31\2\u03ef\u03f1\3\2\2\2\u03f0\u03ca\3\2\2\2\u03f0\u03cc\3"+
+		"\2\2\2\u03f0\u03cd\3\2\2\2\u03f0\u03ce\3\2\2\2\u03f0\u03d1\3\2\2\2\u03f0"+
+		"\u03dc\3\2\2\2\u03f0\u03e7\3\2\2\2\u03f0\u03ec\3\2\2\2\u03f1\u03f8\3\2"+
+		"\2\2\u03f2\u03f3\f\3\2\2\u03f3\u03f4\5\u00b2Z\2\u03f4\u03f5\5\u00a2R\4"+
+		"\u03f5\u03f7\3\2\2\2\u03f6\u03f2\3\2\2\2\u03f7\u03fa\3\2\2\2\u03f8\u03f6"+
+		"\3\2\2\2\u03f8\u03f9\3\2\2\2\u03f9\u00a3\3\2\2\2\u03fa\u03f8\3\2\2\2\u03fb"+
+		"\u0408\5\u00a6T\2\u03fc\u0408\5\u00aaV\2\u03fd\u03fe\7\u029b\2\2\u03fe"+
+		"\u0408\5\u00aaV\2\u03ff\u0408\5\u00acW\2\u0400\u0408\5\u00aeX\2\u0401"+
+		"\u0408\7\u02b8\2\2\u0402\u0408\7\u02ba\2\2\u0403\u0405\7\u0089\2\2\u0404"+
+		"\u0403\3\2\2\2\u0404\u0405\3\2\2\2\u0405\u0406\3\2\2\2\u0406\u0408\t\30"+
+		"\2\2\u0407\u03fb\3\2\2\2\u0407\u03fc\3\2\2\2\u0407\u03fd\3\2\2\2\u0407"+
+		"\u03ff\3\2\2\2\u0407\u0400\3\2\2\2\u0407\u0401\3\2\2\2\u0407\u0402\3\2"+
+		"\2\2\u0407\u0404\3\2\2\2\u0408\u00a5\3\2\2\2\u0409\u040b\t\31\2\2\u040a"+
+		"\u040c\7\u02b5\2\2\u040b\u040a\3\2\2\2\u040c\u040d\3\2\2\2\u040d\u040b"+
+		"\3\2\2\2\u040d\u040e\3\2\2\2\u040e\u0415\3\2\2\2\u040f\u0412\t\31\2\2"+
+		"\u0410\u0411\7A\2\2\u0411\u0413\5\u00a8U\2\u0412\u0410\3\2\2\2\u0412\u0413"+
+		"\3\2\2\2\u0413\u0415\3\2\2\2\u0414\u0409\3\2\2\2\u0414\u040f\3\2\2\2\u0415"+
+		"\u00a7\3\2\2\2\u0416\u0419\5\36\20\2\u0417\u0419\7\u02b5\2\2\u0418\u0416"+
+		"\3\2\2\2\u0418\u0417\3\2\2\2\u0419\u00a9\3\2\2\2\u041a\u041b\t\32\2\2"+
+		"\u041b\u00ab\3\2\2\2\u041c\u041d\7\u02b7\2\2\u041d\u00ad\3\2\2\2\u041e"+
+		"\u041f\t\33\2\2\u041f\u00af\3\2\2\2\u0420\u0421\t\34\2\2\u0421\u00b1\3"+
+		"\2\2\2\u0422\u0423\t\35\2\2\u0423\u00b3\3\2\2\2\u0424\u0429\5\u00a4S\2"+
+		"\u0425\u0429\5&\24\2\u0426\u0429\5,\27\2\u0427\u0429\5\62\32\2\u0428\u0424"+
+		"\3\2\2\2\u0428\u0425\3\2\2\2\u0428\u0426\3\2\2\2\u0428\u0427\3\2\2\2\u0429"+
+		"\u0433\3\2\2\2\u042a\u042f\7\u02a9\2\2\u042b\u0430\5\u00a4S\2\u042c\u0430"+
+		"\5&\24\2\u042d\u0430\5,\27\2\u042e\u0430\5\62\32\2\u042f\u042b\3\2\2\2"+
+		"\u042f\u042c\3\2\2\2\u042f\u042d\3\2\2\2\u042f\u042e\3\2\2\2\u0430\u0432"+
+		"\3\2\2\2\u0431\u042a\3\2\2\2\u0432\u0435\3\2\2\2\u0433\u0431\3\2\2\2\u0433"+
+		"\u0434\3\2\2\2\u0434\u00b5\3\2\2\2\u0435\u0433\3\2\2\2\u0436\u0438\5\u00ba"+
+		"^\2\u0437\u0436\3\2\2\2\u0437\u0438\3\2\2\2\u0438\u0439\3\2\2\2\u0439"+
+		"\u043b\t\36\2\2\u043a\u043c\5\u00b8]\2\u043b\u043a\3\2\2\2\u043b\u043c"+
+		"\3\2\2\2\u043c\u043d\3\2\2\2\u043d\u043f\5.\30\2\u043e\u0440\t\37\2\2"+
+		"\u043f\u043e\3\2\2\2\u043f\u0440\3\2\2\2\u0440\u0441\3\2\2\2\u0441\u0442"+
+		"\5\u00bc_\2\u0442\u0443\5\60\31\2\u0443\u0479\3\2\2\2\u0444\u0446\5\u00ba"+
+		"^\2\u0445\u0444\3\2\2\2\u0445\u0446\3\2\2\2\u0446\u0447\3\2\2\2\u0447"+
+		"\u0449\7\u0105\2\2\u0448\u044a\5\u00b8]\2\u0449\u0448\3\2\2\2\u0449\u044a"+
+		"\3\2\2\2\u044a\u044b\3\2\2\2\u044b\u0454\5.\30\2\u044c\u0455\7\u0297\2"+
+		"\2\u044d\u044f\5\u00be`\2\u044e\u044d\3\2\2\2\u044e\u044f\3\2\2\2\u044f"+
+		"\u0450\3\2\2\2\u0450\u0455\5\u00bc_\2\u0451\u0452\5\u00c0a\2\u0452\u0453"+
+		"\5\u00b4[\2\u0453\u0455\3\2\2\2\u0454\u044c\3\2\2\2\u0454\u044e\3\2\2"+
+		"\2\u0454\u0451\3\2\2\2\u0455\u0456\3\2\2\2\u0456\u0457\5\60\31\2\u0457"+
+		"\u0479\3\2\2\2\u0458\u0459\t \2\2\u0459\u045b\5.\30\2\u045a\u045c\7\60"+
+		"\2\2\u045b\u045a\3\2\2\2\u045b\u045c\3\2\2\2\u045c\u045d\3\2\2\2\u045d"+
+		"\u045e\5\u00bc_\2\u045e\u045f\5\60\31\2\u045f\u0479\3\2\2\2\u0460\u0461"+
+		"\7\u0109\2\2\u0461\u0463\5.\30\2\u0462\u0464\7R\2\2\u0463\u0462\3\2\2"+
+		"\2\u0463\u0464\3\2\2\2\u0464\u0465\3\2\2\2\u0465\u0470\5\u00b4[\2\u0466"+
+		"\u0467\7\u0092\2\2\u0467\u0468\7;\2\2\u0468\u046d\5T+\2\u0469\u046a\7"+
+		"\u02a9\2\2\u046a\u046c\5T+\2\u046b\u0469\3\2\2\2\u046c\u046f\3\2\2\2\u046d"+
+		"\u046b\3\2\2\2\u046d\u046e\3\2\2\2\u046e\u0471\3\2\2\2\u046f\u046d\3\2"+
+		"\2\2\u0470\u0466\3\2\2\2\u0470\u0471\3\2\2\2\u0471\u0474\3\2\2\2\u0472"+
+		"\u0473\7\u00ab\2\2\u0473\u0475\7\u02b5\2\2\u0474\u0472\3\2\2\2\u0474\u0475"+
+		"\3\2\2\2\u0475\u0476\3\2\2\2\u0476\u0477\5\60\31\2\u0477\u0479\3\2\2\2"+
+		"\u0478\u0437\3\2\2\2\u0478\u0445\3\2\2\2\u0478\u0458\3\2\2\2\u0478\u0460"+
+		"\3\2\2\2\u0479\u00b7\3\2\2\2\u047a\u047b\7\u0150\2\2\u047b\u00b9\3\2\2"+
+		"\2\u047c\u047d\7.\2\2\u047d\u00bb\3\2\2\2\u047e\u0483\5\u00a4S\2\u047f"+
+		"\u0483\5&\24\2\u0480\u0483\5,\27\2\u0481\u0483\5\62\32\2\u0482\u047e\3"+
+		"\2\2\2\u0482\u047f\3\2\2\2\u0482\u0480\3\2\2\2\u0482\u0481\3\2\2\2\u0483"+
+		"\u00bd\3\2\2\2\u0484\u0485\7\60\2\2\u0485\u00bf\3\2\2\2\u0486\u0487\7"+
+		"R\2\2\u0487\u00c1\3\2\2\2\u0488\u0489\t!\2\2\u0489\u048a\5.\30\2\u048a"+
+		"\u048d\5\62\32\2\u048b\u048c\7\u02a9\2\2\u048c\u048e\5\u00aaV\2\u048d"+
+		"\u048b\3\2\2\2\u048d\u048e\3\2\2\2\u048e\u0491\3\2\2\2\u048f\u0490\7\u02a9"+
+		"\2\2\u0490\u0492\5\u00aaV\2\u0491\u048f\3\2\2\2\u0491\u0492\3\2\2\2\u0492"+
+		"\u0493\3\2\2\2\u0493\u0494\5\60\31\2\u0494\u04ab\3\2\2\2\u0495\u0496\t"+
+		"\"\2\2\u0496\u0497\5.\30\2\u0497\u0498\5\62\32\2\u0498\u0499\5\60\31\2"+
+		"\u0499\u04ab\3\2\2\2\u049a\u049b\t#\2\2\u049b\u049c\5.\30\2\u049c\u049d"+
+		"\5\60\31\2\u049d\u04ab\3\2\2\2\u049e\u049f\7\u0110\2\2\u049f\u04a0\5."+
+		"\30\2\u04a0\u04a1\5\62\32\2\u04a1\u04a2\7\u02a9\2\2\u04a2\u04a3\5\u00aa"+
+		"V\2\u04a3\u04a4\5\60\31\2\u04a4\u04ab\3\2\2\2\u04a5\u04a6\7\u010f\2\2"+
+		"\u04a6\u04a7\5.\30\2\u04a7\u04a8\5\u00aaV\2\u04a8\u04a9\5\60\31\2\u04a9"+
+		"\u04ab\3\2\2\2\u04aa\u0488\3\2\2\2\u04aa\u0495\3\2\2\2\u04aa\u049a\3\2"+
+		"\2\2\u04aa\u049e\3\2\2\2\u04aa\u04a5\3\2\2\2\u04ab\u00c3\3\2\2\2\u04ac"+
+		"\u04ad\t$\2\2\u04ad\u00c5\3\2\2\2\u04ae\u04af\t\20\2\2\u04af\u00c7\3\2"+
+		"\2\2\u04b0\u04b1\7\u00c4\2\2\u04b1\u00c9\3\2\2\2\u04b2\u04b3\5\62\32\2"+
+		"\u04b3\u00cb\3\2\2\2\u04b4\u04b5\5\\/\2\u04b5\u00cd\3\2\2\2\u04b6\u04b7"+
+		"\5^\60\2\u04b7\u00cf\3\2\2\2\u0092\u00d2\u00d6\u00de\u00e3\u00e9\u00ed"+
+		"\u00f3\u00f5\u00fb\u0104\u010b\u0111\u0115\u011b\u0124\u012b\u0131\u0135"+
+		"\u013b\u0144\u014c\u015a\u0161\u016c\u0172\u0176\u017c\u017e\u0184\u018a"+
+		"\u0193\u0195\u019a\u019c\u01a2\u01ab\u01b2\u01b6\u01c2\u01c7\u01cf\u01d9"+
+		"\u01de\u01e8\u01f5\u01fb\u01fe\u0204\u0214\u021a\u0223\u0225\u022f\u0232"+
+		"\u0235\u0238\u023e\u0247\u024c\u0250\u0258\u025b\u0260\u0264\u0267\u0270"+
+		"\u0275\u0285\u028a\u0290\u0297\u029b\u02a5\u02a9\u02ad\u02b7\u02bb\u02bf"+
+		"\u02c3\u02c7\u02cf\u02d5\u02dd\u02e2\u02ea\u02ee\u02f1\u02f9\u02fc\u0303"+
+		"\u0306\u030c\u0311\u031e\u0325\u0330\u033a\u0340\u0343\u0351\u0355\u0363"+
+		"\u0368\u036a\u0376\u0379\u0385\u038d\u0399\u03a2\u03a4\u03b2\u03b6\u03c8"+
+		"\u03d7\u03e3\u03f0\u03f8\u0404\u0407\u040d\u0412\u0414\u0418\u0428\u042f"+
+		"\u0433\u0437\u043b\u043f\u0445\u0449\u044e\u0454\u045b\u0463\u046d\u0470"+
+		"\u0474\u0478\u0482\u048d\u0491\u04aa";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

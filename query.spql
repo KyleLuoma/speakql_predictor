@@ -1,1 +1,1 @@
-select a from building where
+from table one inner joined table two show me a, b wear a is not equal to 'hello'
