@@ -2,7 +2,9 @@ import antlrgen.SimpleSpeakQlParser;
 import com.vmware.antlr4c3.CodeCompletionCore;
 import dag.DagNode;
 import org.antlr.v4.runtime.*;
+import predictor.NextWordsPredictor;
 import predictor.ParserPackage;
+import server.PredictorServer;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -24,6 +26,7 @@ public class Main {
         Boolean predict = false;
         Boolean tokenize = false;
         Boolean parseQuery = false;
+        Boolean doServer = false;
 
         for(int arg = 0; arg < args.length; arg++) {
             if(args[arg].toUpperCase(Locale.ROOT).equals("-PREDICT")) {
@@ -39,14 +42,18 @@ public class Main {
             }
             if(args[arg].toUpperCase(Locale.ROOT).equals("-TOKENIZE")) {
                 asrQuery = args[arg + 1];
+                tokenize = true;
             }
             if(args[arg].toUpperCase(Locale.ROOT).equals("-PARSE")) {
                 asrQuery = args[arg + 1];
                 parseQuery = true;
             }
+            if(args[arg].toUpperCase(Locale.ROOT).equals("-SERVER")) {
+                doServer = true;
+            }
         }
 
-        if(asrQuery.length() == 0) {//Get a raw asr-based query:
+        if(asrQuery.length() == 0 && !doServer) {//Get a raw asr-based query:
             String queryFileName = "query.spql";
             asrQuery = getQueryFromFile(queryFileName, false);
         }
@@ -97,8 +104,8 @@ public class Main {
         }
 
         if(predict) {
-            ArrayList<String> nextWords = getNextWords(asrQuery, idRuleSet, null);
-            printNextWordsAsArray(nextWords);
+            ArrayList<String> nextWords = NextWordsPredictor.getNextWords(asrQuery, idRuleSet, null);
+            NextWordsPredictor.printNextWordsAsArray(nextWords);
         }
 
         if(makeTrie) {
@@ -120,6 +127,15 @@ public class Main {
 
         if(parseQuery){
             printParseTree(asrQuery);
+        }
+
+        if(doServer){
+            PredictorServer predictorServer = new PredictorServer();
+            try {
+                predictorServer.run();
+            } catch(Exception e) {
+                System.out.println((e));
+            }
         }
     }
 
@@ -144,20 +160,6 @@ public class Main {
         return tokenString;
     }
 
-    public static String printNextWordsAsArray(ArrayList<String> nextWords) {
-        Iterator<String> iter = nextWords.iterator();
-        String output = "[";
-        while (iter.hasNext()) {
-            output = output + iter.next();
-            if (iter.hasNext()) {
-                output = output + ", ";
-            }
-        }
-        output = output + "]";
-        System.out.println(output);
-        return output;
-    }
-
     public static String getQueryFromFile(String fileName, Boolean verbose) throws FileNotFoundException {
         String asrQuery = "";
         String queryFileName = fileName;
@@ -174,45 +176,6 @@ public class Main {
             System.out.println("MAIN: Read query " + asrQuery + " from " + queryFileName);
         }
         return asrQuery.toUpperCase(Locale.ROOT);
-    }
-
-    public static ArrayList<String> getNextWords(
-            String query, HashSet<Integer> ruleSet, HashSet<Integer> ignoredTokens
-    ) {
-
-        query = query.replace("__SCHROD", "").strip() + " __SCHROD";
-        query = query.toUpperCase(Locale.ROOT);
-
-        ParserPackage parserPackage = new ParserPackage(query);
-        SimpleSpeakQlParser parser = parserPackage.getParser();
-        CommonTokenStream tokens = parserPackage.getTokens();
-
-        CodeCompletionCore core = new CodeCompletionCore(parser, ruleSet, ignoredTokens);
-
-        int caretPosition = tokens.getTokens().size() - 2;
-
-//        System.out.println(query);
-//        System.out.println(tokens.getTokens());
-//        System.out.println(caretPosition);
-
-        CodeCompletionCore.CandidatesCollection collection
-                = core.collectCandidates(caretPosition, null);
-
-        ArrayList<String> nextWords = new ArrayList<>();
-
-        Set<Integer> ruleKeys = collection.rules.keySet();
-        Iterator<Integer> ruleKeyIter = ruleKeys.iterator();
-        while(ruleKeyIter.hasNext()) {
-            nextWords.add(parser.getRuleNames()[ruleKeyIter.next()]);
-        }
-
-        Set<Integer> keys = collection.tokens.keySet();
-        Iterator<Integer> keyIter = keys.iterator();
-        while(keyIter.hasNext()) {
-            nextWords.add(parser.getVocabulary().getDisplayName(keyIter.next()));
-        }
-
-        return nextWords;
     }
 
     public static void printNextRulesForQuery(String query, HashSet<Integer> ruleSet) {
