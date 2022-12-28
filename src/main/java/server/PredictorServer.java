@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -13,7 +12,7 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import predictor.NextWordsPredictor;
-import predictor.ParserPackage;
+import predictor.StartRuleParserPackage;
 
 //https://stackoverflow.com/questions/3732109/simple-http-server-in-java-using-only-java-se-api
 public class PredictorServer {
@@ -70,8 +69,8 @@ public class PredictorServer {
             }
             System.out.println(requestBodySB.toString());
             //Parse request query
-            ParserPackage parserPackage = new ParserPackage(requestBodySB.toString());
-            String response = parserPackage.getTree().toStringTree(parserPackage.getParser());
+            StartRuleParserPackage startRuleParserPackage = new StartRuleParserPackage(requestBodySB.toString());
+            String response = startRuleParserPackage.getTree().toStringTree(startRuleParserPackage.getParser());
 
             //Return parse tree
             t.sendResponseHeaders(200, response.length());

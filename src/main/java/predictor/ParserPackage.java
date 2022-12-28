@@ -5,18 +5,17 @@ import antlrgen.SimpleSpeakQlParser;
 import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.ParserRuleContext;
 
-public class ParserPackage {
+public abstract class ParserPackage {
 
     SimpleSpeakQlLexer lexer;
     CommonTokenStream tokens;
     SimpleSpeakQlParser parser;
     String query;
-    SimpleSpeakQlParser.StartContext tree;
+    ParserRuleContext tree;
 
-    public ParserPackage(String query) {
-        this.updateWithNewQuery(query);
-    }
+    public abstract ParserRuleContext generateTree();
 
     public void updateWithNewQuery(String query) {
         this.query = query;
@@ -28,26 +27,22 @@ public class ParserPackage {
         BaseErrorListener errorListener = new BaseErrorListener();
         parser.addErrorListener(errorListener);
         this.lexer.reset();
-        this.tree = parser.start();
-    }
-
+        this.tree = this.generateTree();
+    };
     public SimpleSpeakQlLexer getLexer() {
-        return lexer;
+        return this.lexer;
     }
-
     public CommonTokenStream getTokens() {
-        return tokens;
+        return this.tokens;
     }
-
     public SimpleSpeakQlParser getParser() {
-        return parser;
+        return this.parser;
     }
-
     public String getQuery() {
-        return query;
+        return this.query;
     }
-
-    public SimpleSpeakQlParser.StartContext getTree() {
+    public ParserRuleContext getTree() {
         return tree;
     }
+
 }

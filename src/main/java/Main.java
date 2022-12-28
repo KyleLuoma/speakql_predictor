@@ -1,9 +1,7 @@
 import antlrgen.SimpleSpeakQlParser;
 import com.vmware.antlr4c3.CodeCompletionCore;
-import dag.DagNode;
 import org.antlr.v4.runtime.*;
-import predictor.NextWordsPredictor;
-import predictor.ParserPackage;
+import predictor.*;
 import server.PredictorServer;
 
 import java.io.File;
@@ -27,6 +25,10 @@ public class Main {
         Boolean tokenize = false;
         Boolean parseQuery = false;
         Boolean doServer = false;
+        Boolean parseSelectExpression = false;
+        Boolean parseWhereExpression = false;
+        Boolean parseTableExpression = false;
+        Boolean parseSelectModifierExpression = false;
 
         for(int arg = 0; arg < args.length; arg++) {
             if(args[arg].toUpperCase(Locale.ROOT).equals("-PREDICT")) {
@@ -47,6 +49,26 @@ public class Main {
             if(args[arg].toUpperCase(Locale.ROOT).equals("-PARSE")) {
                 asrQuery = args[arg + 1];
                 parseQuery = true;
+            }
+            if(args[arg].toUpperCase(Locale.ROOT).equals("-PARSE-SELECT")) {
+                asrQuery = args[arg + 1];
+                parseSelectExpression = true;
+                parseQuery = false;
+            }
+            if(args[arg].toUpperCase(Locale.ROOT).equals("-PARSE-TABLE")) {
+                asrQuery = args[arg + 1];
+                parseTableExpression = true;
+                parseQuery = false;
+            }
+            if(args[arg].toUpperCase(Locale.ROOT).equals("-PARSE-WHERE")) {
+                asrQuery = args[arg + 1];
+                parseWhereExpression = true;
+                parseQuery = false;
+            }
+            if(args[arg].toUpperCase(Locale.ROOT).equals("-PARSE-MODIFIER")) {
+                asrQuery = args[arg + 1];
+                parseSelectModifierExpression = true;
+                parseQuery = false;
             }
             if(args[arg].toUpperCase(Locale.ROOT).equals("-SERVER")) {
                 doServer = true;
@@ -126,8 +148,33 @@ public class Main {
         }
 
         if(parseQuery){
-            printParseTree(asrQuery);
+            StartRuleParserPackage startRuleParserPackage = new StartRuleParserPackage(asrQuery);
+            String stringTree = startRuleParserPackage.getTree().toStringTree(startRuleParserPackage.getParser());
+            System.out.println(stringTree);
         }
+
+        if(parseSelectExpression || parseTableExpression || parseWhereExpression || parseSelectModifierExpression) {
+            ParserPackage parserPackage = new ParserPackage() {
+                @Override
+                public ParserRuleContext generateTree() {
+                    return null;
+                }
+            };
+            if(parseSelectExpression) {
+                parserPackage = new SelectExpressionRuleParserPackage(asrQuery);
+            } else if (parseTableExpression) {
+                parserPackage = new TableExpressionRuleParserPackage(asrQuery);
+            } else if (parseWhereExpression) {
+                parserPackage = new WhereExpressionRuleParserPackage(asrQuery);
+            } else if (parseSelectModifierExpression) {
+                parserPackage = new SelectModifierExpressionRuleParserPackage(asrQuery);
+            }
+            String stringTree = parserPackage.getTree().toStringTree(
+                    parserPackage.getParser()
+            );
+            System.out.println(stringTree);
+        }
+
 
         if(doServer){
             PredictorServer predictorServer = new PredictorServer();
@@ -139,15 +186,9 @@ public class Main {
         }
     }
 
-    public static void printParseTree(String speakqlQuery) {
-        ParserPackage parserPackage = new ParserPackage(speakqlQuery);
-        String stringTree = parserPackage.getTree().toStringTree(parserPackage.getParser());
-        System.out.println(stringTree);
-    }
-
     public static String printLexerTokensAsArray(String query) {
-        ParserPackage parserPackage = new ParserPackage(query);
-        CommonTokenStream tokens = parserPackage.getTokens();
+        StartRuleParserPackage startRuleParserPackage = new StartRuleParserPackage(query);
+        CommonTokenStream tokens = startRuleParserPackage.getTokens();
         List<Token> tokensList = tokens.getTokens();
         StringBuilder stringBuilder = new StringBuilder();
         for(Token token : tokensList) {
@@ -179,9 +220,9 @@ public class Main {
     }
 
     public static void printNextRulesForQuery(String query, HashSet<Integer> ruleSet) {
-        ParserPackage parserPackage = new ParserPackage(query);
-        SimpleSpeakQlParser parser = parserPackage.getParser();
-        CommonTokenStream tokens = parserPackage.getTokens();
+        StartRuleParserPackage startRuleParserPackage = new StartRuleParserPackage(query);
+        SimpleSpeakQlParser parser = startRuleParserPackage.getParser();
+        CommonTokenStream tokens = startRuleParserPackage.getTokens();
 
         //Specify entry point
         SimpleSpeakQlParser.StartContext tree = parser.start();
@@ -221,9 +262,9 @@ public class Main {
 
         query = query.replace("'", "").strip();
 
-        ParserPackage parserPackage = new ParserPackage(query);
-        SimpleSpeakQlParser parser = parserPackage.getParser();
-        CommonTokenStream tokens = parserPackage.getTokens();
+        StartRuleParserPackage startRuleParserPackage = new StartRuleParserPackage(query);
+        SimpleSpeakQlParser parser = startRuleParserPackage.getParser();
+        CommonTokenStream tokens = startRuleParserPackage.getTokens();
 
         HashSet<Integer> ruleSet = new HashSet<>();
         ruleSet.addAll(delimRuleSet);
@@ -240,9 +281,9 @@ public class Main {
         }
 
         HashSet<Integer> ignoreTokens = new HashSet<>();
-        ignoreTokens.add(parserPackage.getLexer().getTokenType("END_OF_FILE"));
-        ignoreTokens.add(parserPackage.getLexer().getTokenType("<EOF>"));
-        ignoreTokens.add(parserPackage.getLexer().getTokenType("-2"));
+        ignoreTokens.add(startRuleParserPackage.getLexer().getTokenType("END_OF_FILE"));
+        ignoreTokens.add(startRuleParserPackage.getLexer().getTokenType("<EOF>"));
+        ignoreTokens.add(startRuleParserPackage.getLexer().getTokenType("-2"));
 
         CodeCompletionCore core = new CodeCompletionCore(parser, ruleSet, ignoreTokens);
         CodeCompletionCore.CandidatesCollection collection = core.collectCandidates(tokens.getTokens().size() - 3, null);

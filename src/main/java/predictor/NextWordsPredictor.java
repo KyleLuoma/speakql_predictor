@@ -14,9 +14,9 @@ public class NextWordsPredictor {
         query = query.replace("__SCHROD", "").strip() + " __SCHROD";
         query = query.toUpperCase(Locale.ROOT);
 
-        ParserPackage parserPackage = new ParserPackage(query);
-        SimpleSpeakQlParser parser = parserPackage.getParser();
-        CommonTokenStream tokens = parserPackage.getTokens();
+        StartRuleParserPackage startRuleParserPackage = new StartRuleParserPackage(query);
+        SimpleSpeakQlParser parser = startRuleParserPackage.getParser();
+        CommonTokenStream tokens = startRuleParserPackage.getTokens();
 
         CodeCompletionCore core = new CodeCompletionCore(parser, ruleSet, ignoredTokens);
 
