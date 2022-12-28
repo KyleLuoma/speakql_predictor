@@ -22,6 +22,10 @@ public class Main {
         Boolean includeL3DelimRules = true;
         Boolean makeTrie = false;
         Boolean predict = false;
+        Boolean predictSelectExpression = false;
+        Boolean predictWhereExpression = false;
+        Boolean predictTableExpression = false;
+        Boolean predictSelectModifierExpression = false;
         Boolean tokenize = false;
         Boolean parseQuery = false;
         Boolean doServer = false;
@@ -34,6 +38,22 @@ public class Main {
             if(args[arg].toUpperCase(Locale.ROOT).equals("-PREDICT")) {
                 asrQuery = args[arg + 1];
                 predict = true;
+            }
+            if(args[arg].toUpperCase(Locale.ROOT).equals("-PREDICT-SELECT")) {
+                asrQuery = args[arg + 1];
+                predictSelectExpression = true;
+            }
+            if(args[arg].toUpperCase(Locale.ROOT).equals("-PREDICT-WHERE")) {
+                asrQuery = args[arg + 1];
+                predictWhereExpression = true;
+            }
+            if(args[arg].toUpperCase(Locale.ROOT).equals("-PREDICT-TABLE")) {
+                asrQuery = args[arg + 1];
+                predictTableExpression = true;
+            }
+            if(args[arg].toUpperCase(Locale.ROOT).equals("-PREDICT-MODIFIER")) {
+                asrQuery = args[arg + 1];
+                predictSelectModifierExpression = true;
             }
             if(args[arg].toUpperCase(Locale.ROOT).equals("-TRIE")) {
                 makeTrie = true;
@@ -125,8 +145,18 @@ public class Main {
             delimRuleSet.add(SimpleSpeakQlParser.RULE_groupByItemDelimiter);
         }
 
-        if(predict) {
-            ArrayList<String> nextWords = NextWordsPredictor.getNextWords(asrQuery, idRuleSet, null);
+        if(predict || predictSelectExpression || predictTableExpression || predictWhereExpression || predictSelectModifierExpression) {
+            String rule = "START";
+            if(predictSelectExpression) {
+                rule = "SELECT";
+            } else if(predictTableExpression) {
+                rule = "TABLE";
+            } else if(predictWhereExpression) {
+                rule = "WHERE";
+            } else if(predictSelectModifierExpression) {
+                rule = "MODIFIER";
+            }
+            ArrayList<String> nextWords = NextWordsPredictor.getNextWords(asrQuery, idRuleSet, null, rule);
             NextWordsPredictor.printNextWordsAsArray(nextWords);
         }
 

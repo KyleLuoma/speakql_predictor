@@ -1,5 +1,4 @@
-// Generated from SimpleSpeakQlParser.g4 by ANTLR 4.9.3
-package antlrgen;
+package antlrgen;// Generated from SimpleSpeakQlParser.g4 by ANTLR 4.9.3
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -335,6 +334,18 @@ public class SimpleSpeakQlParserBaseListener implements SimpleSpeakQlParserListe
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAggregateFunctionCall(SimpleSpeakQlParser.AggregateFunctionCallContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNoParenAggregateFunctionCall(SimpleSpeakQlParser.NoParenAggregateFunctionCallContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNoParenAggregateFunctionCall(SimpleSpeakQlParser.NoParenAggregateFunctionCallContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -755,6 +766,42 @@ public class SimpleSpeakQlParserBaseListener implements SimpleSpeakQlParserListe
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitOrderByExpression(SimpleSpeakQlParser.OrderByExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOrder(SimpleSpeakQlParser.OrderContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOrder(SimpleSpeakQlParser.OrderContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAscendingKeyword(SimpleSpeakQlParser.AscendingKeywordContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAscendingKeyword(SimpleSpeakQlParser.AscendingKeywordContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDescendingKeyword(SimpleSpeakQlParser.DescendingKeywordContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDescendingKeyword(SimpleSpeakQlParser.DescendingKeywordContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1384,6 +1431,30 @@ public class SimpleSpeakQlParserBaseListener implements SimpleSpeakQlParserListe
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterIntervalExpressionAtom(SimpleSpeakQlParser.IntervalExpressionAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIntervalExpressionAtom(SimpleSpeakQlParser.IntervalExpressionAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIntervalType(SimpleSpeakQlParser.IntervalTypeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIntervalType(SimpleSpeakQlParser.IntervalTypeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterConstant(SimpleSpeakQlParser.ConstantContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -1499,6 +1570,18 @@ public class SimpleSpeakQlParserBaseListener implements SimpleSpeakQlParserListe
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAggregateWindowedFunction(SimpleSpeakQlParser.AggregateWindowedFunctionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNoParenAggregateWindowedFunction(SimpleSpeakQlParser.NoParenAggregateWindowedFunctionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNoParenAggregateWindowedFunction(SimpleSpeakQlParser.NoParenAggregateWindowedFunctionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

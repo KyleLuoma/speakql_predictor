@@ -1,5 +1,4 @@
-// Generated from SimpleSpeakQlParser.g4 by ANTLR 4.9.3
-package antlrgen;
+package antlrgen;// Generated from SimpleSpeakQlParser.g4 by ANTLR 4.9.3
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -181,6 +180,13 @@ public interface SimpleSpeakQlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitAggregateFunctionCall(SimpleSpeakQlParser.AggregateFunctionCallContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code noParenAggregateFunctionCall}
+	 * labeled alternative in {@link SimpleSpeakQlParser#functionCall}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNoParenAggregateFunctionCall(SimpleSpeakQlParser.NoParenAggregateFunctionCallContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code nonAggregateFunctionCall}
 	 * labeled alternative in {@link SimpleSpeakQlParser#functionCall}.
@@ -408,6 +414,24 @@ public interface SimpleSpeakQlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitOrderByExpression(SimpleSpeakQlParser.OrderByExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#order}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitOrder(SimpleSpeakQlParser.OrderContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#ascendingKeyword}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAscendingKeyword(SimpleSpeakQlParser.AscendingKeywordContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#descendingKeyword}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDescendingKeyword(SimpleSpeakQlParser.DescendingKeywordContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#limitClause}.
 	 * @param ctx the parse tree
@@ -738,6 +762,19 @@ public interface SimpleSpeakQlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExistsExpressionAtom(SimpleSpeakQlParser.ExistsExpressionAtomContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code intervalExpressionAtom}
+	 * labeled alternative in {@link SimpleSpeakQlParser#expressionAtom}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIntervalExpressionAtom(SimpleSpeakQlParser.IntervalExpressionAtomContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#intervalType}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIntervalType(SimpleSpeakQlParser.IntervalTypeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#constant}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -797,6 +834,12 @@ public interface SimpleSpeakQlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitAggregateWindowedFunction(SimpleSpeakQlParser.AggregateWindowedFunctionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#noParenAggregateWindowedFunction}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNoParenAggregateWindowedFunction(SimpleSpeakQlParser.NoParenAggregateWindowedFunctionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link SimpleSpeakQlParser#ofKeyword}.
 	 * @param ctx the parse tree

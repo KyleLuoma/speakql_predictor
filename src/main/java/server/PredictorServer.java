@@ -43,9 +43,8 @@ public class PredictorServer {
             idRuleSet.add(SimpleSpeakQlParser.RULE_simpleId);
             idRuleSet.add(SimpleSpeakQlParser.RULE_uid);
             idRuleSet.add(SimpleSpeakQlParser.RULE_constant);
-
             ArrayList<String> nextWords = NextWordsPredictor.getNextWords(
-                    requestBodySB.toString(), idRuleSet, null
+                    requestBodySB.toString(), idRuleSet, null, "START"
             );
 
             String response = NextWordsPredictor.printNextWordsAsArray(nextWords);
