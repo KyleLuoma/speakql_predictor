@@ -8,32 +8,32 @@ tokens for partial SpeakQL queries.
 Note: This is a simple program that only accepts one command line argument per 
 execution.
 
--predict "<partial query>" 
+-predict "\<partial query\>" 
 print a list of valid next tokens to the console
 
--predict-select "<partial select expression>"
+-predict-select "\<partial select expression\>"
 print a list of valid next tokens to the console for a select expression
 
--predict-where "<partial where expression>"
+-predict-where "\<partial where expression\>"
 
--predict-table "<partial table expression>"
+-predict-table "\<partial table expression\>"
 
--predict-modifier "<partial modifier expression>"
+-predict-modifier "\<partial modifier expression\>"
 
--tokenize "<query>"
+-tokenize "\<query\>"
 print query as an array of tokens to the console
 
--parse "<query>"
+-parse "\<query\>"
 Print a lisp style AST to the console
 
--parse-select "<partial select expression>"
+-parse-select "\<partial select expression\>"
 Print a lisp style AST for a partial query (select expression)
 
--parse-table "<partial table expression>"
+-parse-table "\<partial table expression\>"
 
--parse-where "<partial where expression>"
+-parse-where "\<partial where expression\>"
 
--parse-modifier "<partial modifier expression>"
+-parse-modifier "\<partial modifier expression\>"
 
 -server
 Start a simple http server with parse and predict endpoints
