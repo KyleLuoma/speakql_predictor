@@ -13,6 +13,8 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import predictor.NextWordsPredictor;
 import predictor.StartRuleParserPackage;
+import util.SimpleJsonStringParser;
+
 
 //https://stackoverflow.com/questions/3732109/simple-http-server-in-java-using-only-java-se-api
 public class PredictorServer {
@@ -25,7 +27,6 @@ public class PredictorServer {
         server.start();
     }
 
-
     static class PredictRequestHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
@@ -36,19 +37,28 @@ public class PredictorServer {
                 requestBodySB.append((char) i);
             }
 
-            HashSet<Integer> idRuleSet = new HashSet<Integer>();
+            System.out.println(requestBodySB.toString());
 
-//            idRuleSet.add(SimpleSpeakQlParser.RULE_tableName);
-//            idRuleSet.add(SimpleSpeakQlParser.RULE_tableAlias);
+            String query = null;
+            String rule = null;
+            try {
+                query = SimpleJsonStringParser.getValueFromJsonString("query", requestBodySB.toString());
+                rule = SimpleJsonStringParser.getValueFromJsonString("rule", requestBodySB.toString());
+            } catch (NoSuchFieldException e) {
+                e.printStackTrace();
+            }
+
+            System.out.println("Rule: " + rule + " Query: " + query);
+
+            HashSet<Integer> idRuleSet = new HashSet<Integer>();
             idRuleSet.add(SimpleSpeakQlParser.RULE_simpleId);
             idRuleSet.add(SimpleSpeakQlParser.RULE_uid);
             idRuleSet.add(SimpleSpeakQlParser.RULE_constant);
+
             ArrayList<String> nextWords = NextWordsPredictor.getNextWords(
-                    requestBodySB.toString(), idRuleSet, null, "START"
+                    query, idRuleSet, null, rule
             );
-
             String response = NextWordsPredictor.printNextWordsAsArray(nextWords);
-
             t.sendResponseHeaders(200, response.length());
             OutputStream os = t.getResponseBody();
             os.write(response.getBytes());
