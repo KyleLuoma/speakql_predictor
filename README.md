@@ -43,7 +43,7 @@ Start a simple http server with parse and predict endpoints
 Port: 6789 (Currently hard coded only)
 
 Prediction request format:
-{"rule": "<rule>", "query": "query"}
+{"rule": "\<rule\>", "query": "query"}
 
 The rule indicates whether you are passing a full query (START), or a partial query indicated
 by the type of query using the values below.

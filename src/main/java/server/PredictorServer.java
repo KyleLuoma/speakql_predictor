@@ -20,11 +20,27 @@ import util.SimpleJsonStringParser;
 public class PredictorServer {
 
     public void run() throws Exception {
-        HttpServer server = HttpServer.create(new InetSocketAddress(6789), 0);
+        int port = 6789;
+        HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
         server.createContext("/parse/full", new ParseFullRequestHandler());
         server.createContext("/predict", new PredictRequestHandler());
+        server.createContext("/kill", new KillRequestHandler());
         server.setExecutor(null);
         server.start();
+        System.out.println("SpeakQL Predictor server running on port " + port);
+    }
+
+    static class KillRequestHandler implements  HttpHandler {
+        @Override
+        public void handle(HttpExchange t) throws IOException {
+            System.out.println("Terminating SpeakQL Predictor server due to call to kill endpoint!");
+            System.exit(0);
+            String response = "He is dead, Jim";
+            t.sendResponseHeaders(200, response.length());
+            OutputStream os = t.getResponseBody();
+            os.write(response.getBytes());
+            os.close();
+        }
     }
 
     static class PredictRequestHandler implements HttpHandler {
